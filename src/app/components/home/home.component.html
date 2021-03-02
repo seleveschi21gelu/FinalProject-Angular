@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <style>
+        body {
+         
+        background-size: cover;
+        background-position: center;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  class="container">
+    
+        <form [formGroup]="billsform" (ngSubmit)="submitRegistration()" novalidate>
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name" required autofocus/>
+          </div>
+          <div class="form-group">
+            <label>Invoice Number</label>
+            <input type="text" class="form-control" formControlName="invoiceNumber" required/>
+          </div>
+          <div class="form-group">
+            <label>Unit Price</label>
+            <input type="number" class="form-control" formControlName="unitPrice" required/>
+          </div>
+          <div>
+          <label>Invoice Date</label>
+            <input type="text" class="form-control" formControlName="invoiceDate" required/>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
+            <select class="form-control" formControlName="status" required>
+              <option *ngFor="let status of statusList"
+                      [value]="status.id">
+                      {{status.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Material</label>
+            <input type="text" class="form-control" formControlName="material" required/>
+          </div>
+          <div class="form-group">
+            <label>Provider</label>
+            <input type="text" class="form-control" formControlName="providers" required/>
+          </div>
+          <div class="form-group">
+            <label>Flat Block</label>
+            <input type="text" class="form-control" formControlName="flatBlock" required/>
+          </div>
+          <div class="form-group">
+            <label>Delivery Type</label>
+            <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
+            <select class="form-control" formControlName="deliveryTypes" required>
+              <option *ngFor="let deliveryTypes of deliveryTypeList"
+                      [value]="deliveryTypes.id">
+                      {{deliveryTypes.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Type</label>
+            <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
+            <select class="form-control" formControlName="type" required>
+              <option *ngFor="let type of typeList"
+                      [value]="type.id">
+                      {{type.name}}
+              </option>
+            </select>
+          </div>
+    
+          <button type="submit" class="btn btn-dark" >Submit</button>
+        </form>
+      </div>
+    
+</body>
+</html>

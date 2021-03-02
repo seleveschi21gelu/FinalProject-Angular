@@ -1,0 +1,37 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+          <th>ID</th>
+        <th>Invoice Number</th>
+        <th>Unit Price</th>
+        <th>Status</th>
+        <th>Material</th>
+        <th>Provider</th>
+        <!-- <th class="text-right"></th> -->
+      </tr>
+      <tr *ngFor="let bill of bills">
+        <td>
+            {{bill.id}}
+          </td>
+        <td class="text-right">
+          {{bill.invoiceNumber}}
+        </td>
+        <td>
+            {{bill.unitPrice}}
+          </td>
+          <td>
+            {{bill.status}}
+          </td>
+          <td>
+            {{bill.name}}
+          </td>
+          <td>
+            {{bill.material}}
+          </td>
+          <td>
+            {{bill.provider}}
+          </td>
+      
+      </tr>
+    </table>
+  </div>
