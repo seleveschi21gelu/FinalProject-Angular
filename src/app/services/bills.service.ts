@@ -14,21 +14,14 @@ export class BillsService {
   constructor(private http:HttpClient) {}
 
     getBills(){
-      return this.http.get('server/bills')
+      return this.http.get('server/bills');
+    }
 
-  }
-
-  getBill(id:number){
-    return this.http.get('server/bills/'+id)
-
-  }
-  addBill(bills: any){
-    let body = JSON.stringify(bills);
-    return this.http.post('server/bills',body, httpOptions)
-  }
-
-  
-
-
-
-  }
+    getBill(id:number){
+      return this.http.get('server/bills/'+id);
+    }
+    addBill(bills: any){
+      //let body = JSON.stringify(bills);
+      return this.http.post('server/bills',bills, httpOptions);
+    }
+}

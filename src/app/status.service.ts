@@ -15,7 +15,7 @@ export class StatusService {
 
 
   getStatusList(){
-    return this.http.get('server/status');
+    return this.http.get('server/paidStatus');
   }
   addStatus(status: any){
     let body = JSON.stringify(status);

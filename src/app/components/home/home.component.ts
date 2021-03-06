@@ -1,4 +1,6 @@
-import { TypeService } from './../../type.service';
+import { FlatblockService } from './../../services/flatblock.service';
+import { MaterialService } from './../../services/material.service';
+import { ProviderService } from './../../services/provider.service';
 import { DeliveryTypeService } from './../../delivery-type.service';
 import { StatusService } from './../../status.service';
 import { Observable, throwError } from 'rxjs';
@@ -16,51 +18,57 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   statusList:any;
   deliveryTypeList:any;
-  typeList:any;
+  providerList:any;
+  materialList:any;
+  flatBlockList:any;
 
-  models: string[]= [
-    'PAID',
-    'UNPAID',
-    "ADVANCE"
-  ];
   billsform!: FormGroup;
   validMessage: string= "";
 
-  constructor(private billsService:BillsService, private statusService:StatusService,private deliveryTypeService:DeliveryTypeService,private typeService:TypeService) {
+  constructor(private billsService:BillsService,
+              private statusService:StatusService,
+              private deliveryTypeService:DeliveryTypeService,
+              private providerService:ProviderService,
+              private materialService:MaterialService,
+              private flatBlockService:FlatblockService) {
+
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
-    this.deliveryTypeService.getDeliveryTypeList().subscribe(deliveryTypes=>this.deliveryTypeList =deliveryTypes)
-  this.typeService.getTypes().subscribe(types =>this.typeList=types)
+    this.providerService.getProviders().subscribe(providers => this.providerList =providers);
+    this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
+    this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
+    this.deliveryTypeService.getDeliveryTypeList().subscribe(deliveryTypes=>this.deliveryTypeList = deliveryTypes);
+
    }
 
   ngOnInit(): void  {
     this.billsform = new FormGroup({
-      invoiceNumber: new FormControl('',Validators.required),
-      unitPrice: new FormControl('',Validators.required),
-      status: new FormControl('',Validators.required),
-      invoiceDate: new FormControl('',Validators.required),
-      providers: new FormControl('',Validators.required),
-      name:new FormControl ('',Validators.required),
-      flatBlock:new FormControl('',Validators.required),
-      material:new FormControl('',Validators.required),
-      deliveryTypes:new FormControl('',Validators.required),
-      type:new FormControl('',Validators.required)
+       invoiceNumber: new FormControl('',Validators.required),
+       unitPrice: new FormControl('',Validators.required),
+       status: new FormControl('',Validators.required),
+       invoiceDate: new FormControl('',Validators.required),
+       provider: new FormControl('',Validators.required),
+       name:new FormControl ('',Validators.required),
+       flatBlock:new FormControl('',Validators.required),
+       material:new FormControl('',Validators.required),
+       deliveryTypes:new FormControl('',Validators.required)
     });
 
   }
   submitRegistration(){
-if(this.billsform?.valid){
-  this.validMessage = "Your bills registration has been submitted. Thank you!";
-  this.billsService.addBill(this.billsform.value).subscribe(
-    data=>{this.billsform.reset();
-    return true;
-   },
-   
-   error =>{return Observable.throw(error); 
-  }
-  )
-}else {
-  this.validMessage ="Please fill out the form before submitting"
-}
+    if(this.billsform?.valid){
+      this.validMessage = "Your bike registration has been submitted. Thank you!";
+      this.billsService.addBill(this.billsform.value).subscribe(
+        data => {
+          this.billsform?.reset();
+          return true;
+        },
+        error => {
+          return throwError(error);
+        }
+      )
+    } else{
+      this.validMessage = "Please fill out the form before submitting";
+    }
   }
 
 }

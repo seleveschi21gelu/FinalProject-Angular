@@ -3,7 +3,7 @@
 <head >
     <style>
         body {
-         
+
         background-size: cover;
         background-position: center;
         }
@@ -15,7 +15,7 @@
 </head>
 <body>
     <div  class="container">
-    
+
         <form [formGroup]="billsform" (ngSubmit)="submitRegistration()" novalidate>
           <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
@@ -37,51 +37,56 @@
             <input type="text" class="form-control" formControlName="invoiceDate" required/>
           </div>
           <div class="form-group">
-            <label>Status</label>
+            <label>Paid Status</label>
             <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
             <select class="form-control" formControlName="status" required>
               <option *ngFor="let status of statusList"
-                      [value]="status.id">
+                      [ngValue]="status.id">
                       {{status.name}}
               </option>
             </select>
           </div>
           <div class="form-group">
-            <label>Material</label>
-            <input type="text" class="form-control" formControlName="material" required/>
+            <label>Material Or Execution</label>
+            <select class="form-control" formControlName="material" required>
+              <option *ngFor="let material of materialList"
+                      [ngValue]="material">
+                      {{material.name}}
+              </option>
+            </select>
           </div>
           <div class="form-group">
             <label>Provider</label>
-            <input type="text" class="form-control" formControlName="providers" required/>
+            <select class="form-control" formControlName="provider" required>
+              <option *ngFor="let provider of providerList"
+                      [ngValue]="provider">
+                      {{provider.name}}
+              </option>
+            </select>
           </div>
           <div class="form-group">
             <label>Flat Block</label>
-            <input type="text" class="form-control" formControlName="flatBlock" required/>
+            <select class="form-control" formControlName="flatBlock" required>
+              <option *ngFor="let flatBlock of flatBlockList"
+                      [ngValue]="flatBlock">
+                      {{flatBlock.name}}
+              </option>
+            </select>
           </div>
           <div class="form-group">
             <label>Delivery Type</label>
             <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
             <select class="form-control" formControlName="deliveryTypes" required>
               <option *ngFor="let deliveryTypes of deliveryTypeList"
-                      [value]="deliveryTypes.id">
+                      [ngValue]="deliveryTypes">
                       {{deliveryTypes.name}}
               </option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Type</label>
-            <!-- <input type="text" class="form-control" formControlName="Status" required/> -->
-            <select class="form-control" formControlName="type" required>
-              <option *ngFor="let type of typeList"
-                      [value]="type.id">
-                      {{type.name}}
-              </option>
-            </select>
-          </div>
-    
+
           <button type="submit" class="btn btn-dark" >Submit</button>
         </form>
       </div>
-    
+
 </body>
 </html>

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TypeService } from './type.service';
+import { FlatblockService } from './flatblock.service';
 
-describe('TypeService', () => {
-  let service: TypeService;
+describe('FlatblockService', () => {
+  let service: FlatblockService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TypeService);
+    service = TestBed.inject(FlatblockService);
   });
 
   it('should be created', () => {
