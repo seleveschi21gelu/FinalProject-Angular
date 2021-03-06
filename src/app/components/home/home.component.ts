@@ -48,12 +48,14 @@ export class HomeComponent implements OnInit {
 
   }
   submitRegistration(){
-if(this.billsform.valid){
+if(this.billsform?.valid){
   this.validMessage = "Your bills registration has been submitted. Thank you!";
   this.billsService.addBill(this.billsform.value).subscribe(
     data=>{this.billsform.reset();
     return true;
-   },error =>{return throwError(error); 
+   },
+   
+   error =>{return Observable.throw(error); 
   }
   )
 }else {

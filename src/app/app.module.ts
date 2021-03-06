@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import{HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component'
 import { formatCurrency } from '@angular/common';
+import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
-    HomeComponent
+    HomeComponent,
+    ViewRegistrationComponent
   ],
   imports: [
     BrowserModule,

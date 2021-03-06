@@ -14,17 +14,17 @@ export class BillsService {
   constructor(private http:HttpClient) {}
 
     getBills(){
-      return this.http.get('http://localhost:8080/bills')
+      return this.http.get('server/bills')
 
   }
 
   getBill(id:number){
-    return this.http.get('http://localhost:8080/bills'+id)
+    return this.http.get('server/bills/'+id)
 
   }
   addBill(bills: any){
-    
-    return this.http.post('http://localhost:8080/bills',bills, httpOptions)
+    let body = JSON.stringify(bills);
+    return this.http.post('server/bills',body, httpOptions)
   }
 
   
