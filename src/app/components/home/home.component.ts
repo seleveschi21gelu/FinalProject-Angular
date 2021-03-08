@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
        unitPrice: new FormControl('',Validators.required),
        paidStatus: new FormControl('',Validators.required),
        invoiceDate: new FormControl('',Validators.required),
-       providers: new FormControl('',Validators.required),
+       provider: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
        materialAndExecution:new FormControl('',Validators.required)
       //  deliveryType:new FormControl('',Validators.required)
