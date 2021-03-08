@@ -16,12 +16,12 @@ flatblockList : any;
   flatblockForm!: FormGroup;
   validMessage: string ="";
 
-  constructor(private flatblockService:FlatblockService, 
+  constructor(private flatblockService:FlatblockService,
     private constructiontypeService:ConstructiontypeService) {
-    
-      this.flatblockService.getFlatBlocks().subscribe(flatblock => this.flatblockList= flatblock);
+
+    this.flatblockService.getFlatBlocks().subscribe(flatblock => this.flatblockList= flatblock);
     this.constructiontypeService.getConstructioType().subscribe(constructiontype => this.constructiontypeList = constructiontype)
-    
+
    }
 
   ngOnInit(): void {

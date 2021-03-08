@@ -1,4 +1,4 @@
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProviderService } from './../../services/provider.service';
 import { Component, OnInit } from '@angular/core';
 import { throwError } from 'rxjs';
@@ -14,12 +14,12 @@ export class ProviderComponent implements OnInit {
   validMessage: string = "";
 
 
-  constructor(private providerService:ProviderService) { 
+  constructor(private providerService:ProviderService) {
     this.providerService.getProviders().subscribe(provider=>this.providerList=provider);
   }
 
   ngOnInit(): void {
-    this.providerForm=new FormControl({
+    this.providerForm=new FormGroup({
       name:new FormControl('',Validators.required),
       description:new FormControl('',Validators.required)
 
