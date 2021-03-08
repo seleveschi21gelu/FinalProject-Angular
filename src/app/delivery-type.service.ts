@@ -14,12 +14,12 @@ export class DeliveryTypeService {
   constructor(private http:HttpClient) {
    }
     
-   getDeliveryTypeList(){
+   getDeliverysType(){
   return this.http.get('server/deliveryType')
 
    }
    addDeliveryType(deliveryType: any){
-    let body = JSON.stringify(deliveryType);
-    return this.http.post('server/deliveryType',body, httpOptions)
+    // let body = JSON.stringify(deliveryType);
+    return this.http.post('server/deliveryType',deliveryType, httpOptions)
   }
 }

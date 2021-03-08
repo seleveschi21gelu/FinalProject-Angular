@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+          <th>ID</th>
+        <th>Material Name</th>
+        <th>Delivery Type</th>
+        
+        <!-- <th class="text-right"></th> -->
+      </tr>
+      <tr *ngFor="let material of material">
+        <td>
+            {{material.id}}
+          </td>
+        <td class="text-right">
+          {{material.name}}
+        </td>
+        <td>
+            {{material.deliveryType}}
+          </td>
+      </tr>
+    </table>
+  </div>

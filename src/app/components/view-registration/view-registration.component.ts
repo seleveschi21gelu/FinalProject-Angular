@@ -26,4 +26,5 @@ getBillsRegistration(id:number){
   );
 }
 
+
 }

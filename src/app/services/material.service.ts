@@ -15,11 +15,13 @@ export class MaterialService {
   }
 
   getMaterials(){
- return this.http.get('server/material')
+ return this.http.get('/server/material')
 
   }
-  addMaterial(deliveryType: any){
-   let body = JSON.stringify(deliveryType);
-   return this.http.post('server/material',body, httpOptions)
+  addMaterial(material: any){
+  
+   return this.http.post('/server/material',material, httpOptions)
+   
  }
+
 }

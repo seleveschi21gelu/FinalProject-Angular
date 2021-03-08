@@ -15,11 +15,11 @@ export class FlatblockService {
   }
 
   getFlatBlocks(){
-    return this.http.get('server/flatBlock')
+    return this.http.get('/server/flatBlock')
 
   }
   addFlatBlock(deliveryType: any){
-   let body = JSON.stringify(deliveryType);
-   return this.http.post('server/flatBlock',body, httpOptions)
+   
+   return this.http.post('/server/flatBlock',deliveryType, httpOptions)
  }
 }

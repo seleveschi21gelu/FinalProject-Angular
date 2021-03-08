@@ -1,1 +1,41 @@
-<p>view-registration works!</p>
+<div class="container">
+    <div class="row">
+      <a class="btn btn=primary" routerLink="/admin">Back to List</a>
+    </div><br>
+    <div>
+      <div class="form-group">
+        <label>Name</label>
+        <div class="form-control">{{billsRegistration.name}}</div>
+      </div>
+      <div class="form-group">
+        <label>Invoice Number</label>
+        <div class="form-control">{{billsRegistration.invoiceNumber}}</div>
+      </div>
+        <div class="form-group">
+        <label>Paid Status</label>
+        <div class="form-control">{{billsRegistration.paidStatus}}</div>
+      </div>
+    
+      <div class="form-group">
+        <label>Invoice date</label>
+        <div class="form-control">{{billsRegistration.invoiceDate}}</div>
+      </div>
+      <div class="form-group">
+        <label>Material Or Execution</label>
+        <div class="form-control">{{billsRegistration.materialAndExecution}}</div>
+      </div>
+      <div class="form-group">
+        <label>Provider</label>
+        <div class="form-control">{{billsRegistration.providers}}</div>
+      </div>
+      <div class="form-group">
+        <label>Flat Block</label>
+        <div class="form-control">{{billsRegistration.flatblock}}</div>
+      </div>
+      <div class="form-group">
+        <label>Delivery Type</label>
+        <div class="form-control">{{billsRegistration.deliveryType}}</div>
+      </div>
+    </div>
+  </div>
+

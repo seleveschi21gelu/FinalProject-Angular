@@ -15,10 +15,10 @@ export class ProviderService {
   }
 
   getProviders(){
-    return this.http.get('server/provider')
+    return this.http.get('/server/provider')
   }
-  addProvider(deliveryType: any){
-   let body = JSON.stringify(deliveryType);
-   return this.http.post('server/provider',body, httpOptions)
+  addProvider(provider: any){
+  //  let body = JSON.stringify(deliveryType);
+   return this.http.post('/server/provider',provider, httpOptions)
  }
 }

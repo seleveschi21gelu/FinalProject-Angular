@@ -1,3 +1,4 @@
+import { ConstructiontypeService } from './services/constructiontype.service';
 import { DeliveryTypeService } from './delivery-type.service';
 import { FlatblockService } from './services/flatblock.service';
 import { MaterialService } from './services/material.service';
@@ -15,6 +16,12 @@ import{HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component'
 import { formatCurrency } from '@angular/common';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { FlatblockComponent } from './components/flatblock/flatblock.component';
+import { ProviderComponent } from './components/provider/provider.component';
+import { MaterialComponent } from './components/material/material.component';
+import { ViewRegistrationFlatblockComponent } from './views/view-registration-flatblock/view-registration-flatblock.component';
+import { ViewProviderComponent } from './views/view-provider/view-provider.component';
+import { ViewMaterialComponent } from './views/view-material/view-material.component';
 
 
 @NgModule({
@@ -22,7 +29,13 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ViewRegistrationComponent
+    ViewRegistrationComponent,
+    FlatblockComponent,
+    ProviderComponent,
+    MaterialComponent,
+    ViewRegistrationFlatblockComponent,
+    ViewProviderComponent,
+    ViewMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +43,7 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [BillsService, StatusService, ProviderService, MaterialService, FlatblockService, DeliveryTypeService],
+  providers: [BillsService, StatusService, ProviderService, MaterialService, FlatblockService, DeliveryTypeService,ConstructiontypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

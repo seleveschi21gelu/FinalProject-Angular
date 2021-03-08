@@ -11,17 +11,19 @@ const httpOptions ={
 })
 export class BillsService {
 
+  // readonly root ='http://localhost:8080';
+
   constructor(private http:HttpClient) {}
 
     getBills(){
-      return this.http.get('server/bills');
+      return this.http.get('/server/bills');
     }
 
     getBill(id:number){
-      return this.http.get('server/bills/'+id);
+      return this.http.get('/server/bills'+id);
     }
     addBill(bills: any){
       //let body = JSON.stringify(bills);
-      return this.http.post('server/bills',bills, httpOptions);
+      return this.http.post('/server/bills',bills, httpOptions);
     }
 }

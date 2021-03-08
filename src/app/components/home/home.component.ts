@@ -36,27 +36,27 @@ export class HomeComponent implements OnInit {
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
     this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
-    this.deliveryTypeService.getDeliveryTypeList().subscribe(deliveryTypes=>this.deliveryTypeList = deliveryTypes);
+    // this.deliveryTypeService.getDeliverysType().subscribe(deliveryTypes=>this.deliveryTypeList = deliveryTypes);
 
    }
 
   ngOnInit(): void  {
     this.billsform = new FormGroup({
+       name:new FormControl ('',Validators.required),
        invoiceNumber: new FormControl('',Validators.required),
        unitPrice: new FormControl('',Validators.required),
-       status: new FormControl('',Validators.required),
+       paidStatus: new FormControl('',Validators.required),
        invoiceDate: new FormControl('',Validators.required),
-       provider: new FormControl('',Validators.required),
-       name:new FormControl ('',Validators.required),
+       providers: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
-       material:new FormControl('',Validators.required),
-       deliveryTypes:new FormControl('',Validators.required)
+       materialAndExecution:new FormControl('',Validators.required)
+      //  deliveryType:new FormControl('',Validators.required)
     });
 
   }
   submitRegistration(){
     if(this.billsform?.valid){
-      this.validMessage = "Your bike registration has been submitted. Thank you!";
+      this.validMessage = "Your invoice registration has been submitted. Thank you!";
       this.billsService.addBill(this.billsform.value).subscribe(
         data => {
           this.billsform?.reset();

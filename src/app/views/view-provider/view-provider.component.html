@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+          <th>ID</th>
+        <th>Provider Name</th>
+        <th>Description</th>
+        
+        <!-- <th class="text-right"></th> -->
+      </tr>
+      <tr *ngFor="let provider of provider">
+        <td>
+            {{provider.id}}
+          </td>
+        <td class="text-right">
+          {{provider.name}}
+        </td>
+        <td>
+            {{provider.description}}
+          </td>
+      </tr>
+    </table>
+  </div>
