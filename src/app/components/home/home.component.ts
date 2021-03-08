@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit {
        provider: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
        materialAndExecution:new FormControl('',Validators.required)
-      //  deliveryType:new FormControl('',Validators.required)
     });
 
   }
