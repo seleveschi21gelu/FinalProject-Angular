@@ -2,7 +2,7 @@
     <div class="row">
       <a class="btn btn=primary" routerLink="/flatblock">Back to Flat Block Form</a>
     </div>
-    <div>
+    <div *ngIf="flatblockRegistration">
       <div class="form-group">
         <label>ID</label>
         <div class="form-control">{{flatblockRegistration.id}}</div>

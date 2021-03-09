@@ -1,3 +1,4 @@
+import { NavbarComponent } from './navbar/navbar.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view-flatblock-by-id.component';
@@ -62,7 +63,8 @@ const routes: Routes = [
 },
 {path:'admin',
 component:AdminComponent
-},
+}
+
 
 
 ];

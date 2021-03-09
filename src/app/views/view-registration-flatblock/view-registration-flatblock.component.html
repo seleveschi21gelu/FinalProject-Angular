@@ -7,11 +7,13 @@
           <th>ID</th>
         <th>Flat Block Name</th>
         <th>Construction Type</th>
+       
         
         <!-- <th class="text-right"></th> -->
       </tr>
       <tr *ngFor="let flatblock of flatblockRegistration">
-        <td>
+        <td [routerLink]="['/admin/view-flatblock/',flatblock.id]" class="pointer">
+        
             {{flatblock.id}}
           </td>
         <td class="text-right">
@@ -20,6 +22,7 @@
         <td>
             {{flatblock.constructionType.name}}
           </td>
+        
       </tr>
     </table>
   </div>

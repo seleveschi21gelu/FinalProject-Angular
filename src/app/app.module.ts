@@ -25,6 +25,7 @@ import { ViewMaterialComponent } from './views/view-material/view-material.compo
 import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view-flatblock-by-id.component';
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view
     ViewMaterialComponent,
     ViewFlatblockByIdComponent,
     ViewProviderByIdComponent,
-    ViewMatertialByIdComponent
+    ViewMatertialByIdComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

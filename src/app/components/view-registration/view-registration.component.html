@@ -2,7 +2,7 @@
     <div class="row">
       <a class="btn btn=primary" routerLink="/admin">Back to Invoice Form</a>
     </div>
-    <div>
+    <div *ngIf="billsRegistration">
       <div class="form-group">
         <label>ID</label>
         <div class="form-control">{{billsRegistration.id}}</div>
