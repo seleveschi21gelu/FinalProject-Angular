@@ -1,5 +1,6 @@
 import { FlatblockService } from './../../services/flatblock.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-registration-flatblock',
@@ -10,9 +11,11 @@ export class ViewRegistrationFlatblockComponent implements OnInit {
 
 public flatblockRegistration: any;
 
-  constructor(private flatblockService:FlatblockService) { }
+  constructor(private flatblockService:FlatblockService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getFlatblockRegistration();
+   
   }
 
 getFlatblockRegistration(){
@@ -22,7 +25,8 @@ this.flatblockService.getFlatBlocks().subscribe(
   err=>console.error(err),
   ()=>console.log('flatblock loaded')
 );
-
 }
+
+
 
 }

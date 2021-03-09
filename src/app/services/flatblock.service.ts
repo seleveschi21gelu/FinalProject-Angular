@@ -18,6 +18,10 @@ export class FlatblockService {
     return this.http.get('/server/flatBlock')
 
   }
+  getFlatblockById(id : number){
+    return this.http.get('/server/flatBlock/'+id)
+
+  }
   addFlatBlock(deliveryType: any){
    
    return this.http.post('/server/flatBlock',deliveryType, httpOptions)

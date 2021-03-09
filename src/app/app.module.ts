@@ -22,6 +22,9 @@ import { MaterialComponent } from './components/material/material.component';
 import { ViewRegistrationFlatblockComponent } from './views/view-registration-flatblock/view-registration-flatblock.component';
 import { ViewProviderComponent } from './views/view-provider/view-provider.component';
 import { ViewMaterialComponent } from './views/view-material/view-material.component';
+import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view-flatblock-by-id.component';
+import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
+import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { ViewMaterialComponent } from './views/view-material/view-material.compo
     MaterialComponent,
     ViewRegistrationFlatblockComponent,
     ViewProviderComponent,
-    ViewMaterialComponent
+    ViewMaterialComponent,
+    ViewFlatblockByIdComponent,
+    ViewProviderByIdComponent,
+    ViewMatertialByIdComponent
   ],
   imports: [
     BrowserModule,

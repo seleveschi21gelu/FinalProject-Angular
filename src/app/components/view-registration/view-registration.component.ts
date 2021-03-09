@@ -18,10 +18,10 @@ export class ViewRegistrationComponent implements OnInit {
   }
 
 getBillsRegistration(id:number){
-  this.billsRegistration.getBill(id).subscribe(
-    (    data: any)=>{this.billsRegistration = data;
+  this.billsService.getBill(id).subscribe(
+    data=>{this.billsRegistration = data;
     },
-    (    err: any)=>console.error(err),
+    err=>console.error(err),
     ()=>console.log('bills loaded')
   );
 }

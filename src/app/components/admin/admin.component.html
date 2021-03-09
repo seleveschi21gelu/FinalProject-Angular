@@ -11,7 +11,8 @@
       </tr>
       <tr *ngFor="let bill of bills">
         <td>
-            {{bill.id}}
+          <!-- <a [routerLink] = "['/admin/view', bill.id]">{{bills.name}}</a> </td> -->
+           {{bill.id}}
           </td>
         <td class="text-right">
           {{bill.invoiceNumber}}

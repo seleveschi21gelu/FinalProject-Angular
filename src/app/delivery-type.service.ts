@@ -15,11 +15,11 @@ export class DeliveryTypeService {
    }
     
    getDeliverysType(){
-  return this.http.get('server/deliveryType')
+  return this.http.get('/server/deliveryType')
 
    }
    addDeliveryType(deliveryType: any){
     // let body = JSON.stringify(deliveryType);
-    return this.http.post('server/deliveryType',deliveryType, httpOptions)
+    return this.http.post('/server/deliveryType',deliveryType, httpOptions)
   }
 }

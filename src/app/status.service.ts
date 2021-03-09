@@ -15,11 +15,12 @@ export class StatusService {
 
 
   getStatusList(){
-    return this.http.get('server/paidStatus');
+    return this.http.get('/server/paidStatus');
   }
   addStatus(status: any){
     let body = JSON.stringify(status);
-    return this.http.post('server/bills',body, httpOptions)
+    return this.http.post('/server/paidStatus',body, httpOptions)
   }
+  
 
 }

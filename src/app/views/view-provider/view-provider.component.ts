@@ -12,9 +12,10 @@ export class ViewProviderComponent implements OnInit {
   constructor(private providerService :ProviderService) { }
 
   ngOnInit(): void {
+    this.getProviderRegistration();
   }
 
-  getFlatblockRegistration(){
+  getProviderRegistration(){
     this.providerService.getProviders().subscribe(
       data=>{this.provider =data;
       },

@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="row">
+        <a class="btn btn=primary" routerLink="/admin">Back to Invoice Form</a>
+      </div>
     <table class="table table-bordered table-inverse">
       <tr>
           <th>ID</th>
@@ -12,10 +15,10 @@
             {{flatblock.id}}
           </td>
         <td class="text-right">
-          {{flatblock.name}}
+            {{flatblock.name}}
         </td>
         <td>
-            {{flatblock.constructionType}}
+            {{flatblock.constructionType.name}}
           </td>
       </tr>
     </table>

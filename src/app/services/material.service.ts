@@ -18,6 +18,10 @@ export class MaterialService {
  return this.http.get('/server/material')
 
   }
+
+  getMaterialById(id: number){
+    return this.http.get('/server/material/'+id);
+  }
   addMaterial(material: any){
   
    return this.http.post('/server/material',material, httpOptions)

@@ -17,6 +17,9 @@ export class ProviderService {
   getProviders(){
     return this.http.get('/server/provider')
   }
+  getProvidersById(id:number){
+    return this.http.get('/server/provider/'+id)
+  }
   addProvider(provider: any){
   //  let body = JSON.stringify(deliveryType);
    return this.http.post('/server/provider',provider, httpOptions)

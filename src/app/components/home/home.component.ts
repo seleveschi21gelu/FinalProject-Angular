@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void  {
     this.billsform = new FormGroup({
-       name:new FormControl ('',Validators.required),
+      //  name:new FormControl ('',Validators.required),
        invoiceNumber: new FormControl('',Validators.required),
        unitPrice: new FormControl('',Validators.required),
        paidStatus: new FormControl('',Validators.required),
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     if(this.billsform?.valid){
       this.validMessage = "Your invoice registration has been submitted. Thank you!";
       this.billsService.addBill(this.billsform.value).subscribe(
-        data => {
+        _data => {
           this.billsform?.reset();
           return true;
         },

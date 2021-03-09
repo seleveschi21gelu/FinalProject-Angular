@@ -16,6 +16,8 @@ flatblockList : any;
   flatblockForm!: FormGroup;
   validMessage: string ="";
 
+  public flatblock:any;
+
   constructor(private flatblockService:FlatblockService,
     private constructiontypeService:ConstructiontypeService) {
 
@@ -30,9 +32,13 @@ flatblockList : any;
     constructionType: new FormControl('',Validators.required)
 
 
-    })
+    });
+   
 
-  }
+  } 
+ 
+
+  
 
   submitRegistration(){
     if(this.flatblockForm?.valid){

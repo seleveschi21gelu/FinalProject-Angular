@@ -20,7 +20,7 @@ export class BillsService {
     }
 
     getBill(id:number){
-      return this.http.get('/server/bills'+id);
+      return this.http.get('/server/bills/'+id);
     }
     addBill(bills: any){
       //let body = JSON.stringify(bills);

@@ -1,41 +1,40 @@
 <div class="container">
     <div class="row">
-      <a class="btn btn=primary" routerLink="/admin">Back to List</a>
-    </div><br>
+      <a class="btn btn=primary" routerLink="/admin">Back to Invoice Form</a>
+    </div>
     <div>
       <div class="form-group">
-        <label>Name</label>
-        <div class="form-control">{{billsRegistration.name}}</div>
+        <label>ID</label>
+        <div class="form-control">{{billsRegistration.id}}</div>
       </div>
       <div class="form-group">
         <label>Invoice Number</label>
         <div class="form-control">{{billsRegistration.invoiceNumber}}</div>
       </div>
-        <div class="form-group">
-        <label>Paid Status</label>
-        <div class="form-control">{{billsRegistration.paidStatus}}</div>
-      </div>
-    
       <div class="form-group">
-        <label>Invoice date</label>
+        <label>Unit Price</label>
+        <div class="form-control">{{billsRegistration.unitPrice}}</div>
+      </div>
+      <div class="form-group">
+        <label>Invoice Date</label>
         <div class="form-control">{{billsRegistration.invoiceDate}}</div>
       </div>
       <div class="form-group">
-        <label>Material Or Execution</label>
-        <div class="form-control">{{billsRegistration.materialAndExecution}}</div>
+        <label>Paid Status</label>
+        <div class="form-control">{{billsRegistration.paidStatus.name}}</div>
+      </div>
+      <div class="form-group">
+        <label>material Or Execution</label>
+        <div class="form-control">{{billsRegistration.materialAndExecution.name}}</div>
       </div>
       <div class="form-group">
         <label>Provider</label>
-        <div class="form-control">{{billsRegistration.providers}}</div>
+        <div class="form-control">{{billsRegistration.provider.name}}</div>
       </div>
       <div class="form-group">
         <label>Flat Block</label>
-        <div class="form-control">{{billsRegistration.flatblock}}</div>
-      </div>
-      <div class="form-group">
-        <label>Delivery Type</label>
-        <div class="form-control">{{billsRegistration.deliveryType}}</div>
+        <div class="form-control">{{billsRegistration.flatBlock.name}}</div>
       </div>
     </div>
   </div>
-
+    

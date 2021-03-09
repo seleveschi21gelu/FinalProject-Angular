@@ -1,3 +1,6 @@
+import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
+import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
+import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view-flatblock-by-id.component';
 import { ViewMaterialComponent } from './views/view-material/view-material.component';
 import { ViewProviderComponent } from './views/view-provider/view-provider.component';
 import { ViewRegistrationFlatblockComponent } from './views/view-registration-flatblock/view-registration-flatblock.component';
@@ -21,9 +24,6 @@ const routes: Routes = [
   path:'admin/view/:id',
   component: ViewRegistrationComponent
 },
-  {path:'admin',
-component:AdminComponent
-},
 {
   path:'flatblock',
   component:FlatblockComponent
@@ -37,17 +37,32 @@ component:AdminComponent
   component:MaterialComponent
 },
 {
+  path:'admin/view-flatblock/:id',
+  component:ViewFlatblockByIdComponent
+},
+{
   path:'admin/view-flatblock',
   component:ViewRegistrationFlatblockComponent
+},
+{
+  path:'admin/view-provider/:id',
+  component:ViewProviderByIdComponent
 },
 {
   path:'admin/view-provider',
   component:ViewProviderComponent
 },
 {
+  path:'admin/view-material/:id',
+  component:ViewMatertialByIdComponent
+},
+{
   path:'admin/view-material',
   component:ViewMaterialComponent
-}
+},
+{path:'admin',
+component:AdminComponent
+},
 
 
 ];

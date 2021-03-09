@@ -12,6 +12,7 @@ export class ViewMaterialComponent implements OnInit {
   constructor(private materialService:MaterialService) { }
 
   ngOnInit(): void {
+    this.getMaterial();
   }
 
   getMaterial(){
