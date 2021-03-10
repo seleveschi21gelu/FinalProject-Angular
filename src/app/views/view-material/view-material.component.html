@@ -1,5 +1,5 @@
 <div class="container">
-    
+ <p> <a class="btn btn-light" routerLink="/material">Register a material</a></p>
     <table class="table table-bordered table-inverse">
       <tr>
           <th>ID</th>
@@ -9,7 +9,7 @@
         <!-- <th class="text-right"></th> -->
       </tr>
       <tr *ngFor="let material of material">
-        <td>
+        <td [routerLink] = "['/admin/view-material/', material.id]" class="pointer">
             {{material.id}}
           </td>
         <td class="text-right">
