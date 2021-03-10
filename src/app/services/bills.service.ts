@@ -26,4 +26,11 @@ export class BillsService {
       //let body = JSON.stringify(bills);
       return this.http.post('/server/bills',bills, httpOptions);
     }
+
+    deleteBillById(id:number){
+      return this.http.delete('/server/bills/'+id);
+    }
+    updateBillById(id:number,bills:any){
+      return this.http.put('/server/bills/'+id,bills).subscribe();
+    }
 }

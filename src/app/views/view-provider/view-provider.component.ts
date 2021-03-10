@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { ProviderService } from './../../services/provider.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class ViewProviderComponent implements OnInit {
 
   public provider: any;
-  constructor(private providerService :ProviderService) { }
+  constructor(private providerService :ProviderService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getProviderRegistration();
+    this.deleteProviderById(this.route.snapshot.params.id)
   }
 
   getProviderRegistration(){
@@ -23,4 +25,14 @@ export class ViewProviderComponent implements OnInit {
       ()=>console.log('Provider loaded')
     );
 }
+
+deleteProviderById(id:number){
+  this.providerService.deleteProviderById(id).subscribe(
+    data=>{this.provider=data;},
+    err=>console.error(err),
+   ()=> console.log('Provider deleted')
+  
+  );
+}
+
 }

@@ -28,6 +28,8 @@
         <td>
             {{bill.provider.name}}
         </td>
+        <button *ngIf="bill.id" (click)="updateBillById()" class="btn btn-light">Update Bill</button>
+        <button *ngIf="bill.id" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
 
       </tr>
     </table>

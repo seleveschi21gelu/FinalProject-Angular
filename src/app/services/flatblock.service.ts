@@ -26,4 +26,8 @@ export class FlatblockService {
    
    return this.http.post('/server/flatBlock',deliveryType, httpOptions)
  }
+
+ deleteFlatBlock(id:number){
+   return this.http.delete('/server/flatBlock/'+id)
+ }
 }

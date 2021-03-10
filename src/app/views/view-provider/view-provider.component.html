@@ -18,6 +18,7 @@
         <td>
             {{provider.description}}
           </td>
+          <button *ngIf="provider.id" (click)="deleteProviderById(provider.id)" class="btn btn-light" [routerLink] = "'/admin/view-provider'" class="pointer">Delete provider</button>
       </tr>
     </table>
   </div>

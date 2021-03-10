@@ -32,11 +32,11 @@ this.deliveryTypeService.getDeliverysType().subscribe(deliveryType=>this.deliver
     if(this.materialForm?.valid){
       this.validMessage = "Your material registration has been submitted. Thank you!";
       this.materialService.addMaterial(this.materialForm.value).subscribe(
-        (_data: any) => {
+        _data => {
           this.materialForm?.reset();
           return true;
         },
-        (error: any) => {
+        error => {
           return throwError(error);
         }
       )
@@ -44,5 +44,6 @@ this.deliveryTypeService.getDeliverysType().subscribe(deliveryType=>this.deliver
       this.validMessage = "Please fill out the form before submitting";
     }
   }
+  
 
 }

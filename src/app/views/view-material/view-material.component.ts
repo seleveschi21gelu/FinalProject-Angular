@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { MaterialService } from './../../services/material.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class ViewMaterialComponent implements OnInit {
   public material:any;
 
-  constructor(private materialService:MaterialService) { }
+  constructor(private materialService:MaterialService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getMaterial();
+    this.deleteMaterialById(this.route.snapshot.params.id);
   }
 
   getMaterial(){
@@ -22,6 +24,18 @@ export class ViewMaterialComponent implements OnInit {
       },
       err=>console.error(err),
       ()=>console.log('material loaded')
+    );
+
+  }
+
+  
+  deleteMaterialById(id:number){
+    this.materialService.deleteMaterialById(id).subscribe(
+      data=>{
+        this.material=data
+      },
+      err=>console.error(err),
+      ()=>console.log('material deleted')
     );
 
   }

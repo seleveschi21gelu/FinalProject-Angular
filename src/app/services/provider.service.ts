@@ -24,4 +24,9 @@ export class ProviderService {
   //  let body = JSON.stringify(deliveryType);
    return this.http.post('/server/provider',provider, httpOptions)
  }
+
+ deleteProviderById(id:number){
+   return this.http.delete('/server/provider/'+id)
+
+ }
 }

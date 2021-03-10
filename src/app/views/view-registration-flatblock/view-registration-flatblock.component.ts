@@ -15,6 +15,7 @@ public flatblockRegistration: any;
 
   ngOnInit(): void {
     this.getFlatblockRegistration();
+    this.deleteFlatblockById(this.route.snapshot.params.id);
    
   }
 
@@ -26,6 +27,15 @@ this.flatblockService.getFlatBlocks().subscribe(
   ()=>console.log('flatblock loaded')
 );
 }
+
+deleteFlatblockById(id:number){
+  this.flatblockService.deleteFlatBlock(id).subscribe(
+    data=>{this.flatblockRegistration =data;
+    },
+    err=>console.error(err),
+    ()=>console.log('flatblock deleted')
+  );
+  }
 
 
 
