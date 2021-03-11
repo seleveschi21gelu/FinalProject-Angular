@@ -20,30 +20,9 @@
           <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
           </div>
-          <!-- <div class="form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" formControlName="name" required autofocus/>
-          </div> -->
           <div class="form-group">
             <label>Invoice Number</label>
             <input type="text" class="form-control" formControlName="invoiceNumber" required/>
-          </div>
-          <div class="form-group">
-            <label>Unit Price</label>
-            <input type="number" class="form-control" formControlName="unitPrice" required/>
-          </div>
-          <div>
-          <label>Invoice Date</label>
-            <input type="text" class="form-control" formControlName="invoiceDate" required/>
-          </div>
-          <div class="form-group">
-            <label>Paid Status</label>
-            <select class="form-control" formControlName="paidStatus" required>
-              <option *ngFor="let status of statusList"
-                      [ngValue]="status">
-                      {{status.name}}
-              </option>
-            </select>
           </div>
           <div class="form-group">
             <label>Material Or Execution</label>
@@ -63,6 +42,39 @@
               </option>
             </select>
           </div>
+          <div>
+            <label>Invoice Date</label>
+              <input type="text" class="form-control" formControlName="invoiceDate" required/>
+            </div>
+          <div class="form-group">
+            <label>Unit Price</label>
+            <input type="number" class="form-control" formControlName="unitPrice" required/>
+          </div>
+          <div class="form-group">
+            <label>Quantity</label>
+            <input type="text" class="form-control" formControlName="quantity" required/>
+          </div>
+          <div class="form-group">
+            <label>TVA%</label>
+            <input type="text" class="form-control" formControlName="TVA" required/>
+          </div>
+          <div class="form-group">
+            <label>Total</label>
+            <input type="number" class="form-control" formControlName="total" required/>
+          </div>
+
+        
+          <div class="form-group">
+            <label>Paid Status</label>
+            <select class="form-control" formControlName="paidStatus" required>
+              <option *ngFor="let status of statusList"
+                      [ngValue]="status">
+                      {{status.name}}
+              </option>
+            </select>
+          </div>
+          
+         
           <div class="form-group">
             <label>Flat Block</label>
             <select class="form-control" formControlName="flatBlock" required>

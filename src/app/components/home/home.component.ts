@@ -44,12 +44,15 @@ export class HomeComponent implements OnInit {
     this.billsform = new FormGroup({
       //  name:new FormControl ('',Validators.required),
        invoiceNumber: new FormControl('',Validators.required),
-       unitPrice: new FormControl('',Validators.required),
-       paidStatus: new FormControl('',Validators.required),
-       invoiceDate: new FormControl('',Validators.required),
+       materialAndExecution:new FormControl('',Validators.required),
        provider: new FormControl('',Validators.required),
+       invoiceDate: new FormControl('',Validators.required),
+       unitPrice: new FormControl('',Validators.required),
+       quantity:new FormControl('',Validators.required),
+       TVA:new FormControl('',Validators.required),
+       total:new FormControl('',Validators.required),
+       paidStatus: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
-       materialAndExecution:new FormControl('',Validators.required)
     });
 
   }

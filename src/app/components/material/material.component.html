@@ -30,7 +30,7 @@
             <!-- <input type="text" class="form-control" formControlName="deliveryType" required/> -->
             <select class="form-control" formControlName="deliveryType" required>
               <option *ngFor="let delivery of deliveryTypeList"
-                      [ngValue]="delivery.id">
+                      [ngValue]="delivery">
                       {{delivery.name}}
               </option>
             </select>
