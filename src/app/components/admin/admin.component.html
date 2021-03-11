@@ -1,57 +1,52 @@
 <div class="container">
   <p><a class="btn btn-light" routerLink="/">Register a new invoice</a></p>
-    <table class="table table-bordered table-inverse">
-      <tr>
-        <th>ID</th>
-        <th>Invoice Number</th>
-        <th>Material</th>
-        <th>Provider</th>
-        <th>Invoice Date</th>
-        <th>Unit Price</th>
-        <th>Quantity</th>
-        <th>TVA %</th>
-        <th>Total</th>
-        <th>Paid Status</th>
-        <th>Flat Block</th>
-        <!-- <th class="text-right"></th> -->
-      </tr>
-      <tr *ngFor="let bill of bills">
-        <td [routerLink] = "['/admin/view/', bill.id]" class="pointer" > 
-           {{bill.id}}</td>
-        <td class="text-right">
-          {{bill.invoiceNumber}}
-        </td>
-        <td>
-          {{bill.material.name}}
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>ID</th>
+      <th>Invoice Number</th>
+      <th>Material</th>
+      <th>Provider</th>
+      <th>InvoiceDate</th>
+      <th>Unit Price</th>
+      <th>Quantity</th>
+      <th>TVA %</th>
+      <th>Paid Status</th>
+      <th>Flat Block</th>
+    </tr>
+    <tr *ngFor="let bill of bills">
+      <td [routerLink]="['/admin/view/', bill.id]" class="pointer">
+        {{bill.id}}</td>
+      <td class="text-right">
+        {{bill.invoiceNumber}}
+      </td>
+      <td>
+        {{bill.material.name}}
       </td>
       <td>
         {{bill.provider.name}}
       </td>
-       <td>
-      {{bill.invoiceDate}}
-       </td>
-       <td>
-            {{bill.unitPrice}}
-        </td>
-        <td>
-          {{bill.quantity}}
-        </td>
-        <td>
-          {{bill.TVA}}
-        </td>
-        <td>
-          {{bill.total}}
-        </td>
-        <td>
-            {{bill.paidStatus.name}}
-        </td>
-        <td>
-          {{bill.flatBlock.name}}
-        </td>
-        
-        <!-- <button *ngIf="bill.id" (click)="updateBillById()" class="btn btn-light">Update Bill</button> -->
-        <button *ngIf="bill.id" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
+      <td>
+        {{bill.invoiceDate}}
+      </td>
+      <td>
+        {{bill.unitPrice}}
+      </td>
+      <td>
+        {{bill.quantity}}
+      </td>
+      <td>
+        {{bill.tva}}
+      </td>
+      <td>
+        {{bill.paidStatus.name}}
+      </td>
+      <td>
+        {{bill.flatBlock.name}}
+      </td>
 
-      </tr>
-    </table>
-  </div>
+      <!-- <button *ngIf="bill.id" (click)="updateBillById()" class="btn btn-light">Update Bill</button> -->
+      <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
+
+    </tr>
+  </table>
+</div>

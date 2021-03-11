@@ -28,7 +28,7 @@ export class BillsService {
     }
 
     deleteBillById(id:number){
-      return this.http.delete('/server/bills/'+id);
+      this.http.delete('/server/bills/'+id).subscribe();
     }
     updateBillById(id:number,bills:any){
       return this.http.put('/server/bills/'+id,bills).subscribe();

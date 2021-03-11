@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private billsService:BillsService,
               private statusService:StatusService,
-              private deliveryTypeService:DeliveryTypeService,
               private providerService:ProviderService,
               private materialService:MaterialService,
               private flatBlockService:FlatblockService) {
@@ -36,7 +35,6 @@ export class HomeComponent implements OnInit {
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
     this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
-    // this.deliveryTypeService.getDeliverysType().subscribe(deliveryTypes=>this.deliveryTypeList = deliveryTypes);
 
    }
 
@@ -49,8 +47,7 @@ export class HomeComponent implements OnInit {
        invoiceDate: new FormControl('',Validators.required),
        unitPrice: new FormControl('',Validators.required),
        quantity:new FormControl('',Validators.required),
-       TVA:new FormControl('',Validators.required),
-       total:new FormControl('',Validators.required),
+       tva:new FormControl('',Validators.required),
        paidStatus: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
     });

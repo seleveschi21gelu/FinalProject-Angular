@@ -27,12 +27,7 @@ public bills: any;
   }
 
   deleteBillById(id:number){
-    this.BillsService.deleteBillById(id).subscribe(
-      data=>{this.bills=data},
-  err=>console.error(err),
-  ()=>console.log('bill removed')
-
-    );
+    this.BillsService.deleteBillById(id);
   }
   // updateBillById(id:number,bills:any){
   //   this.BillsService.updateBillById(id,bills).subscribe(
@@ -43,7 +38,7 @@ public bills: any;
   //     ()=>console.log('bill updated')
   //   );
   // }
-  
+
   updateBillById(){
     if(this.bills.id) this.BillsService.updateBillById(this.bills.id,this.bills)
   }
