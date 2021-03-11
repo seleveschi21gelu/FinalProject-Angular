@@ -1,6 +1,6 @@
 import { BillsService } from './../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -10,11 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 public bills: any;
-  constructor(private BillsService:BillsService, private route: ActivatedRoute) { }
+  constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getBills();
-    this.deleteBillById(this.route.snapshot.params.id);
+    //this.deleteBillById(this.route.snapshot.params.id);
     // this.updateBillById();
   }
 
@@ -27,7 +27,14 @@ public bills: any;
   }
 
   deleteBillById(id:number){
-    this.BillsService.deleteBillById(id);
+    this.BillsService.deleteBillById(id).
+    subscribe(
+      (data) =>{
+        console.log(data);
+        this.ngOnInit();
+      })
+    //this.router.navigate(["/server/admin"]);
+    //this.router.navigateByUrl('/RefreshCompoment',{skipLocationChange});
   }
   // updateBillById(id:number,bills:any){
   //   this.BillsService.updateBillById(id,bills).subscribe(
