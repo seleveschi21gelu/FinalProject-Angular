@@ -26,12 +26,23 @@ import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { NavbarComponent } from './navbar/navbar.component';
+<<<<<<< HEAD
 import { UpdateComponent } from './components/update/update.component';
+=======
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './services/http-interceptor.service';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { PageerrorComponent } from './components/pageerror/pageerror.component';
+
+>>>>>>> b2e5c71e4e6d9d4880169bfe3e35d100b53cdd04
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    PageerrorComponent,
     AdminComponent,
     HomeComponent,
     ViewRegistrationComponent,
@@ -51,10 +62,22 @@ import { UpdateComponent } from './components/update/update.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     FormsModule
+=======
+    FormsModule,
+    ReactiveFormsModule,
+
+>>>>>>> b2e5c71e4e6d9d4880169bfe3e35d100b53cdd04
   ],
-  providers: [BillsService, StatusService, ProviderService, MaterialService, FlatblockService, DeliveryTypeService,ConstructiontypeService],
+  providers: [AuthService, BillsService, StatusService,
+              {provide:HTTP_INTERCEPTORS,
+                useClass:HttpInterceptorService,
+                multi:true},
+              ProviderService, MaterialService,
+              FlatblockService, DeliveryTypeService,
+              ConstructiontypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
