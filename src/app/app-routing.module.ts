@@ -1,3 +1,4 @@
+import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
 import { UpdateComponent } from './components/update/update.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
@@ -6,7 +7,6 @@ import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view
 import { ViewMaterialComponent } from './views/view-material/view-material.component';
 import { ViewProviderComponent } from './views/view-provider/view-provider.component';
 import { ViewRegistrationFlatblockComponent } from './views/view-registration-flatblock/view-registration-flatblock.component';
-import { MaterialService } from './services/material.service';
 import { ProviderComponent } from './components/provider/provider.component';
 import { FlatblockComponent } from './components/flatblock/flatblock.component';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
@@ -19,64 +19,11 @@ import { LoginComponent } from './components/login/login.component';
 import { PageerrorComponent } from './components/pageerror/pageerror.component';
 import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.component';
+import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
 
 
 const routes: Routes = [
-<<<<<<< HEAD
-{
-  path:'',
-  component:HomeComponent
-},
-{
-  path:'admin/view/:id',
-  component: ViewRegistrationComponent
-},
-{
-  path:'flatblock',
-  component:FlatblockComponent
-},
-{
-  path:'provider',
-  component:ProviderComponent
-},
-{
-  path:'material',
-  component:MaterialComponent
-},
-{
-  path:'admin/view-flatblock/:id',
-  component:ViewFlatblockByIdComponent
-},
-{
-  path:'admin/view-flatblock',
-  component:ViewRegistrationFlatblockComponent
-},
-{
-  path:'admin/view-provider/:id',
-  component:ViewProviderByIdComponent
-},
-{
-  path:'admin/view-provider',
-  component:ViewProviderComponent
-},
-{
-  path:'admin/view-material/:id',
-  component:ViewMatertialByIdComponent
-},
-{
-  path:'admin/view-material',
-  component:ViewMaterialComponent
-},
-{
-path:'admin/update/:id',
-component:UpdateComponent
-},
-{path:'admin',
-component:AdminComponent
-}
-
-
-=======
   {
     path:'home',
     component:HomeComponent,
@@ -117,9 +64,15 @@ component:AdminComponent
     component:ViewProviderByIdComponent,
     canActivate: [AuthService]
   },
+  
   {
-    path:'admin/view-provider',
-    component:ViewProviderComponent,
+    path:'fiscalbill',
+    component:FiscalBillComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'fiscalbill/view',
+    component:FiscalBillViewComponent,
     canActivate: [AuthService]
   },
   {
@@ -127,6 +80,17 @@ component:AdminComponent
     component:ViewMatertialByIdComponent,
     canActivate: [AuthService]
   },
+  {
+    path:'fiscalbill/view/:id',
+    component:ViewFiscalBillByIdComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'admin/view-provider',
+    component:ViewProviderComponent,
+    canActivate: [AuthService]
+  },
+  
   {
     path:'admin/view-material',
     component:ViewMaterialComponent,
@@ -146,7 +110,7 @@ component:AdminComponent
     component:PageerrorComponent,
     canActivate: [AuthService]
   }
->>>>>>> b2e5c71e4e6d9d4880169bfe3e35d100b53cdd04
+  
 
 ];
 

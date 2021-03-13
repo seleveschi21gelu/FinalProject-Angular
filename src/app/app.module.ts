@@ -1,3 +1,4 @@
+import { FiscalBillService } from './services/fiscal-bill.service';
 import { ConstructiontypeService } from './services/constructiontype.service';
 import { DeliveryTypeService } from './delivery-type.service';
 import { FlatblockService } from './services/flatblock.service';
@@ -26,16 +27,16 @@ import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { NavbarComponent } from './navbar/navbar.component';
-<<<<<<< HEAD
-import { UpdateComponent } from './components/update/update.component';
-=======
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { PageerrorComponent } from './components/pageerror/pageerror.component';
+import { UpdateComponent } from './components/update/update.component';
+import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.component';
+import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
+import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
 
->>>>>>> b2e5c71e4e6d9d4880169bfe3e35d100b53cdd04
 
 
 @NgModule({
@@ -56,20 +57,23 @@ import { PageerrorComponent } from './components/pageerror/pageerror.component';
     ViewProviderByIdComponent,
     ViewMatertialByIdComponent,
     NavbarComponent,
-    UpdateComponent
+    UpdateComponent,
+    FiscalBillComponent,
+    FiscalBillViewComponent,
+    ViewFiscalBillByIdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-<<<<<<< HEAD
+
     ReactiveFormsModule,
-    FormsModule
-=======
+    FormsModule,
+
     FormsModule,
     ReactiveFormsModule,
 
->>>>>>> b2e5c71e4e6d9d4880169bfe3e35d100b53cdd04
+
   ],
   providers: [AuthService, BillsService, StatusService,
               {provide:HTTP_INTERCEPTORS,
@@ -77,7 +81,7 @@ import { PageerrorComponent } from './components/pageerror/pageerror.component';
                 multi:true},
               ProviderService, MaterialService,
               FlatblockService, DeliveryTypeService,
-              ConstructiontypeService],
+              ConstructiontypeService,FiscalBillService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

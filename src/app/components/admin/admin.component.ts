@@ -33,16 +33,12 @@ public bills: any;
         console.log(data);
         this.ngOnInit();
       })
-    //this.router.navigate(["/server/admin"]);
-    //this.router.navigateByUrl('/RefreshCompoment',{skipLocationChange});
+   
   }
   updateBillById(id:number,bills:any){
     this.BillsService.updateBillById(id,bills);
   
   }
 
-  // updateBillByIdd(){
-  //   if(this.bills.id) this.BillsService.updateBillById(this.bills.id,this.bills)
-  // }
-
+  
 }

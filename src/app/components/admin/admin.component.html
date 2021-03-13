@@ -44,7 +44,7 @@
         {{bill.flatBlock.name}}
       </td>
 
-      <button [routerLink]="['/admin/update/',bill.id]" class="btn btn-light">Update Bill</button>
+      <!-- <button [routerLink]="['/admin/update/',bill.id]" class="btn btn-light">Update Bill</button> -->
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
 
     </tr>

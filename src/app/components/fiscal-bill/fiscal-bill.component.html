@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <style>
+        body {
+
+        background-size: cover;
+        background-position: center;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  class="container">
+
+        <form [formGroup]="fiscalBillForm" (ngSubmit)="submitRegistration()" novalidate>
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
+          <div class="form-group">
+            <label>Provider</label>
+            <input type="text" class="form-control" formControlName="provider" required/>
+          </div>
+
+          <div class="form-group">
+            <label>C.I.F</label>
+            <input type="text" class="form-control" formControlName="cif" required/>
+          </div>
+
+          <div class="form-group">
+            <label>Social Capital</label>
+            <input type="number" class="form-control" formControlName="socialCapital" required/>
+          </div>
+
+          <div class="form-group">
+            <label>Headquarters</label>
+            <input type="text" class="form-control" formControlName="headquarters" required/>
+          </div>
+          
+          <div class="form-group">
+            <label>County</label>
+            <input type="text" class="form-control" formControlName="county" required/>
+          </div>
+
+          <div class="form-group">
+            <label>Bank</label>
+            <input type="text" class="form-control" formControlName="bank" required/>
+          </div>
+
+          <button type="submit" class="btn btn-dark" >Submit</button>
+        </form>
+      </div>
+    </body>
+    </html>
