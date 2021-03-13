@@ -1,6 +1,8 @@
+import { Edit } from './edit';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
+
 
 const httpOptions ={
   headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -34,4 +36,8 @@ export class BillsService {
     updateBillById(id:number,bills:any){
       return this.http.put('/server/bills/'+id,bills).subscribe();
     }
+
+    // put(edit:Edit,id:number):Observable<any>{
+    //   return this.http.put('server/bills/'+id,edit)
+    // }
 }

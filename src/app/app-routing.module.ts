@@ -1,3 +1,4 @@
+import { UpdateComponent } from './components/update/update.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
@@ -60,6 +61,10 @@ const routes: Routes = [
 {
   path:'admin/view-material',
   component:ViewMaterialComponent
+},
+{
+path:'admin/update/:id',
+component:UpdateComponent
 },
 {path:'admin',
 component:AdminComponent

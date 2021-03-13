@@ -8,7 +8,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { BillsService } from './services/bills.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{ReactiveFormsModule} from '@angular/forms'
+import{FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UpdateComponent } from './components/update/update.component';
 
 
 @NgModule({
@@ -43,13 +44,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     ViewFlatblockByIdComponent,
     ViewProviderByIdComponent,
     ViewMatertialByIdComponent,
-    NavbarComponent
+    NavbarComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [BillsService, StatusService, ProviderService, MaterialService, FlatblockService, DeliveryTypeService,ConstructiontypeService],
   bootstrap: [AppComponent]

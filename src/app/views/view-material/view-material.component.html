@@ -18,7 +18,7 @@
         <td>
             {{material.deliveryType.name}}
           </td>
-          <button *ngIf="material.id" (click)="deleteMaterialById(material.id)" class="btn btn-light">Delete material</button>
+          <button *ngIf="material" (click)="deleteMaterialById(material.id)" class="btn btn-light">Delete material</button>
       </tr>
     </table>
   </div>

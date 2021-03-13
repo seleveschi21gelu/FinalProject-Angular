@@ -14,7 +14,7 @@ export class ViewMaterialComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMaterial();
-    this.deleteMaterialById(this.route.snapshot.params.id);
+    // this.deleteMaterialById(this.route.snapshot.params.id);
   }
 
   getMaterial(){
@@ -29,16 +29,27 @@ export class ViewMaterialComponent implements OnInit {
   }
 
   
-  deleteMaterialById(id:number){
-    this.materialService.deleteMaterialById(id).subscribe(
-      data=>{
-        this.material=data
-      },
-      err=>console.error(err),
-      ()=>console.log('material deleted')
-    );
+  // deleteMaterialById(id:number){
+  //   this.materialService.deleteMaterialById(id).subscribe(
+  //     data=>{
+  //       this.material=data
+  //     },
+  //     err=>console.error(err),
+  //     ()=>console.log('material deleted')
+  //   );
 
+  // }
+  deleteMaterialById(id:number){
+    this.materialService.deleteMaterialById(id).
+    subscribe(
+      (data) =>{
+        console.log(data);
+        this.ngOnInit();
+      })
+   
   }
+
+  
   
 
 }

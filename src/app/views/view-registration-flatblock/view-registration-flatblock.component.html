@@ -22,7 +22,7 @@
         <td>
             {{flatblock.constructionType.name}}
           </td>
-          <button *ngIf="flatblock.id" (click)="deleteFlatblockById(flatblock.id)" class="btn btn-light">Delete Flatblock</button>
+          <button *ngIf="flatblock" (click)="deleteFlatblockById(flatblock.id)" class="btn btn-light">Delete Flatblock</button>
         
       </tr>
     </table>

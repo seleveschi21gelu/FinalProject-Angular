@@ -27,12 +27,13 @@ export class ViewProviderComponent implements OnInit {
 }
 
 deleteProviderById(id:number){
-  this.providerService.deleteProviderById(id).subscribe(
-    data=>{this.provider=data;},
-    err=>console.error(err),
-   ()=> console.log('Provider deleted')
-  
-  );
+  this.providerService.deleteProviderById(id).
+  subscribe(
+    (data) =>{
+      console.log(data);
+      this.ngOnInit();
+    })
+ 
 }
 
 }

@@ -29,13 +29,14 @@ this.flatblockService.getFlatBlocks().subscribe(
 }
 
 deleteFlatblockById(id:number){
-  this.flatblockService.deleteFlatBlock(id).subscribe(
-    data=>{this.flatblockRegistration =data;
-    },
-    err=>console.error(err),
-    ()=>console.log('flatblock deleted')
-  );
-  }
+  this.flatblockService.deleteFlatBlock(id).
+  subscribe(
+    (data) =>{
+      console.log(data);
+      this.ngOnInit();
+    })
+ 
+}
 
 
 

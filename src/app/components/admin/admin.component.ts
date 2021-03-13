@@ -36,18 +36,13 @@ public bills: any;
     //this.router.navigate(["/server/admin"]);
     //this.router.navigateByUrl('/RefreshCompoment',{skipLocationChange});
   }
-  // updateBillById(id:number,bills:any){
-  //   this.BillsService.updateBillById(id,bills).subscribe(
-  //     data=>{
-  //       this.bills=data
-  //     },
-  //     err=>console.error(err),
-  //     ()=>console.log('bill updated')
-  //   );
-  // }
-
-  updateBillById(){
-    if(this.bills.id) this.BillsService.updateBillById(this.bills.id,this.bills)
+  updateBillById(id:number,bills:any){
+    this.BillsService.updateBillById(id,bills);
+  
   }
+
+  // updateBillByIdd(){
+  //   if(this.bills.id) this.BillsService.updateBillById(this.bills.id,this.bills)
+  // }
 
 }

@@ -29,7 +29,7 @@ export class MaterialService {
  }
 
  deleteMaterialById(id:number){
-   return this.http.delete('/server/material/'+id)
+   return this.http.delete('/server/material/'+id);
  }
 
 }
