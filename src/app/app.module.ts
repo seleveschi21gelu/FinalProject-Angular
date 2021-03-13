@@ -8,7 +8,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { BillsService } from './services/bills.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import{ReactiveFormsModule} from '@angular/forms'
+import{FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,11 +26,19 @@ import { ViewFlatblockByIdComponent } from './viewById/view-flatblock-by-id/view
 import { ViewProviderByIdComponent } from './viewById/view-provider-by-id/view-provider-by-id.component';
 import { ViewMatertialByIdComponent } from './viewById/view-matertial-by-id/view-matertial-by-id.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './services/http-interceptor.service';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { PageerrorComponent } from './components/pageerror/pageerror.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    PageerrorComponent,
     AdminComponent,
     HomeComponent,
     ViewRegistrationComponent,
@@ -49,9 +57,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
-  providers: [BillsService, StatusService, ProviderService, MaterialService, FlatblockService, DeliveryTypeService,ConstructiontypeService],
+  providers: [AuthService, BillsService, StatusService,
+              {provide:HTTP_INTERCEPTORS,
+                useClass:HttpInterceptorService,
+                multi:true},
+              ProviderService, MaterialService,
+              FlatblockService, DeliveryTypeService,
+              ConstructiontypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
