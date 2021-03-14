@@ -9,7 +9,7 @@
         <!-- <th class="text-right"></th> -->
       </tr>
       <tr *ngFor="let material of material">
-        <td [routerLink] = "['/admin/view-material/', material.id]" class="pointer">
+        <td [routerLink] = "['/material/view/', material.id]" class="pointer">
             {{material.id}}
           </td>
         <td class="text-right">

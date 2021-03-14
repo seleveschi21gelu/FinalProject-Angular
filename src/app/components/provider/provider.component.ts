@@ -21,9 +21,17 @@ export class ProviderComponent implements OnInit {
   ngOnInit(): void {
     this.providerForm=new FormGroup({
       name:new FormControl('',Validators.required),
-      description:new FormControl('',Validators.required)
-
+      description:new FormControl('',Validators.required),
+      cif: new FormControl('',Validators.required),
+      country : new FormControl('',Validators.required),
+      bank : new FormControl('',Validators.required),
+      iban : new FormControl('',Validators.required),
+      telephone:  new FormControl('',Validators.required),
+      address: new FormControl('',Validators.required),
+      email: new FormControl('',Validators.required)
     });
+
+    
   }
   submitRegistration(){
     if(this.providerForm?.valid){

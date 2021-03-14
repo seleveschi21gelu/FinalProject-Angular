@@ -1,10 +1,10 @@
 import { Edit } from '../models/edit';
-import { FlatblockService } from './../../services/flatblock.service';
-import { MaterialService } from './../../services/material.service';
-import { ProviderService } from './../../services/provider.service';
+import { FlatblockService } from '../../services/flatblock.service';
+import { MaterialService } from '../../services/material.service';
+import { ProviderService } from '../../services/provider.service';
 import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { Observable, throwError } from 'rxjs';
-import { BillsService } from './../../services/bills.service';
+import { BillsService } from '../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClientService } from 'src/app/services/client.service';

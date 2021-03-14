@@ -16,9 +16,9 @@ import { ViewProviderComponent } from './views/view-provider/view-provider.compo
 import { ViewRegistrationFlatblockComponent } from './views/view-registration-flatblock/view-registration-flatblock.component';
 import { ProviderComponent } from './components/provider/provider.component';
 import { FlatblockComponent } from './components/flatblock/flatblock.component';
-import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
-import { HomeComponent } from './components/home/home.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { ViewRegistrationComponent } from './components/view-invoicesByID/view-registration.component';
+import { HomeComponent } from './components/bills-register/home.component';
+import { AdminComponent } from './components/bills-view/admin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialComponent } from './components/material/material.component';
@@ -42,11 +42,11 @@ const routes: Routes = [
     component:HomeComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'bills/:id',
-    component: HomeComponent,
-    canActivate: [AuthService]
-  },
+  // {
+  //   path:'bills/:id',
+  //   component: HomeComponent,
+  //   canActivate: [AuthService]
+  // },
   {
     path:'flatblock',
     component:FlatblockComponent,
@@ -68,7 +68,7 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'deliveryTypes',
+    path:'deliveryType/view',
     component: DeliveryTypeViewComponent,
     canActivate: [AuthService]
   },
@@ -82,7 +82,7 @@ const routes: Routes = [
     component: UpdateComponent,
     canActivate:[AuthService]
   },
-  {path:'admin/clientView/:id',
+  {path:'client/view/:id',
   component:ClientViewByIdComponent,
   canActivate:[AuthService]
 },
@@ -91,17 +91,17 @@ const routes: Routes = [
   canActivate:[AuthService]
 },
   {
-    path:'admin/view-flatblock/:id',
+    path:'flatblock/view/:id',
     component:ViewFlatblockByIdComponent,
     canActivate: [AuthService]
   },
   {
-    path:'admin/view-flatblock',
+    path:'flatblock/view',
     component:ViewRegistrationFlatblockComponent,
     canActivate: [AuthService]
   },
   {
-    path:'admin/view-provider/:id',
+    path:'provider/view/:id',
     component:ViewProviderByIdComponent,
     canActivate: [AuthService]
   },
@@ -117,7 +117,7 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'admin/view-material/:id',
+    path:'material/view/:id',
     component:ViewMatertialByIdComponent,
     canActivate: [AuthService]
   },
@@ -127,13 +127,13 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'admin/view-provider',
+    path:'provider/view',
     component:ViewProviderComponent,
     canActivate: [AuthService]
   },
 
   {
-    path:'admin/view-material',
+    path:'material/view',
     component:ViewMaterialComponent,
     canActivate: [AuthService]
   },
@@ -143,7 +143,7 @@ const routes: Routes = [
   canActivate: [AuthService]
   },
   {
-    path:'admin/clientView',
+    path:'client/view',
     component:ClientViewComponent,
     canActivate: [AuthService]
 

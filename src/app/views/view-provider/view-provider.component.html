@@ -1,24 +1,52 @@
 <div class="container">
-  <p> <a class="btn btn-light" routerLink="/provider">Register a provider</a></p>
-    <table class="table table-bordered table-inverse">
-      <tr>
-          <th>ID</th>
-        <th>Provider Name</th>
-        <th>Description</th>
-        
-        <!-- <th class="text-right"></th> -->
-      </tr>
-      <tr *ngFor="let provider of provider">
-        <td [routerLink] = "['/admin/view-provider/', provider.id]" class="pointer">
-            {{provider.id}}
-          </td>
-        <td class="text-right">
-          {{provider.name}}
-        </td>
-        <td>
-            {{provider.description}}
-          </td>
-          <button *ngIf="provider" (click)="deleteProviderById(provider.id)" class="btn btn-light" [routerLink] = "'/admin/view-provider'" class="pointer">Delete provider</button>
-      </tr>
-    </table>
-  </div>
+  <p><a class="btn btn-light" routerLink="/provider" >Register a new provider</a></p>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>ID</th>
+      <th>Provider Name</th>
+      <th>C.I.F</th>
+      <th>Address</th>
+      <th>Country</th>
+      <th>Telephone</th>
+      <th>IBAN</th>
+      <th>Bank</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let provider of provider">
+      <td [routerLink]="['/provider/view/', provider.id]" class="pointer">
+        {{provider.id}}</td>
+      <td class="text-right">
+        {{provider.name}}
+      </td>
+      <td>
+        {{provider.cif}}
+      </td>
+      <td>
+        {{provider.description}}
+      </td>
+      <td>
+        {{provider.address}}
+      </td>
+      <td>
+        {{provider.country}}
+      </td>
+      <td>
+        {{provider.telephone}}
+      </td>
+      <td>
+        {{provider.iban}}
+      </td>
+      <td>
+        {{provider.bank}}
+      </td>
+      <td>
+        {{provider.email}}
+      </td>
+
+      <!-- <button [routerLink]="['/admin/update/',fiscal.id]" class="btn btn-light">Update Bill</button> -->
+      <button *ngIf="provider" (click)="deleteProviderById(provider.id)" class="btn btn-light">Delete Bill</button>
+
+    </tr>
+  </table>
+</div>
+

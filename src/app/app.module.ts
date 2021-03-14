@@ -5,7 +5,7 @@ import { DeliveryTypeService } from './services/delivery-type.service';
 import { FlatblockService } from './services/flatblock.service';
 import { MaterialService } from './services/material.service';
 import { ProviderService } from './services/provider.service';
-import { AdminComponent } from './components/admin/admin.component';
+import { AdminComponent } from './components/bills-view/admin.component';
 import { BillsService } from './services/bills.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,9 +14,9 @@ import{FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{HttpClientModule} from '@angular/common/http';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/bills-register/home.component'
 import { formatCurrency } from '@angular/common';
-import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { ViewRegistrationComponent } from './components/view-invoicesByID/view-registration.component';
 import { FlatblockComponent } from './components/flatblock/flatblock.component';
 import { ProviderComponent } from './components/provider/provider.component';
 import { MaterialComponent } from './components/material/material.component';

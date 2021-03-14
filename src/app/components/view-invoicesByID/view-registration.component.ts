@@ -1,4 +1,4 @@
-import { BillsService } from './../../services/bills.service';
+import { BillsService } from '../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute}from '@angular/router'
 
