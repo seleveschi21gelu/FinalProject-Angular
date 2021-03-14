@@ -1,0 +1,42 @@
+<div class="container">
+    <p><a class="btn btn-light" routerLink="/fiscalbill">Register a new fiscal invoice</a></p>
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>ID</th>
+        <th>Client name</th>
+        <th>C.I.F</th>
+        <th>County</th>
+        <th>Telephone</th>
+        <th>Address</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let client of client">
+        <td [routerLink]="['/fiscalbill/view/', client.id]" class="pointer">
+          {{client.id}}</td>
+        <td class="text-right">
+          {{client.name}}
+        </td>
+        <td>
+          {{client.cif}}
+        </td>
+        <td>
+          {{client.county}}
+        </td>
+        <td>
+          {{client.telephone}}
+        </td>
+        <td>
+          {{client.address}}
+        </td>
+        <td>
+          {{client.email}}
+        </td>
+  
+        <!-- <button [routerLink]="['/admin/update/',fiscal.id]" class="btn btn-light">Update Bill</button> -->
+        <button *ngIf="client" (click)="deleteClientById(client.id)" class="btn btn-light">Delete</button>
+  
+      </tr>
+    </table>
+  </div>
+
+

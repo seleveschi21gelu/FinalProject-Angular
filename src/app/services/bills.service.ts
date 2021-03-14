@@ -36,6 +36,9 @@ export class BillsService {
     updateBillById(id:number,bills:any){
       return this.http.put('/server/bills/'+id,bills).subscribe();
     }
+    
+
+    
 
     // put(edit:Edit,id:number):Observable<any>{
     //   return this.http.put('server/bills/'+id,edit)

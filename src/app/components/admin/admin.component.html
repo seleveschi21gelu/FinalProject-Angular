@@ -10,6 +10,8 @@
       <th>Unit Price</th>
       <th>Quantity</th>
       <th>TVA %</th>
+      <th>Total W/O TVA</th>
+      <th>Total with TVA</th>
       <th>Paid Status</th>
       <th>Flat Block</th>
     </tr>
@@ -36,6 +38,12 @@
       </td>
       <td>
         {{bill.tva}}
+      </td>
+      <td>
+        {{bill.getTotalWithoutTva()}}
+      </td>
+      <td>
+        {{bill.getTotalWithTva()}}
       </td>
       <td>
         {{bill.paidStatus.name}}

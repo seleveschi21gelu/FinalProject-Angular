@@ -7,6 +7,7 @@ import { Observable, throwError } from 'rxjs';
 import { BillsService } from './../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ClientService } from 'src/app/services/client.service';
 
 
 
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   providerList:any;
   materialList:any;
   flatBlockList:any;
+  clientList:any;
 
   billsform!: FormGroup;
   validMessage: string= "";
@@ -29,12 +31,15 @@ export class HomeComponent implements OnInit {
               private statusService:StatusService,
               private providerService:ProviderService,
               private materialService:MaterialService,
-              private flatBlockService:FlatblockService) {
+              private flatBlockService:FlatblockService,
+              private clientService:ClientService) {
 
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
     this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
+    this.clientService.getClients().subscribe(client => this.clientList =client);
+
 
    }
 
@@ -50,6 +55,7 @@ export class HomeComponent implements OnInit {
        tva:new FormControl('',Validators.required),
        paidStatus: new FormControl('',Validators.required),
        flatBlock:new FormControl('',Validators.required),
+       client: new FormControl('',Validators.required)
     });
 
   }

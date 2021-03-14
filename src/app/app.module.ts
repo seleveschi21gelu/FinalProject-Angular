@@ -1,3 +1,4 @@
+import { ClientService } from './services/client.service';
 import { FiscalBillService } from './services/fiscal-bill.service';
 import { ConstructiontypeService } from './services/constructiontype.service';
 import { DeliveryTypeService } from './delivery-type.service';
@@ -37,6 +38,7 @@ import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.compon
 import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
 import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
 import { ClientComponent } from './components/client/client.component';
+import { ClientViewComponent } from './views/client-view/client-view.component';
 
 
 
@@ -62,7 +64,8 @@ import { ClientComponent } from './components/client/client.component';
     FiscalBillComponent,
     FiscalBillViewComponent,
     ViewFiscalBillByIdComponent,
-    ClientComponent
+    ClientComponent,
+    ClientViewComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +86,7 @@ import { ClientComponent } from './components/client/client.component';
                 multi:true},
               ProviderService, MaterialService,
               FlatblockService, DeliveryTypeService,
-              ConstructiontypeService,FiscalBillService],
+              ConstructiontypeService,FiscalBillService,ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

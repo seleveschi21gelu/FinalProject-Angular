@@ -37,8 +37,9 @@ public bills: any;
   }
   updateBillById(id:number,bills:any){
     this.BillsService.updateBillById(id,bills);
-  
   }
+
+
 
   
 }

@@ -1,3 +1,5 @@
+import { ClientViewComponent } from './views/client-view/client-view.component';
+import { ClientComponent } from './components/client/client.component';
 import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
 import { UpdateComponent } from './components/update/update.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -95,6 +97,17 @@ const routes: Routes = [
     path:'admin/view-material',
     component:ViewMaterialComponent,
     canActivate: [AuthService]
+  },
+  {
+  path:'client',
+  component:ClientComponent,
+  canActivate: [AuthService]
+  },
+  {
+    path:'admin/clientView',
+    component:ClientViewComponent,
+    canActivate: [AuthService]
+
   },
   {path:'admin',
     component: AdminComponent,
