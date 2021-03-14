@@ -39,7 +39,4 @@ public bills: any;
     this.BillsService.updateBillById(id,bills);
   }
 
-
-
-
 }

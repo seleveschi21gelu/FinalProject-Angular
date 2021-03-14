@@ -31,4 +31,8 @@ export class DeliveryTypeService {
    updateDeliveryType(id:number, deliveryType: DeliveryType){
     return this.http.put('/server/bills/'+id,deliveryType).subscribe();
    }
+
+   getDeliveryTypeById(id:number){
+     return this.http.get<DeliveryType>('server/deliveryType/' + id);
+  }
 }

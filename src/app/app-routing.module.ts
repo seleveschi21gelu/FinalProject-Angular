@@ -73,6 +73,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
+    path:'deliveryType/:id',
+    component: DeliveryTypeComponent,
+    canActivate: [AuthService]
+  },
+  {
     path:'update',
     component: UpdateComponent,
     canActivate:[AuthService]
