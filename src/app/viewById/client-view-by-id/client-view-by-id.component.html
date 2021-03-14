@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <a class="btn btn=primary" routerLink="/admin/viewClient">Back to Invoice View Form</a>
+    </div>
+    <div *ngIf="clientRegistration">
+      <div class="form-group">
+        <label>ID</label>
+        <div class="form-control">{{clientRegistration.id}}</div>
+      </div>
+      <div class="form-group">
+        <label>Client Name</label>
+        <div class="form-control">{{clientRegistration.name}}</div>
+      </div>
+      <label>C.I.F</label>
+      <div class="form-control">{{clientRegistration.cif}}</div>
+    </div>
+
+    <div class="form-group">
+      <label>County</label>
+      <div class="form-control">{{clientRegistration.county}}</div>
+    </div>
+      
+      <div class="form-group">
+        <label>Telephone</label>
+        <div class="form-control">{{clientRegistration.telephone}}</div>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <div class="form-control">{{clientRegistration.address}}</div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <div class="form-control">{{clientRegistration.email}}</div>
+      </div>
+      
+    </div>
