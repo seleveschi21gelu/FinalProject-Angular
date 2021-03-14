@@ -1,3 +1,4 @@
+import { FirstPageComponent } from './components/first-page/first-page.component';
 import { AuthService } from 'src/app/services/auth.service';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { ClientViewComponent } from './views/client-view/client-view.component';
@@ -29,6 +30,11 @@ import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-vi
 const routes: Routes = [
   {
     path:'home',
+    component:FirstPageComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'bills',
     component:HomeComponent,
     canActivate: [AuthService]
   },
@@ -76,7 +82,7 @@ const routes: Routes = [
     component:ViewProviderByIdComponent,
     canActivate: [AuthService]
   },
-  
+
   {
     path:'fiscalbill',
     component:FiscalBillComponent,
@@ -102,7 +108,7 @@ const routes: Routes = [
     component:ViewProviderComponent,
     canActivate: [AuthService]
   },
-  
+
   {
     path:'admin/view-material',
     component:ViewMaterialComponent,
@@ -133,7 +139,7 @@ const routes: Routes = [
     component:PageerrorComponent,
     canActivate: [AuthService]
   }
-  
+
 
 ];
 

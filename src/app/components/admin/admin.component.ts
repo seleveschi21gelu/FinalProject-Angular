@@ -15,7 +15,7 @@ public bills: any;
   ngOnInit(): void {
     this.getBills();
     //this.deleteBillById(this.route.snapshot.params.id);
-    this.updateBillById(this.route.snapshot.params.id,this.bills);
+    // this.updateBillById(this.route.snapshot.params.id,this.bills);
   }
 
   getBills(){
@@ -33,7 +33,7 @@ public bills: any;
         console.log(data);
         this.ngOnInit();
       })
-   
+
   }
   updateBillById(id:number,bills:any){
     this.BillsService.updateBillById(id,bills);
@@ -41,5 +41,5 @@ public bills: any;
 
 
 
-  
+
 }

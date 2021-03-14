@@ -20,7 +20,7 @@
       <td [routerLink]="['/admin/view/', bill.id]" class="pointer">
         {{bill.id}}</td>
         <td>
-          {{bill.client}}
+          {{bill.client.name}}
         </td>
         <td>
           {{bill.provider.name}}
@@ -56,7 +56,8 @@
         {{bill.flatBlock.name}}
       </td>
 
-      <button [routerLink]="['/update']" (click)="updateBillById(bill.id,bill)" class="btn btn-light">Update Bill</button>
+      <!-- <button [routerLink]="['/update']" (click)="updateBillById(bill.id,bill)" class="btn btn-light">Update Bill</button> -->
+      <a class="navbar-brand" href="#">Invoice Form</a>
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
 
     </tr>
