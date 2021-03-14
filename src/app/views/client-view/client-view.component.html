@@ -1,5 +1,5 @@
 <div class="container">
-    <p><a class="btn btn-light" routerLink="/fiscalbill">Register a new fiscal invoice</a></p>
+    <p><a class="btn btn-light" routerLink="/client">Register a new client </a></p>
     <table class="table table-bordered table-inverse">
       <tr>
         <th>ID</th>
@@ -11,7 +11,7 @@
         <th>Email</th>
       </tr>
       <tr *ngFor="let client of client">
-        <td [routerLink]="['/fiscalbill/view/', client.id]" class="pointer">
+        <td [routerLink]="['/admin/clientView/', client.id]" class="pointer">
           {{client.id}}</td>
         <td class="text-right">
           {{client.name}}

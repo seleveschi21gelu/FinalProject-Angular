@@ -1,4 +1,5 @@
 import { FirstPageComponent } from './components/first-page/first-page.component';
+import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-view-by-id.component';
 import { AuthService } from 'src/app/services/auth.service';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { ClientViewComponent } from './views/client-view/client-view.component';
@@ -63,6 +64,10 @@ const routes: Routes = [
     component: UpdateComponent,
     canActivate:[AuthService]
   },
+  {path:'admin/clientView/:id',
+  component:ClientViewByIdComponent,
+  canActivate:[AuthService]
+},
   {path:'registerPage',
   component:RegisterPageComponent,
   canActivate:[AuthService]

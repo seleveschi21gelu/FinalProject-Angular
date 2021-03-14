@@ -41,6 +41,7 @@ import { ClientComponent } from './components/client/client.component';
 import { ClientViewComponent } from './views/client-view/client-view.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { FirstPageComponent } from './components/first-page/first-page.component';
+import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-view-by-id.component';
 
 
 
@@ -69,7 +70,8 @@ import { FirstPageComponent } from './components/first-page/first-page.component
     ClientComponent,
     ClientViewComponent,
     RegisterPageComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    ClientViewByIdComponent
   ],
   imports: [
     BrowserModule,

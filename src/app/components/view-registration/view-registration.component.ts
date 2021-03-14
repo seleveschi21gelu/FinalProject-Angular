@@ -11,10 +11,14 @@ import {ActivatedRoute}from '@angular/router'
 export class ViewRegistrationComponent implements OnInit {
 
   public billsRegistration:any;
+  readonly:boolean =false;
+
   constructor(private billsService:BillsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getBillsRegistration(this.route.snapshot.params.id);
+    if(this.route.snapshot.queryParams['id']){
+      this.getBillsRegistration(this.route.snapshot.params.id);
+    }
   }
 
 getBillsRegistration(id:number){
@@ -25,6 +29,8 @@ getBillsRegistration(id:number){
     ()=>console.log('bills loaded')
   );
 }
+
+
 
 
 }

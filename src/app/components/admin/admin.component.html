@@ -58,6 +58,8 @@
 
       <!-- <button [routerLink]="['/update']" (click)="updateBillById(bill.id,bill)" class="btn btn-light">Update Bill</button> -->
       <a class="navbar-brand" href="#">Invoice Form</a>
+
+      <button [routerLink]="['/admin/view/', bill.id]" class="btn btn-light">Update Bill</button>
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
 
     </tr>
