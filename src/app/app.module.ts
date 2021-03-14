@@ -40,6 +40,7 @@ import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/v
 import { ClientComponent } from './components/client/client.component';
 import { ClientViewComponent } from './views/client-view/client-view.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { FirstPageComponent } from './components/first-page/first-page.component';
 
 
 
@@ -67,7 +68,8 @@ import { RegisterPageComponent } from './components/register-page/register-page.
     ViewFiscalBillByIdComponent,
     ClientComponent,
     ClientViewComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    FirstPageComponent
   ],
   imports: [
     BrowserModule,
