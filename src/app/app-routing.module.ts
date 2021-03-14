@@ -52,6 +52,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
+    path:'update',
+    component: UpdateComponent,
+    canActivate:[AuthService]
+  },
+  {
     path:'admin/view-flatblock/:id',
     component:ViewFlatblockByIdComponent,
     canActivate: [AuthService]

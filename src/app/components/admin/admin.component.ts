@@ -15,7 +15,7 @@ public bills: any;
   ngOnInit(): void {
     this.getBills();
     //this.deleteBillById(this.route.snapshot.params.id);
-    // this.updateBillById();
+    this.updateBillById(this.route.snapshot.params.id,this.bills);
   }
 
   getBills(){
