@@ -3,9 +3,10 @@
   <table class="table table-bordered table-inverse">
     <tr>
       <th>ID</th>
-      <th>Invoice Number</th>
-      <th>Material</th>
+      <th>Client name</th>
       <th>Provider</th>
+      <th>Invoice number</th>
+      <th>Material</th>
       <th>InvoiceDate</th>
       <th>Unit Price</th>
       <th>Quantity</th>
@@ -18,14 +19,17 @@
     <tr *ngFor="let bill of bills">
       <td [routerLink]="['/admin/view/', bill.id]" class="pointer">
         {{bill.id}}</td>
+        <td>
+          {{bill.client}}
+        </td>
+        <td>
+          {{bill.provider.name}}
+        </td>
       <td class="text-right">
         {{bill.invoiceNumber}}
       </td>
       <td>
         {{bill.material.name}}
-      </td>
-      <td>
-        {{bill.provider.name}}
       </td>
       <td>
         {{bill.invoiceDate}}
@@ -40,10 +44,10 @@
         {{bill.tva}}
       </td>
       <td>
-        {{bill.getTotalWithoutTva()}}
+        {{bill.totalWithoutTva}}
       </td>
       <td>
-        {{bill.getTotalWithTva()}}
+        {{bill.totalWithTva}}
       </td>
       <td>
         {{bill.paidStatus.name}}
