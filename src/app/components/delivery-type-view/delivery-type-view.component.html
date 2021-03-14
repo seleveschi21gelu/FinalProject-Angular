@@ -1,0 +1,20 @@
+<div class="container">
+    <p><a class="btn btn-light" routerLink="/">Register a new Delivery Type</a></p>
+    <table class="table table-bordered table-inverse" *ngIf="deliveryTypes">
+      <tr>
+        <th>ID</th>
+        <th>Delivery Type name</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let deliveryType of deliveryTypes">
+        <td [routerLink]="['/deliveryType/', deliveryType.id]" class="pointer">
+          {{deliveryType.id}}</td>
+          <td>{{deliveryType.name}}</td>
+
+          <td>
+            <button [routerLink]="['/deliveryType/', deliveryType.id]" class="btn btn-light">Update DeliveryType</button>
+            <button *ngIf="deliveryType" (click)="deleteDeliveryTypeById(deliveryType.id)" class="btn btn-light">Delete DeliveryType</button>
+        </td>
+      </tr>
+    </table>
+  </div>

@@ -1,13 +1,15 @@
+import { Edit } from '../models/edit';
 import { FlatblockService } from './../../services/flatblock.service';
 import { MaterialService } from './../../services/material.service';
 import { ProviderService } from './../../services/provider.service';
-import { DeliveryTypeService } from './../../delivery-type.service';
-import { StatusService } from './../../status.service';
+import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { Observable, throwError } from 'rxjs';
 import { BillsService } from './../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClientService } from 'src/app/services/client.service';
+import { ActivatedRoute } from '@angular/router';
+import { StatusService } from 'src/app/services/status.service';
 
 
 
@@ -23,16 +25,18 @@ export class HomeComponent implements OnInit {
   materialList:any;
   flatBlockList:any;
   clientList:any;
-
+  public billsRegistration:any;
   billsform!: FormGroup;
   validMessage: string= "";
+  readonly:boolean =false;
 
   constructor(private billsService:BillsService,
               private statusService:StatusService,
               private providerService:ProviderService,
               private materialService:MaterialService,
               private flatBlockService:FlatblockService,
-              private clientService:ClientService) {
+              private clientService:ClientService,
+              private route: ActivatedRoute) {
 
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
@@ -58,6 +62,12 @@ export class HomeComponent implements OnInit {
        client: new FormControl('',Validators.required)
     });
 
+    if(this.route.snapshot.queryParams['id']){
+      this.getBillsRegistration(this.route.snapshot.params.id);
+    } else {
+      this.billsRegistration = new Edit();
+    }
+
   }
   submitRegistration(){
     if(this.billsform?.valid){
@@ -76,4 +86,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  getBillsRegistration(id:number){
+    this.billsService.getBill(id).subscribe(
+      data=>{this.billsRegistration = data;
+      },
+      err=>console.error(err),
+      ()=>console.log('bills loaded')
+    );
+  }
 }

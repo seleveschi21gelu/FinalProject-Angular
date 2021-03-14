@@ -1,11 +1,11 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { BillsService } from './../../services/bills.service';
 import { Component, OnInit } from '@angular/core';
-import { StatusService } from 'src/app/status.service';
 import { ProviderService } from 'src/app/services/provider.service';
 import { MaterialService } from 'src/app/services/material.service';
 import { FlatblockService } from 'src/app/services/flatblock.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { StatusService } from 'src/app/services/status.service';
 
 @Component({
   selector: 'app-update',
@@ -27,8 +27,8 @@ export class UpdateComponent implements OnInit {
     private statusService:StatusService,
     private providerService:ProviderService,
     private materialService:MaterialService,
-    private flatBlockService:FlatblockService) { 
-    
+    private flatBlockService:FlatblockService) {
+
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
@@ -58,7 +58,7 @@ export class UpdateComponent implements OnInit {
     console.log(id);
   }
 
- 
+
 
 
 

@@ -17,7 +17,7 @@
       <th>Flat Block</th>
     </tr>
     <tr *ngFor="let bill of bills">
-      <td [routerLink]="['/admin/view/', bill.id]" class="pointer">
+      <td [routerLink]="['/bills/', bill.id]" class="pointer">
         {{bill.id}}</td>
         <td>
           {{bill.client.name}}
@@ -59,7 +59,7 @@
       <!-- <button [routerLink]="['/update']" (click)="updateBillById(bill.id,bill)" class="btn btn-light">Update Bill</button> -->
       <a class="navbar-brand" href="#">Invoice Form</a>
 
-      <button [routerLink]="['/admin/view/', bill.id]" class="btn btn-light">Update Bill</button>
+      <button [routerLink]="['/bills/', bill.id]" class="btn btn-light">Update Bill</button>
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
 
     </tr>

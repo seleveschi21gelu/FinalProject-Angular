@@ -1,11 +1,10 @@
 import { ClientService } from './services/client.service';
 import { FiscalBillService } from './services/fiscal-bill.service';
 import { ConstructiontypeService } from './services/constructiontype.service';
-import { DeliveryTypeService } from './delivery-type.service';
+import { DeliveryTypeService } from './services/delivery-type.service';
 import { FlatblockService } from './services/flatblock.service';
 import { MaterialService } from './services/material.service';
 import { ProviderService } from './services/provider.service';
-import { StatusService } from './status.service';
 import { AdminComponent } from './components/admin/admin.component';
 import { BillsService } from './services/bills.service';
 import { NgModule } from '@angular/core';
@@ -42,6 +41,9 @@ import { ClientViewComponent } from './views/client-view/client-view.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { FirstPageComponent } from './components/first-page/first-page.component';
 import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-view-by-id.component';
+import { StatusService } from './services/status.service';
+import { DeliveryTypeViewComponent } from './components/delivery-type-view/delivery-type-view.component';
+import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.component';
 
 
 
@@ -49,10 +51,12 @@ import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-vie
   declarations: [
     AppComponent,
     LoginComponent,
+    DeliveryTypeViewComponent,
     PageerrorComponent,
     AdminComponent,
     HomeComponent,
     ViewRegistrationComponent,
+    DeliveryTypeComponent,
     FlatblockComponent,
     ProviderComponent,
     MaterialComponent,
@@ -71,7 +75,9 @@ import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-vie
     ClientViewComponent,
     RegisterPageComponent,
     FirstPageComponent,
-    ClientViewByIdComponent
+    ClientViewByIdComponent,
+    DeliveryTypeComponent,
+    DeliveryTypeViewComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +98,8 @@ import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-vie
                 multi:true},
               ProviderService, MaterialService,
               FlatblockService, DeliveryTypeService,
-              ConstructiontypeService,FiscalBillService,ClientService],
+              ConstructiontypeService,FiscalBillService,
+              ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

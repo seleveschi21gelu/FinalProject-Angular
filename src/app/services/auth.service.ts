@@ -25,9 +25,9 @@ export class AuthService implements CanActivate{
     console.log("AuthServiceLogin " + username +" "+ password)
     this._authString = 'Basic ' + window.btoa(username + ':' + password);
 
-return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').pipe(
-  map(response =>response)
-);
+    return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').pipe(
+    map(response =>response)
+    );
 
   }
 
@@ -53,6 +53,6 @@ return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').
        data=>{console.log(data);
       }
      );
-  
+
   }
 }

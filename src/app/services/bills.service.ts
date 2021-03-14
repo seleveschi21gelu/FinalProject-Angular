@@ -1,4 +1,4 @@
-import { Edit } from './edit';
+import { Edit } from '../components/models/edit';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
@@ -36,9 +36,9 @@ export class BillsService {
     updateBillById(id:number,bills:any){
       return this.http.put('/server/bills/'+id,bills).subscribe();
     }
-    
 
-    
+
+
 
     // put(edit:Edit,id:number):Observable<any>{
     //   return this.http.put('server/bills/'+id,edit)

@@ -1,3 +1,4 @@
+import { DeliveryTypeService } from './services/delivery-type.service';
 import { FirstPageComponent } from './components/first-page/first-page.component';
 import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-view-by-id.component';
 import { AuthService } from 'src/app/services/auth.service';
@@ -26,11 +27,13 @@ import { PageerrorComponent } from './components/pageerror/pageerror.component';
 import { FormsModule } from '@angular/forms';
 import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.component';
 import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
+import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.component';
+import { DeliveryTypeViewComponent } from './components/delivery-type-view/delivery-type-view.component';
 
 
 const routes: Routes = [
   {
-    path:'home',
+    path:'',
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
@@ -40,8 +43,8 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'admin/view/:id',
-    component: ViewRegistrationComponent,
+    path:'bills/:id',
+    component: HomeComponent,
     canActivate: [AuthService]
   },
   {
@@ -57,6 +60,16 @@ const routes: Routes = [
   {
     path:'material',
     component:MaterialComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'deliveryType',
+    component:DeliveryTypeComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'deliveryTypes',
+    component: DeliveryTypeViewComponent,
     canActivate: [AuthService]
   },
   {
@@ -135,7 +148,7 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'',
+    path:'login',
     component:LoginComponent,
     canActivate: [AuthService]
   },

@@ -23,11 +23,11 @@ export class FlatblockService {
 
   }
   addFlatBlock(deliveryType: any){
-   
-   return this.http.post('/server/flatBlock',deliveryType, httpOptions)
- }
 
- deleteFlatBlock(id:number){
+   return this.http.post('/server/flatBlock',deliveryType, httpOptions)
+  }
+
+  deleteFlatBlock(id:number){
    return this.http.delete('/server/flatBlock/'+id)
- }
+  }
 }

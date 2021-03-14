@@ -21,17 +21,17 @@ export class LoginComponent implements OnInit {
     console.log("login" + this.username+':'+this.password);
     this.authService.login(this.username,this.password).subscribe(
       data => {
-  console.log(data);
-  this.authService.saveAuthInLocalStorage();
-  this.router.navigate(['home']);
-},
-error =>{
-  console.log('error');
-}
+        console.log(data);
+          this.authService.saveAuthInLocalStorage();
+          this.router.navigate(['home']);
+        },
+      error =>{
+      console.log('error');
+      }
 
-    );
+      );
   }
-  
- 
+
+
 
 }

@@ -1,4 +1,4 @@
-import { DeliveryTypeService } from './../../delivery-type.service';
+import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { MaterialService } from './../../services/material.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -15,9 +15,9 @@ export class MaterialComponent implements OnInit {
   materialForm!: FormGroup;
   validMessage: string = "";
 
-  constructor(private materialService:MaterialService, private deliveryTypeService:DeliveryTypeService) { 
-this.materialService.getMaterials().subscribe(material=>this.materialList = material);
-this.deliveryTypeService.getDeliverysType().subscribe(deliveryType=>this.deliveryTypeList= deliveryType)
+  constructor(private materialService:MaterialService, private deliveryTypeService:DeliveryTypeService) {
+  this.materialService.getMaterials().subscribe(material=>this.materialList = material);
+  this.deliveryTypeService.getDeliverysType().subscribe(deliveryType=>this.deliveryTypeList= deliveryType)
 
   }
 
@@ -44,6 +44,6 @@ this.deliveryTypeService.getDeliverysType().subscribe(deliveryType=>this.deliver
       this.validMessage = "Please fill out the form before submitting";
     }
   }
-  
+
 
 }
