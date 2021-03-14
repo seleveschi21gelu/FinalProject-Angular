@@ -31,9 +31,10 @@ error =>{
 
     );
   }
-  register(user:any){
-    console.log("register" + this.username + this.password);
-    this.authService.register(user);
+  
+  register(){
+   console.log("register login");
+    this.authService.register(this.username,this.password);
   }
 
 

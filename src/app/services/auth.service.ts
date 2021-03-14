@@ -47,11 +47,12 @@ return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').
     headers: new HttpHeaders({ 'Content-type': 'application/json'})
   }
 
-  register(user: any) : Observable<BasicAuthResponseModel> {
-    // console.log("AuthServiceRegister " + username +" "+ password)
-     let body = JSON.stringify(user)
-    return this.http.post<any>('/server/api/register', 
-   body,this.httpOptions);
-
+  register(username: string,password:string)   {
+    console.log("register auth");
+     this.http.post<any>('http://localhost:8080/api/register', {"username" : username, "password" : password}).subscribe(
+       data=>{console.log(data);
+      }
+     );
+  
   }
 }

@@ -36,6 +36,7 @@ import { UpdateComponent } from './components/update/update.component';
 import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.component';
 import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
 import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
+import { ClientComponent } from './components/client/client.component';
 
 
 
@@ -60,7 +61,8 @@ import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/v
     UpdateComponent,
     FiscalBillComponent,
     FiscalBillViewComponent,
-    ViewFiscalBillByIdComponent
+    ViewFiscalBillByIdComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,
