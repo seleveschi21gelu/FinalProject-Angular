@@ -11,6 +11,9 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class AuthService implements CanActivate{
   _authString :string ='';
+  authService: any;
+  router: any;
+  isLoggedIn: boolean = false;
 
   constructor(private http:HttpClient) {
     this._authString =this.authFromLocalStorage;
@@ -55,4 +58,10 @@ export class AuthService implements CanActivate{
      );
 
   }
+  logout() {
+    this._authString = '';
+    localStorage.removeItem('auth');
+  }
+
+  
 }
