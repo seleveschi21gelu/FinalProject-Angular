@@ -32,10 +32,6 @@ error =>{
     );
   }
   
-  register(){
-   console.log("register login");
-    this.authService.register(this.username,this.password);
-  }
-
+ 
 
 }

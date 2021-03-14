@@ -1,3 +1,5 @@
+import { AuthService } from 'src/app/services/auth.service';
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { ClientViewComponent } from './views/client-view/client-view.component';
 import { ClientComponent } from './components/client/client.component';
 import { ViewFiscalBillByIdComponent } from './viewById/view-fiscal-bill-by-id/view-fiscal-bill-by-id.component';
@@ -19,7 +21,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialComponent } from './components/material/material.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageerrorComponent } from './components/pageerror/pageerror.component';
-import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { FiscalBillComponent } from './components/fiscal-bill/fiscal-bill.component';
 import { FiscalBillViewComponent } from './views/fiscal-bill-view/fiscal-bill-view.component';
@@ -56,6 +57,10 @@ const routes: Routes = [
     component: UpdateComponent,
     canActivate:[AuthService]
   },
+  {path:'registerPage',
+  component:RegisterPageComponent,
+  canActivate:[AuthService]
+},
   {
     path:'admin/view-flatblock/:id',
     component:ViewFlatblockByIdComponent,
