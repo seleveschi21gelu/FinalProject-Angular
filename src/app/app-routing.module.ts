@@ -33,7 +33,7 @@ import { DeliveryTypeViewComponent } from './components/delivery-type-view/deliv
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
@@ -86,7 +86,7 @@ const routes: Routes = [
   component:ClientViewByIdComponent,
   canActivate:[AuthService]
 },
-  {path:'registerPage',
+  {path:'register',
   component:RegisterPageComponent,
   canActivate:[AuthService]
 },

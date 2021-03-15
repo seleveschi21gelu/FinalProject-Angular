@@ -1,5 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import './css/bills.css';
+// @import 'D:\Java\final-project-angular2\src\assets\images\folder.jpeg';
 
 .pointer{
     cursor:pointer;
@@ -20,3 +21,5 @@ html, body {
     .push {
     height: 50px;
     }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

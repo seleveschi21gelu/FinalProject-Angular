@@ -44,6 +44,7 @@ import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-vie
 import { StatusService } from './services/status.service';
 import { DeliveryTypeViewComponent } from './components/delivery-type-view/delivery-type-view.component';
 import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -89,6 +90,7 @@ import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.
 
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
 
 
   ],

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink='/home'>Invoice Form</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink='/home'>Invoice Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,15 +10,15 @@
           <a class="nav-link" routerLink='/'>Home <span class="sr-only">(current)</span></a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" routerLink='/flatblock'>Flat Block <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink='/bills'>Register invoice <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/material'> Material <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink='/provider'> Register provider <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/provider'> Provider <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink='/client'> Register client <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLink='/admin'> View-Invoice-Form <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -26,29 +26,61 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink='/fiscalbill/view'> FiscalBillView <span class="sr-only">(current)</span></a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
           <a class="nav-link" routerLink='/' (click) ="logout()" value="logout"> Logout <span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Register form
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem class="dropdown-item" routerLink="/material">Material Register</a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="/deliveryType">Delivery Type Register</a>
+            <!-- <a ngbDropdownItem class="dropdown-item" routerLink="/">Client Register</a> -->
+
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <!-- <a ngbDropdownItem class="dropdown-item" href="#">Something else here</a> -->
           </div>
-        </li> -->
-        <!-- <li class="nav-item">
+        </li> 
+
+         <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            View Registers
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem class="dropdown-item" routerLink="/admin">Invoices View</a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="/provider/view">Provider View</a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="/client/view">Client View</a>
+
+            <div class="dropdown-divider"></div>
+            <!-- <a ngbDropdownItem class="dropdown-item" href="#">Something else here</a> -->
+          </div>
+        </li> 
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            View form
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem class="dropdown-item" routerLink="/material/view">Material View Form</a>
+            <a ngbDropdownItem class="dropdown-item" routerLink="/deliveryType">Delivery Type View Form</a>
+            <!-- <a ngbDropdownItem class="dropdown-item" routerLink="/">Client Register</a> -->
+
+            <div class="dropdown-divider"></div>
+            <!-- <a ngbDropdownItem class="dropdown-item" href="#">Something else here</a> -->
+          </div>
+        </li> 
+        <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
-        </li> -->
+        </li> 
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+        <!-- <li class="nav-item"> -->
+          <a class="nav-link" routerLink='/login' (click) ="logout()" value="logout"> Logout <span class="sr-only">(current)</span></a>
+        <!-- </li> -->
       </form>
     </div>
   </nav>
