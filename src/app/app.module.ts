@@ -45,6 +45,7 @@ import { StatusService } from './services/status.service';
 import { DeliveryTypeViewComponent } from './components/delivery-type-view/delivery-type-view.component';
 import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {SidebarModule} from "ng-sidebar";
 
 
 
@@ -91,6 +92,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    SidebarModule.forRoot()
 
 
   ],
