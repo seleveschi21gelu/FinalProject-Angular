@@ -13,7 +13,7 @@ html,body{
     
     .card{
     height: 370px;
-    margin-top: auto;
+    margin-top: 90px;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
@@ -83,3 +83,11 @@ html,body{
     .links a{
     margin-left: 4px;
     }
+    .card-footer{
+        margin: 10px;
+        
+    }
+    .d-flex justify-content-center {
+        margin-left: 50px;
+    }
+   
