@@ -62,11 +62,11 @@ export class HomeComponent implements OnInit {
        client: new FormControl('',Validators.required)
     });
 
-    if(this.route.snapshot.queryParams['id']){
-      this.getBillsRegistration(this.route.snapshot.params.id);
-    } else {
-      this.billsRegistration = new Edit();
-    }
+    // if(this.route.snapshot.queryParams['id']){
+    //   this.getBillsRegistration(this.route.snapshot.params.id);
+    // } else {
+    //   this.billsRegistration = new Edit();
+    // }
 
   }
   submitRegistration(){

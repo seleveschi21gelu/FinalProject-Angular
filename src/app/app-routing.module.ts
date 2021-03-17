@@ -42,11 +42,11 @@ const routes: Routes = [
     component:HomeComponent,
     canActivate: [AuthService]
   },
-  // {
-  //   path:'bills/:id',
-  //   component: HomeComponent,
-  //   canActivate: [AuthService]
-  // },
+  {
+    path:'bills/:id',
+    component: ViewRegistrationComponent,
+    canActivate: [AuthService]
+  },
   {
     path:'flatblock',
     component:FlatblockComponent,
@@ -78,7 +78,7 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'update',
+    path:'update/:id',
     component: UpdateComponent,
     canActivate:[AuthService]
   },

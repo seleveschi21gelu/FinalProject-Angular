@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head >
     <style>
@@ -13,38 +13,49 @@
     <title>Document</title>
 </head>
 <body>
-    <div *ngIf="bill" class="container">
-        <form #f="ngForm" (ngSubmit)="update(f.value)" novalidate> -->
-          <!-- <div *ngIf="validMessage  != ''">
+    <div *ngIf="bill" class="container" [formGroup]="billForm">
+        <form #f="ngForm" (ngSubmit)="update(f.value)" novalidate> 
+           <!-- <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
-          </div> -->
-          <!-- <div class="form-group">
+          </div>  -->
+
+          <div class="form-group">
+            <label>Client</label>
+            <select class="form-control" formControlName="client" required>
+              <option *ngFor="let client of clientList"
+                      [ngValue]="client">
+                      {{client.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Provider</label>
+            <select class="form-control" formControlName="provider" required>
+              <option *ngFor="let provider of providerList"
+                      [ngValue]="provider">
+                      {{provider.name}}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
             <label>Invoice Number</label>
             <input  class="form-control" [(ngModel)]="bill.invoiceNumber" name="invoiceNumber"  id="invoiceNumber" type="text" class="form-control" required/>
           </div>
           <div class="form-group">
             <label>Material Or Execution</label>
-            <select class="form-control" required>
+            <select class="form-control" formControlName="materialAndExecution" required>
               <option *ngFor="let material of materialList"
                       [ngValue]="material">
                       {{material.name}}
               </option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Provider</label>
-            <select class="form-control" required>
-              <option *ngFor="let provider of providerList"
-                      [ngValue]="provider">
-                      {{provider.name}}
-              </option>
-            </select>
-          </div> 
-           <div>
-             <label>Invoice Date</label>
-             <input  class="form-control" [(ngModel)]="bill.invoiceDate" name="invoiceDate"  id="invoiceDate" type="text" class="form-control" required/>
-            </div> 
-          <div class="form-group">
+
+          <div>
+            <label>Invoice Date</label>
+            <input  class="form-control" [(ngModel)]="bill.invoiceDate" name="invoiceDate"  id="invoiceDate" type="text" class="form-control" required/>
+           </div> 
+           <div class="form-group">
             <label>Unit Price</label>
             <input  class="form-control" [(ngModel)]="bill.unitPrice" name="unitPrice"  id="unitPrice" type="number" class="form-control" required/>
           </div>
@@ -56,27 +67,31 @@
             <label>TVA%</label>
             <input  class="form-control" [(ngModel)]="bill.tva" name="tva"  id="tva" type="number" class="form-control" required/>
           </div>
+
           <div class="form-group">
             <label>Paid Status</label>
-            <select class="form-control" required>
+            <select class="form-control" formControlName="paidStatus" required>
               <option *ngFor="let status of statusList"
-                  [selected]="status.id==bill.paidStatus.id"    
-              [ngValue]="status">
+              [selected]="status.id==bill.paidStatus.id"   
+                      [ngValue]="status">
                       {{status.name}}
               </option>
             </select>
           </div>
+
+
           <div class="form-group">
             <label>Flat Block</label>
-            <select class="form-control" required>
+            <select class="form-control" formControlName="flatBlock" required>
               <option *ngFor="let flatBlock of flatBlockList"
                       [ngValue]="flatBlock">
                       {{flatBlock.name}}
               </option>
             </select>
-          </div> 
+          </div>
+
           <button type="submit" class="btn btn-dark" >Submit</button>
         </form>
       </div>
 </body>
-</html> -->
+</html> 
