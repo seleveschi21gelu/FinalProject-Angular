@@ -40,19 +40,19 @@ export class UpdateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.billForm = new FormGroup({
-        //  name:new FormControl ('',Validators.required),
-         invoiceNumber: new FormControl('',Validators.required),
-         materialAndExecution:new FormControl('',Validators.required),
-         provider: new FormControl('',Validators.required),
-         invoiceDate: new FormControl('',Validators.required),
-         unitPrice: new FormControl('',Validators.required),
-         quantity:new FormControl('',Validators.required),
-         tva:new FormControl('',Validators.required),
-         paidStatus: new FormControl('',Validators.required),
-         flatBlock:new FormControl('',Validators.required),
-         client: new FormControl('',Validators.required)
-      });
+      // this.billForm = new FormGroup({
+      //   //  name:new FormControl ('',Validators.required),
+      //    invoiceNumber: new FormControl('',Validators.required),
+      //    materialAndExecution:new FormControl('',Validators.required),
+      //    provider: new FormControl('',Validators.required),
+      //    invoiceDate: new FormControl('',Validators.required),
+      //    unitPrice: new FormControl('',Validators.required),
+      //    quantity:new FormControl('',Validators.required),
+      //    tva:new FormControl('',Validators.required),
+      //    paidStatus: new FormControl('',Validators.required),
+      //    flatBlock:new FormControl('',Validators.required),
+      //    client: new FormControl('',Validators.required)
+      // });
 
 
     this.billsService.getBill(this.route.snapshot.params.id).subscribe(bills=>this.bill = bills);

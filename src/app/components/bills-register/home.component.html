@@ -47,7 +47,10 @@
           <div class="form-group">
             <label>Invoice Number</label>
             <input type="text" class="form-control" formControlName="invoiceNumber" required/>
-          </div>
+            <div class="alert alert-danger" *ngIf="invoiceNumber?.invalid && (invoiceNumber?.dirty || invoiceNumber?.touched)">
+              <div *ngIf="invoiceNumber?.errors?.min">Error</div>
+          </div></div>
+          
           <div class="form-group">
             <label>Material Or Execution</label>
             <select class="form-control" formControlName="materialAndExecution" required>

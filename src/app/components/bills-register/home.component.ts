@@ -10,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ClientService } from 'src/app/services/client.service';
 import { ActivatedRoute } from '@angular/router';
 import { StatusService } from 'src/app/services/status.service';
+import { first } from 'rxjs/operators';
 
 
 
@@ -29,6 +30,7 @@ export class HomeComponent implements OnInit {
   billsform!: FormGroup;
   validMessage: string= "";
   readonly:boolean =false;
+  isAddMode: any;
 
   constructor(private billsService:BillsService,
               private statusService:StatusService,
@@ -48,6 +50,10 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit(): void  {
+
+    let id = this.route.snapshot.params.id;         
+    this.isAddMode = !id;
+
     this.billsform = new FormGroup({
       //  name:new FormControl ('',Validators.required),
        invoiceNumber: new FormControl('',Validators.required),
@@ -68,22 +74,34 @@ export class HomeComponent implements OnInit {
     //   this.billsRegistration = new Edit();
     // }
 
+    if(!this.isAddMode) {
+      this.billsService.getBill(id)
+        .pipe(first())
+        .subscribe(x => this.billsform.patchValue(x))
+    }
+
   }
   submitRegistration(){
-    if(this.billsform?.valid){
-      this.validMessage = "Your invoice registration has been submitted. Thank you!";
-      this.billsService.addBill(this.billsform.value).subscribe(
-        _data => {
-          this.billsform?.reset();
-          return true;
-        },
-        error => {
-          return throwError(error);
-        }
-      )
-    } else{
-      this.validMessage = "Please fill out the form before submitting";
-    }
+    // if(this.billsform?.valid){
+    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
+    //   this.billsService.addBill(this.billsform.value).subscribe(
+    //     _data => {
+    //       this.billsform?.reset();
+    //       return true;
+    //     },
+    //     error => {
+    //       return throwError(error);
+    //     }
+    //   )
+    // } else{
+    //   this.validMessage = "Please fill out the form before submitting";
+    // }
+
+    let id = this.route.snapshot.params.id;
+    // if(this.billsform?.valid){
+    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
+    if(id) this.billsService.updateBillById(id, this.billsform.value);
+    else this.billsService.addBill(this.billsform.value).subscribe();
   }
 
   getBillsRegistration(id:number){
@@ -94,4 +112,9 @@ export class HomeComponent implements OnInit {
       ()=>console.log('bills loaded')
     );
   }
+  get invoiceNumber() {
+    return this.billsform.get('invoiceNumber');
+  }
 }
+
+

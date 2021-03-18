@@ -21,7 +21,11 @@ export class AuthService implements CanActivate{
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     console.log(state.url);
+  let auth=<string> localStorage.getItem('auth')
+  if(auth!==''){
     return true;
+  }
+    return false;
   }
 
   login(username:string ,password: string) : Observable<BasicAuthResponseModel>{

@@ -38,6 +38,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
+    path:'bills/:id',
+    component: HomeComponent,
+  },
+
+  {
     path:'bills',
     component:HomeComponent,
     canActivate: [AuthService]
@@ -137,6 +142,9 @@ const routes: Routes = [
     component:ViewMaterialComponent,
     canActivate: [AuthService]
   },
+  // {path:'client/:id',
+  // component:ClientComponent
+  // },
   {
   path:'client',
   component:ClientComponent,
