@@ -18,6 +18,7 @@
         <td>
             {{material.deliveryType.name}}
           </td>
+      <button [routerLink]="['/material/',material.id]" class="btn btn-light">Update Material</button>
           <button *ngIf="material" (click)="deleteMaterialById(material.id)" class="btn btn-light">Delete material</button>
       </tr>
     </table>

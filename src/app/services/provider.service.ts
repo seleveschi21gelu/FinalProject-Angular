@@ -15,18 +15,21 @@ export class ProviderService {
   }
 
   getProviders(){
-    return this.http.get('/server/provider')
+    return this.http.get('http://localhost:8080/provider')
   }
   getProvidersById(id:number){
-    return this.http.get('/server/provider/'+id)
+    return this.http.get('http://localhost:8080/provider/'+id)
   }
   addProvider(provider: any){
   //  let body = JSON.stringify(deliveryType);
-   return this.http.post('/server/provider',provider, httpOptions)
+   return this.http.post('http://localhost:8080/provider',provider, httpOptions)
  }
 
  deleteProviderById(id:number){
-   return this.http.delete('/server/provider/'+id)
+   return this.http.delete('http://localhost:8080/provider/'+id)
 
  }
+ updateProviderById(id:number,client:any){
+  return this.http.put('http://localhost:8080/provider/'+id, client).subscribe();
+}
 }

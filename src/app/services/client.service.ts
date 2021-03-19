@@ -22,11 +22,11 @@ export class ClientService {
   }
   addClient(client: any){
     //let body = JSON.stringify(bills);
-    return this.http.post('/server/client',client, httpOptions);
+    return this.http.post('http://localhost:8080/client',client, httpOptions);
   }
 
   deleteClientById(id:number){
-    return this.http.delete('/server/client/' + id);
+    return this.http.delete('http://localhost:8080/client/' + id);
 
   }
   updateClientById(id:number,client:any){

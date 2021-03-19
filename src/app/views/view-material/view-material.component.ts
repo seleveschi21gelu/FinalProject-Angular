@@ -49,6 +49,10 @@ export class ViewMaterialComponent implements OnInit {
    
   }
 
+  updateMaterialById(id:number,material:any){
+    this.materialService.updateMaterialById(id,material);
+  }
+
   
   
 

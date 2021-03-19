@@ -15,19 +15,19 @@ export class FlatblockService {
   }
 
   getFlatBlocks(){
-    return this.http.get('/server/flatBlock')
+    return this.http.get('http://localhost:8080/flatBlock')
 
   }
   getFlatblockById(id : number){
-    return this.http.get('/server/flatBlock/'+id)
+    return this.http.get('http://localhost:8080/flatBlock/'+id)
 
   }
   addFlatBlock(deliveryType: any){
 
-   return this.http.post('/server/flatBlock',deliveryType, httpOptions)
+   return this.http.post('http://localhost:8080/flatBlock',deliveryType, httpOptions)
   }
 
   deleteFlatBlock(id:number){
-   return this.http.delete('/server/flatBlock/'+id)
+   return this.http.delete('http://localhost:8080/flatBlock/'+id)
   }
 }

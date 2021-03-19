@@ -2,8 +2,8 @@ import { ActivatedRoute } from '@angular/router';
 import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { throwError } from 'rxjs';
 import { DeliveryType } from '../models/DeliveryType';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-delivery-type',
@@ -11,43 +11,54 @@ import { DeliveryType } from '../models/DeliveryType';
   styleUrls: ['./delivery-type.component.scss']
 })
 export class DeliveryTypeComponent implements OnInit {
+  
+  deliveryTypeForm = new FormGroup({
+    name:new FormControl('',Validators.required)
+  });
+  
   deliveryTypeList: any;
   deliveryType: DeliveryType = new DeliveryType();
-  deliveryTypeForm:any;
+ 
   validMessage: string = "";
+  isAddMode:any;
+  public deliveryTypeRegistration:any;
+
+
 
   constructor(private deliveryTypeService:DeliveryTypeService, private route:ActivatedRoute) {
-    let id = this.route.snapshot.params.id;
+    // let id = this.route.snapshot.params.id;
 
-    if (id !== undefined) {
-      this.deliveryTypeService.getDeliveryTypeById(id).subscribe(data=>this.deliveryType = data)
-    } else {
-      this.deliveryType = new DeliveryType();
-    }
+    // if (id !== undefined) {
+    //   this.deliveryTypeService.getDeliveryTypeById(id).subscribe(data=>this.deliveryType = data)
+    // } else {
+    //   this.deliveryType = new DeliveryType();
+    // }
 
-    this.deliveryTypeService.getDeliverysType().subscribe(delivery=>this.deliveryTypeList=delivery);
+    // this.deliveryTypeService.getDeliverysType().subscribe(delivery=>this.deliveryTypeList=delivery);
 
 
   }
 
   ngOnInit(): void {
+    let id = this.route.snapshot.params.id;         
+    this.isAddMode = !id;
     // this.deliveryTypeForm=new FormGroup({
     //   name:new FormControl('',Validators.required)
     // });
 
-  }
+    
+    if(!this.isAddMode) {
+      this.deliveryTypeService.getDeliveryTypeById(id)
+      .pipe(first())
+      .subscribe(x => this.deliveryTypeForm.patchValue(x))
 
-  submitRegistration(registration: any){
-      this.validMessage = "Your Delivery Type registration has been submitted. Thank you!";
-      this.deliveryTypeService.addDeliveryType(registration.value).subscribe(
-        data => {
-          registration.reset();
-          return true;
-        },
-        error => {
-          return throwError(error);
-        }
-      )
+  }
+}
+
+  submitRegistration(){
+    let id = this.route.snapshot.params.id;
+    if(id) this.deliveryTypeService.updateDeliveryTypeById(id, this.deliveryTypeForm.value);
+    else this.deliveryTypeService.addDeliveryType(this.deliveryTypeForm.value).subscribe();
   }
 
   getDeliveryTypeById(id:number){
@@ -57,6 +68,10 @@ export class DeliveryTypeComponent implements OnInit {
       err=>console.error(err),
       ()=>console.log('bills loaded')
     );
+  }
+
+  updateMaterialById(id:number,material:any){
+    this.deliveryTypeService.updateDeliveryTypeById(id,material);
   }
 
 }

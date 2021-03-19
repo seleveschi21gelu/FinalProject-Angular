@@ -35,5 +35,9 @@ deleteProviderById(id:number){
     })
  
 }
+updateProviderById(id:number,provider:any){
+  this.providerService.updateProviderById(id,provider);
+
+}
 
 }

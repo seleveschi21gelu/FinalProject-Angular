@@ -15,11 +15,11 @@ export class StatusService {
 
 
   getStatusList(){
-    return this.http.get('/server/paidStatus');
+    return this.http.get('http://localhost:8080/paidStatus');
   }
   addStatus(status: any){
     let body = JSON.stringify(status);
-    return this.http.post('/server/paidStatus',body, httpOptions)
+    return this.http.post('http://localhost:8080/paidStatus',body, httpOptions)
   }
   
 

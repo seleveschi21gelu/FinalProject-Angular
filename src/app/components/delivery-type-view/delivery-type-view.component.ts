@@ -1,7 +1,7 @@
+import { DeliveryType } from './../models/DeliveryType';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DeliveryTypeService } from 'src/app/services/delivery-type.service';
-import { DeliveryType } from '../models/DeliveryType';
 
 @Component({
   selector: 'app-delivery-type-view',
@@ -9,7 +9,9 @@ import { DeliveryType } from '../models/DeliveryType';
   styleUrls: ['./delivery-type-view.component.scss']
 })
 export class DeliveryTypeViewComponent implements OnInit {
-  public deliveryTypes: DeliveryType[] = [];
+  // public deliveryTypes: DeliveryType[] = [];
+  public deliveryType: any;
+
   constructor(private deliveryTypeService:DeliveryTypeService,
     private route: ActivatedRoute, private router: Router) { }
 
@@ -21,7 +23,7 @@ export class DeliveryTypeViewComponent implements OnInit {
     this.deliveryTypeService.getDeliverysType().subscribe(
       data =>{
         console.log("This is the data: " + data)
-        this.deliveryTypes=data
+        this.deliveryType=data
       },
       err=>console.error(err),
       ()=>console.log('delivery types loaded')
@@ -29,7 +31,7 @@ export class DeliveryTypeViewComponent implements OnInit {
   }
 
   deleteDeliveryTypeById(id:number) {
-    this.deliveryTypeService.deleteDeliveryType(id).
+    this.deliveryTypeService.deleteDeliveryTypeById(id).
     subscribe(
       (data) =>{
         console.log(data);
@@ -38,7 +40,7 @@ export class DeliveryTypeViewComponent implements OnInit {
 
   }
   updateDeliveryTypeById(id:number,deliveryType:DeliveryType){
-    this.deliveryTypeService.updateDeliveryType(id,deliveryType);
+    this.deliveryTypeService.updateDeliveryTypeById(id,deliveryType);
   }
 
 }

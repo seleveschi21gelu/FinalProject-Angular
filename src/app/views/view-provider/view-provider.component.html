@@ -43,7 +43,7 @@
         {{provider.email}}
       </td>
 
-      <!-- <button [routerLink]="['/admin/update/',fiscal.id]" class="btn btn-light">Update Bill</button> -->
+      <button [routerLink]="['/provider/', provider.id]" class="btn btn-light">Update Provider</button>
       <button *ngIf="provider" (click)="deleteProviderById(provider.id)" class="btn btn-light">Delete Bill</button>
 
     </tr>

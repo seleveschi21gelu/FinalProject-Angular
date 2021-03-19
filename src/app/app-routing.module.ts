@@ -59,8 +59,8 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'provider',
-    component:ProviderComponent,
+    path:'material/view',
+    component:ViewMaterialComponent,
     canActivate: [AuthService]
   },
   {
@@ -69,20 +69,32 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'deliveryType',
-    component:DeliveryTypeComponent,
+    path:'material/:id',
+    component:MaterialComponent,
     canActivate: [AuthService]
   },
+  {
+    path:'material/view/:id',
+    component:ViewMatertialByIdComponent,
+    canActivate: [AuthService]
+  },
+ 
   {
     path:'deliveryType/view',
     component: DeliveryTypeViewComponent,
     canActivate: [AuthService]
   },
   {
-    path:'deliveryType/:id',
-    component: DeliveryTypeComponent,
+    path:'deliveryType',
+    component:DeliveryTypeComponent,
     canActivate: [AuthService]
   },
+  {
+    path:'deliveryType/:id',
+    component:DeliveryTypeComponent,
+    canActivate: [AuthService]
+  },
+  
   {
     path:'update/:id',
     component: UpdateComponent,
@@ -107,6 +119,21 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
+    path:'provider/view',
+    component:ViewProviderComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'provider',
+    component:ProviderComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'provider/:id',
+    component:ProviderComponent,
+    canActivate: [AuthService]
+  },
+  {
     path:'provider/view/:id',
     component:ViewProviderByIdComponent,
     canActivate: [AuthService]
@@ -122,30 +149,13 @@ const routes: Routes = [
     component:FiscalBillViewComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'material/view/:id',
-    component:ViewMatertialByIdComponent,
-    canActivate: [AuthService]
-  },
+  
   {
     path:'fiscalbill/view/:id',
     component:ViewFiscalBillByIdComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'provider/view',
-    component:ViewProviderComponent,
-    canActivate: [AuthService]
-  },
-
-  {
-    path:'material/view',
-    component:ViewMaterialComponent,
-    canActivate: [AuthService]
-  },
-  // {path:'client/:id',
-  // component:ClientComponent
-  // },
+  
   {
     path:'client/view',
     component:ClientViewComponent,

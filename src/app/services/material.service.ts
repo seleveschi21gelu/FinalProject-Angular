@@ -15,21 +15,26 @@ export class MaterialService {
   }
 
   getMaterials(){
- return this.http.get('/server/material')
+ return this.http.get('http://localhost:8080/material')
 
   }
 
   getMaterialById(id: number){
-    return this.http.get('/server/material/'+id);
+    return this.http.get('http://localhost:8080/material/'+id);
   }
   addMaterial(material: any){
   
-   return this.http.post('/server/material',material, httpOptions)
+   return this.http.post('http://localhost:8080/material',material, httpOptions)
    
  }
 
  deleteMaterialById(id:number){
-   return this.http.delete('/server/material/'+id);
+   return this.http.delete('http://localhost:8080/material/'+id);
  }
+
+ updateMaterialById(id:number,material:any){
+  return this.http.put('http://localhost:8080/material/'+id,material).subscribe();
+}
+
 
 }

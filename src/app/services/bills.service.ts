@@ -18,29 +18,23 @@ export class BillsService {
   constructor(private http:HttpClient) {}
 
     getBills(){
-      return this.http.get('/server/bills');
+      return this.http.get('http://localhost:8080/bills');
     }
 
     getBill(id:number){
-      return this.http.get('/server/bills/'+id);
+      return this.http.get('http://localhost:8080/bills/'+id);
     }
     addBill(bills: any){
       //let body = JSON.stringify(bills);
-      return this.http.post('/server/bills',bills, httpOptions);
+      return this.http.post('http://localhost:8080/bills',bills, httpOptions);
     }
 
     deleteBillById(id:number){
-      return this.http.delete('/server/bills/' + id);
+      return this.http.delete('http://localhost:8080/bills/' + id);
 
     }
     updateBillById(id:number,bills:any){
-      return this.http.put('/server/bills/'+id,bills).subscribe();
+      return this.http.put('http://localhost:8080/bills/'+id,bills).subscribe();
     }
 
-
-
-
-    // put(edit:Edit,id:number):Observable<any>{
-    //   return this.http.put('server/bills/'+id,edit)
-    // }
 }
