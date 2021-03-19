@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { stringify } from '@angular/compiler/src/util';
 
 @Injectable({
@@ -12,25 +12,37 @@ import { stringify } from '@angular/compiler/src/util';
 export class AuthService implements CanActivate{
   _authString :string ='';
   authService: any;
-  router: any;
   isLoggedIn: boolean = false;
 
-  constructor(private http:HttpClient) {
-    this._authString =this.authFromLocalStorage;
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private http:HttpClient) {
+    this._authString = this.authFromLocalStorage;
 
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    console.log(state.url);
-  let auth=<string> localStorage.getItem('auth')
-  if(auth!==''){
-    return true;
-  }
-    return false;
-  }
 
+    if(localStorage.getItem('auth') !== null) return true;
+
+    else {
+      this.router.navigate(
+          ['/login'], {
+            queryParams: {
+              returnUrl: state.url
+            }
+          });
+        return false;
+      }
+      
+  }
+          
   login(username:string ,password: string) : Observable<BasicAuthResponseModel>{
     console.log("AuthServiceLogin " + username +" "+ password)
     this._authString = 'Basic ' + window.btoa(username + ':' + password);
+    
+    let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/home';
+     localStorage.setItem('returnUrl',returnUrl);
 
     return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').pipe(
     map(response =>response)

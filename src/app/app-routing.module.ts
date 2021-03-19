@@ -40,6 +40,7 @@ const routes: Routes = [
   {
     path:'bills/:id',
     component: HomeComponent,
+    canActivate: [AuthService]
   },
 
   {
@@ -146,24 +147,30 @@ const routes: Routes = [
   // component:ClientComponent
   // },
   {
-  path:'client',
-  component:ClientComponent,
-  canActivate: [AuthService]
-  },
-  {
     path:'client/view',
     component:ClientViewComponent,
     canActivate: [AuthService]
 
   },
-  {path:'admin',
+  {
+  path:'client',
+  component:ClientComponent,
+  canActivate: [AuthService]
+  },
+  {
+  path:'client/:id',
+  component:ClientComponent,
+  canActivate: [AuthService]
+  },
+  
+  {
+    path:'admin',
     component: AdminComponent,
     canActivate: [AuthService]
   },
   {
     path:'login',
     component:LoginComponent,
-    canActivate: [AuthService]
   },
   {
     path:'**',

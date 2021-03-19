@@ -32,7 +32,7 @@
           {{client.email}}
         </td>
   
-        <button [routerLink]="['/client/']" class="btn btn-light">Update Client</button>
+        <button [routerLink]="['/client/', client.id]" class="btn btn-light">Update Client</button>
         <button *ngIf="client" (click)="deleteClientById(client.id)" class="btn btn-light">Delete</button>
   
       </tr>
