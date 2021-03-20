@@ -34,13 +34,13 @@ import { DeliveryTypeViewComponent } from './components/delivery-type-view/deliv
 
 
 const routes: Routes = [
+  // {
+  //   path:'home',
+  //   component:FirstPageComponent,
+  //   canActivate: [AuthService]
+  // },
   {
     path:'home',
-    component:FirstPageComponent,
-    canActivate: [AuthService]
-  },
-  {
-    path:'entry',
     component:PageEntryComponent,
     canActivate:[AuthService]
 },

@@ -15,10 +15,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'final-project-ui'; 
-myimage:string ="assets/images/folder.jpeg"
- opened= true;
+// myimage:string ="assets/images/folder.jpeg"
+//  opened= true;
 
- toggleSidebar(){
-   this.opened = !this.opened;
- }
+//  toggleSidebar(){
+//    this.opened = !this.opened;
+//  }
 }

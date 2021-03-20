@@ -41,7 +41,7 @@ export class AuthService implements CanActivate{
     console.log("AuthServiceLogin " + username +" "+ password)
     this._authString = 'Basic ' + window.btoa(username + ':' + password);
     
-    let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/entry';
+    let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/home';
      localStorage.setItem('returnUrl',returnUrl);
 
     return this.http.get<BasicAuthResponseModel>('http://localhost:8080/api/login').pipe(
