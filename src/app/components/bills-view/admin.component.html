@@ -1,6 +1,6 @@
 <div class="container">
   <h2>INVOICES</h2>
-  <p><a class="btn btn-light" routerLink="/">Register a new invoice</a></p>
+  <p><a class="btn btn-light" routerLink="/bills">Register a new invoice</a></p>
   <table class="table table-bordered table-inverse">
     <tr>
       <th>ID</th>
@@ -34,7 +34,7 @@
         {{bill.material.name}}
       </td>
       <td>
-        {{bill.invoiceDate}}
+        {{bill.invoiceDate|date:"dd/MM/yyyy"}}
       </td>
       <td>
         {{bill.unitPrice}}

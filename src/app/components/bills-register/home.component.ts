@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
     // } else{
     //   this.validMessage = "Please fill out the form before submitting";
     // }
-
+    console.log(this.billsform.value);
     let id = this.route.snapshot.params.id;
     // if(this.billsform?.valid){
     //   this.validMessage = "Your invoice registration has been submitted. Thank you!";

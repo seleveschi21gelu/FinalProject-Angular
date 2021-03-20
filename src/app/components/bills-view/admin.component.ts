@@ -20,7 +20,10 @@ public bills: any;
 
   getBills(){
     this.BillsService.getBills().subscribe(
-      data =>{this.bills=data},
+      data =>{
+    console.log(data)
+        this.bills=data},
+      
       err=>console.error(err),
       ()=>console.log('bills loaded')
     );

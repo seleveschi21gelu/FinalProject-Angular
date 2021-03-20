@@ -29,7 +29,6 @@ readonly:boolean =false;
   constructor(private route: ActivatedRoute, private clientService:ClientService) {
     
    }
-
   
   ngOnInit(): void {
     let id = this.route.snapshot.params.id;

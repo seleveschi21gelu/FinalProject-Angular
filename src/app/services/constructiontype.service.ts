@@ -9,6 +9,7 @@ export class ConstructiontypeService {
   constructor(private http:HttpClient) { }
 
   getConstructioType(){
-    return this.http.get('/server/constructiontype')
+    return this.http.get('http://localhost:8080/constructiontype')
   }
+
 }
