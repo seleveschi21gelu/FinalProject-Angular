@@ -1,10 +1,14 @@
 <div class="container">
- <p> <a class="btn btn-light" routerLink="/material">Register a material</a></p>
+ <h2>MATERIALS</h2>
+  <p> <a class="btn btn-light" routerLink="/material">Register a new material</a></p>
     <table class="table table-bordered table-inverse">
       <tr>
           <th>ID</th>
         <th>Material Name</th>
         <th>Delivery Type</th>
+        <th>Action</th>
+
+
         
         <!-- <th class="text-right"></th> -->
       </tr>
@@ -12,14 +16,14 @@
         <td [routerLink] = "['/material/view/', material.id]" class="pointer">
             {{material.id}}
           </td>
-        <td class="text-right">
+        <td >
           {{material.name}}
         </td>
         <td>
             {{material.deliveryType.name}}
           </td>
-      <button [routerLink]="['/material/',material.id]" class="btn btn-light">Update Material</button>
-          <button *ngIf="material" (click)="deleteMaterialById(material.id)" class="btn btn-light">Delete material</button>
+      <!-- <button [routerLink]="['/material/',material.id]" class="btn btn-light">Update Material</button> -->
+          <button *ngIf="material" (click)="deleteMaterialById(material.id)" class="btn btn-light">Delete </button>
       </tr>
     </table>
   </div>

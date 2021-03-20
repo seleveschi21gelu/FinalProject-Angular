@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>CLIENTS</h2>
     <p><a class="btn btn-light" routerLink="/client">Register a new client </a></p>
     <table class="table table-bordered table-inverse">
       <tr>
@@ -9,6 +10,7 @@
         <th>Telephone</th>
         <th>Address</th>
         <th>Email</th>
+        <th>Action</th>
       </tr>
       <tr *ngFor="let client of client">
         <td [routerLink]="['/client/view/', client.id]" class="pointer">

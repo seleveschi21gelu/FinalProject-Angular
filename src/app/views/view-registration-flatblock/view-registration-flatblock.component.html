@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>FLATBLOCKS</h2>
     <div class="row">
       <p> <a class="btn btn-light" routerLink="/flatblock">Register a flatblock </a></p>
       </div>
@@ -7,6 +8,7 @@
           <th>ID</th>
         <th>Flat Block Name</th>
         <th>Construction Type</th>
+        <th>Action</th>
        
         
         <!-- <th class="text-right"></th> -->
@@ -16,13 +18,13 @@
         
             {{flatblock.id}}
           </td>
-        <td class="text-right">
+        <td >
             {{flatblock.name}}
         </td>
         <td>
             {{flatblock.constructionType.name}}
           </td>
-          <button *ngIf="flatblock" (click)="deleteFlatblockById(flatblock.id)" class="btn btn-light">Delete Flatblock</button>
+          <button *ngIf="flatblock" (click)="deleteFlatblockById(flatblock.id)" class="btn btn-light">Delete </button>
         
       </tr>
     </table>

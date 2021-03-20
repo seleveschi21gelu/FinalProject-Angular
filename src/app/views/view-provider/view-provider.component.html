@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>PROVIDERS</h2>
   <p><a class="btn btn-light" routerLink="/provider" >Register a new provider</a></p>
   <table class="table table-bordered table-inverse">
     <tr>
@@ -11,6 +12,7 @@
       <th>IBAN</th>
       <th>Bank</th>
       <th>Email</th>
+      <th>Action</th>
     </tr>
     <tr *ngFor="let provider of provider">
       <td [routerLink]="['/provider/view/', provider.id]" class="pointer">

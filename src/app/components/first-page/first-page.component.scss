@@ -1,16 +1,30 @@
+h1{
+    text-align: center;
+
+}
+h3{margin-top: 55px;
+text-align: center;
+
+}
 .container{
     display: center;
     margin-top: 10px;
     margin-left: 170px;
+    // text-align: center;
 
 img{
-    margin-top: 90px;
-    margin-left: 100px;
+    // margin-top: 90px;
+    margin-left: 200px;
+    display: center;
+//   margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+
 }
+
 a{
     margin: 30px;
     margin-right: 20px;
-
 }
 
 h3{
@@ -18,16 +32,19 @@ h3{
     margin-left: 110px;
     color: black ;
     font-style: solid ;
+    align-content: center;
 }
 }
 .container2{
     
     // margin-top: 20px;
-    margin-left: 170px;
+    margin: 120px;
 
 img{
-    margin-top: 90px;
-    margin-left: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
 }
 a{
     margin: 30px;
@@ -49,8 +66,10 @@ h3{
     margin-left: 170px;
 
 img{
-    margin-top: 90px;
-    margin-left: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
 }
 a{
     margin: 30px;

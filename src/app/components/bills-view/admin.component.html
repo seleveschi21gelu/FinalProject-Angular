@@ -1,4 +1,5 @@
 <div class="container">
+  <h2>INVOICES</h2>
   <p><a class="btn btn-light" routerLink="/">Register a new invoice</a></p>
   <table class="table table-bordered table-inverse">
     <tr>
@@ -15,6 +16,7 @@
       <th>Total with TVA</th>
       <th>Paid Status</th>
       <th>Flat Block</th>
+      <th>Action</th>
     </tr>
     <tr *ngFor="let bill of bills">
       <td [routerLink]="['/bills/', bill.id]" class="pointer">
@@ -57,7 +59,7 @@
       </td>
 
       <!-- <button [routerLink]="['/update']"  class="btn btn-light">Update Bill</button> -->
-      <a class="navbar-brand" href="#">Invoice Form</a>
+      <!-- <a class="navbar-brand" href="#">Invoice Form</a> -->
 
       <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update Bill</button>
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>

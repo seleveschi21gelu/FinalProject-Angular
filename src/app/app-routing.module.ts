@@ -1,3 +1,5 @@
+
+import { PageEntryComponent } from './page-entry/page-entry.component';
 import { DeliveryTypeService } from './services/delivery-type.service';
 import { FirstPageComponent } from './components/first-page/first-page.component';
 import { ClientViewByIdComponent } from './viewById/client-view-by-id/client-view-by-id.component';
@@ -37,6 +39,11 @@ const routes: Routes = [
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
+  {
+    path:'entry',
+    component:PageEntryComponent,
+    canActivate:[AuthService]
+},
   {
     path:'bills/:id',
     component: HomeComponent,
@@ -187,7 +194,7 @@ const routes: Routes = [
     component:PageerrorComponent,
     canActivate: [AuthService]
   }
-
+  
 
 ];
 

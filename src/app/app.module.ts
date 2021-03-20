@@ -46,6 +46,7 @@ import { DeliveryTypeViewComponent } from './components/delivery-type-view/deliv
 import { DeliveryTypeComponent } from './components/delivery-type/delivery-type.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SidebarModule} from "ng-sidebar";
+import { PageEntryComponent } from './page-entry/page-entry.component';
 
 
 
@@ -79,7 +80,8 @@ import {SidebarModule} from "ng-sidebar";
     FirstPageComponent,
     ClientViewByIdComponent,
     DeliveryTypeComponent,
-    DeliveryTypeViewComponent
+    DeliveryTypeViewComponent,
+    PageEntryComponent
   ],
   imports: [
     BrowserModule,

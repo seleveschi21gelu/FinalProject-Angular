@@ -13,8 +13,8 @@
           <td>{{deliveryType.name}}</td>
 
           <td>
-            <button [routerLink]="['/deliveryType/',deliveryType.id]" class="btn btn-light">Update deliveryType</button>
-            <button *ngIf="deliveryType" (click)="deleteDeliveryTypeById(deliveryType.id)" class="btn btn-light">Delete deliveryType</button>
+            <!-- <button [routerLink]="['/deliveryType/',deliveryType.id]" class="btn btn-light">Update deliveryType</button> -->
+            <button *ngIf="deliveryType" (click)="deleteDeliveryTypeById(deliveryType.id)" class="btn btn-light">Delete </button>
         </td>
       </tr>
     </table>
