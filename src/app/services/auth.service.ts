@@ -1,10 +1,9 @@
 import { BasicAuthResponseModel } from './../models/BasicAuthResponseModel';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ActivatedRoute, ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { stringify } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ import { stringify } from '@angular/compiler/src/util';
 export class AuthService implements CanActivate{
   _authString :string ='';
   authService: any;
-  isLoggedIn: boolean = false;
+  subject = new Subject<boolean>();
 
   constructor(
     private route: ActivatedRoute,
@@ -72,11 +71,16 @@ export class AuthService implements CanActivate{
        data=>{console.log(data);
       }
      );
-
   }
+
+  isLoggedIn(): Observable<boolean> {
+    return this.subject.asObservable();
+  }
+
   logout() {
     this._authString = '';
     localStorage.removeItem('auth');
+    this.subject.next(false);
   }
 
   

@@ -13,7 +13,9 @@ html {
     font-family: 'Courier New', sans-serif;
     font-weight: normal;
     font-size: 1.5em;
-    background: linear-gradient(150deg,#D5E3F1 15%,#FFFBD9 70%,#FFDFCB 94%);
+    background-image: url("https://wi.wallpapertip.com/wsimgs/171-1712831_wallpaper-cup-coffee-books-pen-laptop-1080p-hd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   h1 {

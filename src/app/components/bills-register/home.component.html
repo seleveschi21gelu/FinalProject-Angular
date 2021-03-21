@@ -35,6 +35,9 @@
                       {{client.name}}
               </option>
             </select>
+            <div *ngIf="client?.touched && !client?.valid" class="alert alert-danger">
+              <div *ngIf="client?.errors?.required">Field required.</div>
+            </div>
           </div>
           <div class="form-group">
             <label>Provider</label>
@@ -48,16 +51,14 @@
           <div class="form-group">
             <label>Invoice Number</label>
             <input type="text" class="form-control" formControlName="invoiceNumber" required/>
-            <div class="alert alert-danger" *ngIf="invoiceNumber?.invalid && (invoiceNumber?.dirty || invoiceNumber?.touched)">
-              <div *ngIf="invoiceNumber?.errors?.min">Error</div>
-          </div></div>
+            </div>
           
           <div class="form-group">
             <label>Material Or Execution</label>
             <select class="form-control" formControlName="materialAndExecution" required>
               <option *ngFor="let material of materialList"
                       [value]="material.name">
-                      {{material.name}}
+                      {{ material.name }}
               </option>
             </select>
           </div>
@@ -78,7 +79,6 @@
             <label>TVA%</label>
             <input type="number" step="0.01" class="form-control" formControlName="tva" required/>
           </div>
-
           <div class="form-group">
             <label>Paid Status</label>
             <select class="form-control" formControlName="paidStatus" required>
@@ -95,12 +95,12 @@
             <select class="form-control" formControlName="flatBlock" required>
               <option *ngFor="let flatBlock of flatBlockList"
                       [value]="flatBlock.name">
-                      {{flatBlock.name}}
+                      {{ flatBlock.name }}
               </option>
             </select>
           </div>
 
-          <button type="submit" class="btn btn-dark" >Submit</button>
+          <button type="submit" disabled="!billsform.valid" class="btn btn-dark" >Submit</button>
         </form>
       </div>
 

@@ -115,6 +115,10 @@ export class HomeComponent implements OnInit {
   get invoiceNumber() {
     return this.billsform.get('invoiceNumber');
   }
+
+  get client() {
+    return this.billsform.get('client');
+  }
 }
 
 

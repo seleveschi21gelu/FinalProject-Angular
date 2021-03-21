@@ -1,14 +1,3 @@
-<!-- <div>    
-username
-<input type="text" name="username" [(ngModel)]="username">
-<br>
-password
-<input type="password" name="password" [(ngModel)]="password">
-<button class="btn btn-primary" (click) ="login()">Login</button> -->
-
-
-
-
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -35,23 +24,19 @@ password
 						</div>
 						<input type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="password">
 					</div>
-					<!-- <div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
-					</div> -->
 					<div class="form-group">
 						<input type="submit" (click) ="login()" value="login" class="btn float-right login_btn">
+					</div>
+					<div style="color: tomato;" *ngIf="invalidUsernameOrPasswordError !=='' ">
+						{{ invalidUsernameOrPasswordError }}
 					</div>
 				</form>
 			</div>
 			<br><br>
 			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Don't have an account? <button class="btn btn-primary" routerLink = '/register'>Register</button>
-						
+				<div  class="d-flex justify-content-center links">
+					Don't have an account? <button style="margin-left: 60px;" class="btn btn-primary" routerLink = '/register'>Register</button>
 				</div>
-				<!-- <div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
-				</div> -->
 			</div>
 		</div>
 	</div>
