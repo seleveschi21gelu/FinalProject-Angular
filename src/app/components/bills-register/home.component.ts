@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   materialList:any;
   flatBlockList:any;
   clientList:any;
-  public billsRegistration:any;
+  billsRegistration:any;
   billsform!: FormGroup;
   validMessage: string= "";
   readonly:boolean =false;

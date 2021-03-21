@@ -62,8 +62,13 @@ readonly:boolean =false;
     );
   }
 
-  get ClientName() {
+  get name() {
     return this.clientForm.get('name');
   }
+
+  get cif() {
+    return this.clientForm.get('cif');
+  }
+
 
 }
