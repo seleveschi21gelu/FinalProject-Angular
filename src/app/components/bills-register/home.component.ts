@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   deliveryTypeList:any;
   providerList:any;
   materialList:any;
-  flatBlockList:any;
+  // flatBlockList:any;
   clientList:any;
   billsRegistration:any;
   billsform!: FormGroup;
@@ -36,14 +36,14 @@ export class HomeComponent implements OnInit {
               private statusService:StatusService,
               private providerService:ProviderService,
               private materialService:MaterialService,
-              private flatBlockService:FlatblockService,
+              // private flatBlockService:FlatblockService,
               private clientService:ClientService,
               private route: ActivatedRoute) {
 
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
-    this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
+    // this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
     this.clientService.getClients().subscribe(client => this.clientList =client);
 
 
@@ -96,12 +96,15 @@ export class HomeComponent implements OnInit {
     // } else{
     //   this.validMessage = "Please fill out the form before submitting";
     // }
-    console.log(this.billsform.value);
-    let id = this.route.snapshot.params.id;
-    // if(this.billsform?.valid){
-    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
-    if(id) this.billsService.updateBillById(id, this.billsform.value);
-    else this.billsService.addBill(this.billsform.value).subscribe();
+    
+      let id = this.route.snapshot.params.id;
+      // if(this.billsform?.valid){
+      //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
+      if(id) this.billsService.updateBillById(id, this.billsform.value);
+      
+      else this.billsService.addBill(this.billsform.value).subscribe();
+      
+    
   }
 
   getBillsRegistration(id:number){
@@ -138,9 +141,9 @@ export class HomeComponent implements OnInit {
     return this.billsform.get('paidStatus');
   }
 
-  get flatBlock(){
-    return this.billsform.get('flatBlock');
-  }
+  // get flatBlock(){
+  //   return this.billsform.get('flatBlock');
+  // }
 
   get invoiceDate(){
     return this.billsform.get('invoiceDate')
