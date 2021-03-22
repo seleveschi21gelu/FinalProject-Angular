@@ -65,4 +65,37 @@ export class ProviderComponent implements OnInit {
       ()=>console.log('clients loaded')
     );
   }
+
+  get name(){
+    return this.providerForm.get('name');
+  }
+  get description(){
+    return this.providerForm.get('description');
+  }
+  get bank(){
+    return this.providerForm.get('bank');
+  }
+  get iban(){
+    return this.providerForm.get('iban');
+  }
+  get country(){
+    return this.providerForm.get('country');
+  
+  }
+  get cif(){
+    return this.providerForm.get('cif');
+  }
+
+  get telephone(){
+    return this.providerForm.get('telephone');
+  
+  }
+  get address(){
+    return this.providerForm.get('address');
+  }
+  get email(){
+    return this.providerForm.get('email');
+  }
+
+
 }

@@ -47,10 +47,16 @@
                       {{provider.name}}
               </option>
             </select>
+            <div *ngIf="provider?.touched && !provider?.valid" class="alert alert-danger">
+              <div *ngIf="provider?.errors?.required">Field required.</div>
+            </div>
           </div>
           <div class="form-group">
             <label>Invoice Number</label>
             <input type="text" class="form-control" formControlName="invoiceNumber" required/>
+            <div *ngIf="invoiceNumber?.touched && !invoiceNumber?.valid" class="alert alert-danger">
+              <div *ngIf="invoiceNumber?.errors?.required">Field required.</div>
+            </div>
             </div>
           
           <div class="form-group">
@@ -61,23 +67,38 @@
                       {{ material.name }}
               </option>
             </select>
+            <div *ngIf="materialAndExecution?.touched && !materialAndExecution?.valid" class="alert alert-danger">
+              <div *ngIf="materialAndExecution?.errors?.required">Field required.</div>
+            </div>
           </div>
 
           <div>
             <label>Invoice Date</label>
               <input type="date" class="form-control" formControlName="invoiceDate" required/>
+              <div *ngIf="invoiceDate?.touched && !invoiceDate?.valid" class="alert alert-danger">
+                <div *ngIf="invoiceDate?.errors?.required">Field required.</div>
+              </div>
             </div>
           <div class="form-group">
             <label>Unit Price</label>
             <input type="number" class="form-control" formControlName="unitPrice" required/>
+            <div *ngIf="unitPrice?.touched && !unitPrice?.valid" class="alert alert-danger">
+              <div *ngIf="unitPrice?.errors?.required">Field required.</div>
+            </div>
           </div>
           <div class="form-group">
             <label>Quantity</label>
             <input type="number" class="form-control" formControlName="quantity" required/>
+            <div *ngIf="quantity?.touched && !quantity?.valid" class="alert alert-danger">
+              <div *ngIf="quantity?.errors?.required">Field required.</div>
+            </div>
           </div>
           <div class="form-group">
             <label>TVA%</label>
             <input type="number" step="0.01" class="form-control" formControlName="tva" required/>
+            <div *ngIf="tva?.touched && !tva?.valid" class="alert alert-danger">
+              <div *ngIf="tva?.errors?.required">Field required.</div>
+            </div>
           </div>
           <div class="form-group">
             <label>Paid Status</label>
@@ -87,20 +108,26 @@
                       {{status.name}}
               </option>
             </select>
+            <div *ngIf="paidStatus?.touched && !paidStatus?.valid" class="alert alert-danger">
+              <div *ngIf="paidStatus?.errors?.required">Field required.</div>
+            </div>
           </div>
 
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label>Flat Block</label>
             <select class="form-control" formControlName="flatBlock" required>
               <option *ngFor="let flatBlock of flatBlockList"
                       [value]="flatBlock.name">
-                      {{ flatBlock.name }}
+                      {{flatBlock.name}}
               </option>
             </select>
-          </div>
+            <div *ngIf="flatBlock?.touched && !flatBlock?.valid" class="alert alert-danger">
+              <div *ngIf="flatBlock?.errors?.required">Field required.</div>
+            </div>
+          </div> -->
 
-          <button type="submit" disabled="!billsform.valid" class="btn btn-dark" >Submit</button>
+         <button type="submit" [routerLink]="['/admin']"  class="btn btn-dark"  >Submit</button>
         </form>
       </div>
 

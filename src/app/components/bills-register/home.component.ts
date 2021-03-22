@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
        quantity:new FormControl('',Validators.required),
        tva:new FormControl('',Validators.required),
        paidStatus: new FormControl('',Validators.required),
-       flatBlock:new FormControl('',Validators.required),
+      //  flatBlock:new FormControl('',Validators.required),
        client: new FormControl('',Validators.required)
     });
 
@@ -119,6 +119,37 @@ export class HomeComponent implements OnInit {
   get client() {
     return this.billsform.get('client');
   }
+
+  get provider(){
+    return this.billsform.get('provider');
+  }
+
+  get materialAndExecution(){
+    return this.billsform.get('materialAndExecution');
+  }
+
+  get unitPrice(){
+    return this.billsform.get('unitPrice');
+  }
+  get tva(){
+    return this.billsform.get('tva');
+  }
+  get paidStatus(){
+    return this.billsform.get('paidStatus');
+  }
+
+  get flatBlock(){
+    return this.billsform.get('flatBlock');
+  }
+
+  get invoiceDate(){
+    return this.billsform.get('invoiceDate')
+  }
+  
+  get quantity(){
+    return this.billsform.get('quantity');
+  }
+
 }
 
 

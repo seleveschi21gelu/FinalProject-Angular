@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <ng-container *ngIf="isLoggedIn">
+    <!-- <ng-container *ngIf="isLoggedIn"> -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -54,10 +54,10 @@
         <form class="form-inline my-2 my-lg-0">
             <a class="nav-link" routerLink='/login' (click) ="logout()" value="logout"> Logout <span class="sr-only">(current)</span></a>
         </form>
-    </ng-container>
-      <ng-container *ngIf="!isLoggedIn">
+    <!-- </ng-container> -->
+      <!-- <ng-container *ngIf="!isLoggedIn">
         <form class="form-inline my-2 my-lg-0">
             <a class="nav-link" routerLink='/login' value="logout"> Login <span class="sr-only">(current)</span></a>
         </form>
-      </ng-container>
+      </ng-container> -->
   </nav>

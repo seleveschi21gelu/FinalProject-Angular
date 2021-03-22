@@ -1,3 +1,4 @@
+import { DeliveryType } from './../models/DeliveryType';
 import { ActivatedRoute } from '@angular/router';
 import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { MaterialService } from './../../services/material.service';
@@ -49,7 +50,15 @@ export class MaterialComponent implements OnInit {
       err=>console.error(err),
       ()=>console.log('bills loaded')
     );
+
+    }
+
+    get name(){
+      return this.materialForm.get('name');
+    }
+
+    get deliveryType(){
+      return this.materialForm.get('deliveryType');
+    }
   
-
-
-    }}
+  }

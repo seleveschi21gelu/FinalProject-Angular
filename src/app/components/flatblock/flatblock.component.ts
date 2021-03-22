@@ -56,5 +56,13 @@ flatblockList : any;
       this.validMessage = "Please fill out the form before submitting";
     }
   }
+  
+  get name(){
+    return this.flatblockForm.get('name');
+  
+  }
+  get constructionType(){
+    return this.flatblockForm.get('constructionType');
+  }
 
 }

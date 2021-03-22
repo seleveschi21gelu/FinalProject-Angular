@@ -70,5 +70,17 @@ readonly:boolean =false;
     return this.clientForm.get('cif');
   }
 
+  get telephone(){
+    return this.clientForm.get('telephone');
+  }
+  get address(){
+    return this.clientForm.get('address');
+  }
+  get email(){
+    return this.clientForm.get('email');
+  }
+  get county(){
+    return this.clientForm.get('county');
+  }
 
 }

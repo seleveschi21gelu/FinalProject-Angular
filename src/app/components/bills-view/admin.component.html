@@ -15,7 +15,7 @@
       <th>Total W/O TVA</th>
       <th>Total with TVA</th>
       <th>Paid Status</th>
-      <th>Flat Block</th>
+      <!-- <th>Flat Block</th> -->
       <th>Action</th>
     </tr>
     <tr *ngFor="let bill of bills">
@@ -54,16 +54,16 @@
       <td>
         {{bill.paidStatus.name}}
       </td>
-      <td>
+      <!-- <td>
         {{bill.flatBlock.name}}
-      </td>
+      </td> -->
 
       <!-- <button [routerLink]="['/update']"  class="btn btn-light">Update Bill</button> -->
       <!-- <a class="navbar-brand" href="#">Invoice Form</a> -->
 
       <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update Bill</button>
       <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
-
+    
     </tr>
   </table>
 </div>

@@ -74,4 +74,8 @@ export class DeliveryTypeComponent implements OnInit {
     this.deliveryTypeService.updateDeliveryTypeById(id,material);
   }
 
+  get name(){
+    return this.deliveryTypeForm.get('name')
+  }
+
 }
