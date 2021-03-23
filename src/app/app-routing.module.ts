@@ -1,3 +1,4 @@
+import { ViewsPageComponent } from './views-page/views-page.component';
 
 import { PageEntryComponent } from './page-entry/page-entry.component';
 import { DeliveryTypeService } from './services/delivery-type.service';
@@ -34,11 +35,17 @@ import { DeliveryTypeViewComponent } from './components/delivery-type-view/deliv
 
 
 const routes: Routes = [
-  // {
-  //   path:'home',
-  //   component:FirstPageComponent,
-  //   canActivate: [AuthService]
-  // },
+  {
+    path: 'viewspage',
+    component:ViewsPageComponent,
+    canActivate: [AuthService]
+  },
+  {
+    path:'registering',
+    component:FirstPageComponent,
+    canActivate: [AuthService]
+  },
+ 
   {
     path:'home',
     component:PageEntryComponent,
