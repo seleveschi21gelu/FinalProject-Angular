@@ -1,69 +1,85 @@
-<div class="container">
-  <h2>INVOICES</h2>
-  <p><a class="btn btn-light" routerLink="/bills">Register a new invoice</a></p>
-  <table class="table table-bordered table-inverse">
-    <tr>
-      <th>ID</th>
-      <th>Client name</th>
-      <th>Provider</th>
-      <th>Invoice number</th>
-      <th>Material</th>
-      <th>InvoiceDate</th>
-      <th>Unit Price</th>
-      <th>Quantity</th>
-      <th>TVA %</th>
-      <th>Total W/O TVA</th>
-      <th>Total with TVA</th>
-      <th>Paid Status</th>
-      <!-- <th>Flat Block</th> -->
-      <th>Action</th>
-    </tr>
-    <tr *ngFor="let bill of bills">
-      <td [routerLink]="['/bills/', bill.id]" class="pointer">
-        {{bill.id}}</td>
-        <td>
-          {{bill.client.name}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2>INVOICES</h2>
+    <p><a class="btn btn-light" routerLink="/bills">Register a new invoice</a></p>
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>ID</th>
+        <th>Client name</th>
+        <th>Provider</th>
+        <th>Invoice number</th>
+        <th>Material</th>
+        <th>InvoiceDate</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        <th>TVA %</th>
+        <th>Total W/O TVA</th>
+        <th>Total with TVA</th>
+        <th>Paid Status</th>
+        <!-- <th>Flat Block</th> -->
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let bill of bills">
+        <td [routerLink]="['/bills/', bill.id]" class="pointer">
+          {{bill.id}}</td>
+          <td>
+            {{bill.client.name}}
+          </td>
+          <td>
+            {{bill.provider.name}}
+          </td>
+        <td class="text-right">
+          {{bill.invoiceNumber}}
         </td>
         <td>
-          {{bill.provider.name}}
+          {{bill.material.name}}
         </td>
-      <td class="text-right">
-        {{bill.invoiceNumber}}
-      </td>
-      <td>
-        {{bill.material.name}}
-      </td>
-      <td>
-        {{bill.invoiceDate|date:"dd/MM/yyyy"}}
-      </td>
-      <td>
-        {{bill.unitPrice}}
-      </td>
-      <td>
-        {{bill.quantity}}
-      </td>
-      <td>
-        {{bill.tva}}
-      </td>
-      <td>
-        {{bill.totalWithoutTva}}
-      </td>
-      <td>
-        {{bill.totalWithTva}}
-      </td>
-      <td>
-        {{bill.paidStatus.name}}
-      </td>
-      <!-- <td>
-        {{bill.flatBlock.name}}
-      </td> -->
+        <td>
+          {{bill.invoiceDate|date:"dd/MM/yyyy"}}
+        </td>
+        <td>
+          {{bill.unitPrice}}
+        </td>
+        <td>
+          {{bill.quantity}}
+        </td>
+        <td>
+          {{bill.tva}}
+        </td>
+        <td>
+          {{bill.totalWithoutTva}}
+        </td>
+        <td>
+          {{bill.totalWithTva}}
+        </td>
+        <td>
+          {{bill.paidStatus.name}}
+        </td>
+        <!-- <td>
+          {{bill.flatBlock.name}}
+        </td> -->
+  
+        <!-- <button [routerLink]="['/update']"  class="btn btn-light">Update Bill</button> -->
+        <!-- <a class="navbar-brand" href="#">Invoice Form</a> -->
+  
+        <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update Bill</button>
+        <td>
+        <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button></td>
+      
+      </tr>
+    </table>
+  </div>
 
-      <!-- <button [routerLink]="['/update']"  class="btn btn-light">Update Bill</button> -->
-      <!-- <a class="navbar-brand" href="#">Invoice Form</a> -->
-
-      <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update Bill</button>
-      <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete Bill</button>
-    
-    </tr>
-  </table>
-</div>
+</body>
+</html>

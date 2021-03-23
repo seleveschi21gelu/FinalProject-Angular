@@ -7,21 +7,40 @@ html {
     padding-bottom: 10px;
     text-rendering: optimizeLegibility;
     position: relative;
-    min-height: 100%;
+    /* min-height: 100%; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Courier New', sans-serif;
     font-weight: normal;
     font-size: 1.5em;
     background-image: url("https://www.invoiceninja.com/wp-content/uploads/2015/11/InvoiceNinja-Background-Pic-current.jpg");
+   /* height: 1500px; */
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment:fixed;
+    /* position: sticky; */
+
+/*       
+    .div {
+        background-image: url('img_girl.jpg');
+      } */
+     
   }
+/* 
+  .img{
+    background-image: url("https://www.invoiceninja.com/wp-content/uploads/2015/11/InvoiceNinja-Background-Pic-current.jpg");
+   background-repeat:  no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+
   
   h1 {
     font-size: 2.0em;
   }
   
   .table-bordered, .table-bordered td, .table-bordered th {
-    border: 1px solid #2F465D;
+    border: 1px solid #070808;
   }
