@@ -99,11 +99,16 @@ export class HomeComponent implements OnInit {
     
       let id = this.route.snapshot.params.id;
       // if(this.billsform?.valid){
-      //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
-      if(id) this.billsService.updateBillById(id, this.billsform.value);
+      if(id) {
+        this.billsService.updateBillById(id, this.billsform.value);
+        this.validMessage = "Your invoice registration has been updated. Thank you!";
       
-      else this.billsService.addBill(this.billsform.value).subscribe();
+      }
+      else{
+         this.billsService.addBill(this.billsform.value).subscribe();
+         this.validMessage = "Your invoice registration has been registrated. Thank you!";
       
+        }
     
   }
 

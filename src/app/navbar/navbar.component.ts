@@ -11,12 +11,21 @@ export class NavbarComponent implements OnInit {
   router: any;
 
   constructor(private authService:AuthService) {
-      this.authService.isLoggedIn().subscribe(value =>
+    let auth = this.authService.authFromLocalStorage;
+    if(auth!== ''){
+      this.isLoggedIn=true;
+    }else {
+      this.isLoggedIn=false;
+    }
+
+    this.authService.isLoggedIn().subscribe(value =>
         this.isLoggedIn = value
       )
    }
 
   ngOnInit(): void {
+
+
   }
   logout() {
     this.authService.logout();

@@ -16,6 +16,8 @@
 <body>
   <h2>REGISTER PROVIDER</h2>
     <div  class="container">
+      <div class="view"> <button type="submit" [routerLink] = "['/provider/view']" class="btn btn-dark" >Providers View</button></div>
+      <div class="view2"> <button type="submit" [routerLink] = "['/provider']" class="btn btn-dark" >Register a new provider</button></div>
 
         <form [formGroup]="providerForm" (ngSubmit)="submitRegistration()" >
           <div *ngIf="validMessage  != ''">
@@ -95,6 +97,10 @@
           </div>
 
           <button type="submit" class="btn btn-dark" >Submit</button>
+        
+
+
+
         </form>
       </div>
     </body>

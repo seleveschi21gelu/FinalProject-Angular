@@ -52,10 +52,14 @@ export class ProviderComponent implements OnInit {
     let id = this.route.snapshot.params.id;
     // if(this.billsform?.valid){
     //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
-    if(id) this.providerService.updateProviderById(id, this.providerForm.value);
-    
-    else this.providerService.addProvider(this.providerForm.value).subscribe();
-  }
+    if(id){ this.providerService.updateProviderById(id, this.providerForm.value);
+    }
+    else{
+     this.providerService.addProvider(this.providerForm.value).subscribe();
+     this.validMessage = "Provider registered!";
+
+    }
+}
 
   getProviderRegistration(id:number){
     this.providerService.getProvidersById(id).subscribe(

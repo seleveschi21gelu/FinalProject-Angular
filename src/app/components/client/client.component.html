@@ -37,7 +37,7 @@
 
           <div class="form-group">
             <label>C.I.F</label>
-            <input class="form-control" formControlName = "cif" required/>
+            <input type="text" class="form-control" formControlName = "cif" required/>
             <div *ngIf="cif?.touched && !cif?.valid" class="alert alert-danger">
               <div *ngIf="cif?.errors?.required">Field required.</div>
             </div>
@@ -75,7 +75,10 @@
             </div>
           </div>
 
-          <button type="submit" disabled="!clientForm.valid" class="btn btn-dark" >Submit</button>
+          <!-- <button type="submit" disabled="!clientForm.valid" class="btn btn-dark" >Submit</button> -->
+          <button type="submit" [disabled]="!clientForm.valid" (click)="submitRegistration()" class="btn btn-dark">Submit</button>
+          <div class="view"> <button type="submit" [routerLink] = "['/client/view']" class="btn btn-dark" >Client View</button></div>
+          <div class="view2"> <button type="submit" [routerLink] = "['/client']" class="btn btn-dark" >Register a new client</button></div>
         </form>
       </div>
     </body>
