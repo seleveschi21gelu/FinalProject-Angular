@@ -38,23 +38,22 @@
 
 .container{
   position: absolute;
-  top: 50%;
-  width: 100%;
+  top: 20%;
+  // width: 100%;
   text-align: center;
   font-size: 18px;
-  margin-top: -180px;
-  margin-left: -300px;
-
+  // margin-top: -180px;
+  // margin-left: -200px;
+  margin-right: 300px;
 
 }
 .container2{
   position: absolute;
-  top: 50%;
-  width: 100%;
+  top: 20%;
+  // width: 100%;
   text-align: center;
   font-size: 18px;
-  margin-top: -180px;
-  margin-left: 350px;
+  margin-left: 800px;
  
 }
 .h2{
@@ -62,12 +61,14 @@
 }
 .text{
   position: absolute;
-  top: 50%;
-  width: 100%;
+  top: 60%;
+  width: 60%;
   text-align: center;
   font-size: 18px;
+  margin-left: 450px;
   // margin-top: -180px;
   // margin-left: 150px;
   color: white;
+  font-family: 'New Tegomin', serif;
 }
  
