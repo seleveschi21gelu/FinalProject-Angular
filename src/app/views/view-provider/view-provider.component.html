@@ -1,9 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
 <div class="container">
-  <h2>PROVIDERS</h2>
-  <p><a class="btn btn-light" routerLink="/provider" >Register a new provider</a></p>
-  <table class="table table-bordered table-inverse">
+  <h1>PROVIDERS</h1>
+  <div class="row">
+    <a class="btn btn-dark" routerLink="/provider">Register provider</a>
+  </div>
+  <!-- <table class="table table-bordered table-inverse"> -->
+    <table class="styled-table">
     <tr>
-      <th>ID</th>
+     
       <th>Provider Name</th>
       <th>C.I.F</th>
       <th>Description</th>
@@ -14,11 +30,11 @@
       <th>Bank</th>
       <th>Email</th>
       <th>Action</th>
+      <th>Action</th>
     </tr>
     <tr *ngFor="let provider of provider">
       <td [routerLink]="['/provider/view/', provider.id]" class="pointer">
-        {{provider.id}}</td>
-      <td class="text-right">
+       
         {{provider.name}}
       </td>
       <td>
@@ -45,11 +61,14 @@
       <td>
         {{provider.email}}
       </td>
-
-      <button [routerLink]="['/provider/', provider.id]" class="btn btn-light">Update</button>
+<td>
+      <button [routerLink]="['/provider/', provider.id]" class="btn btn-light">Update</button></td>
+      <td>
       <button *ngIf="provider" (click)="deleteProviderById(provider.id)" class="btn btn-light">Delete</button>
-
+    </td>
     </tr>
   </table>
 </div>
 
+</body>
+</html>

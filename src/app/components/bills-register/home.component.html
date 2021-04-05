@@ -8,10 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-  <h2>REGISTER INVOICE</h2>
+  <h1>REGISTER INVOICE</h1>
+  <div class="view"> <button type="submit" [routerLink] = "['/admin']" class="btn btn-dark" >Invoices </button></div>
     <div  class="container">
 
-        <form [formGroup]="billsform" (ngSubmit)="submitRegistration()" novalidate>
+        <form [formGroup]="billsform" (ngSubmit)="submitRegistration()" novalidate class="styled-table">
           <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
           </div>
@@ -122,8 +123,8 @@
           </div> -->
 
          <button type="submit" class="btn btn-dark"  >Submit</button>
-         <div class="view"> <button type="submit" [routerLink] = "['/admin']" class="btn btn-dark" >Invoices </button></div>
-         <div class="view2"> <button type="submit" [routerLink] = "['/bills']" class="btn btn-dark" >Register a new invoice</button></div>
+        
+
         </form>
       </div>
 

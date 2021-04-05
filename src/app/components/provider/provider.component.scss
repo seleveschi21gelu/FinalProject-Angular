@@ -1,12 +1,39 @@
-h2{
-    margin-top: 20px;
+h1{
+    margin-top: 40px;
     text-align: center;
     margin-bottom: 50px;
-
+    font-family: 'Abril Fatface' ;
 }
 .view{
     text-align: right;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 .view2{margin-top: 10px;
     text-align: right;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
+.styled-table {
+    // border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    // font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    // font-family: 'Fredoka One', cursive;
+    font-family: 'Noto Serif', serif;
+    font-size: large;   
+     color:black solid;
+// text-align: center ;
+}
+.container{
+    width: 70%;
+    font-size: larger;
+}
+label{font-size: 25px;
+}
+.form-control{font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;}
+
+    .alert-danger{
+        font-size: 20px;
+    }

@@ -14,10 +14,12 @@
     <title>Document</title>
 </head>
 <body>
-  <h2>REGISTER CLIENT</h2>
+  <h1>REGISTER CLIENT</h1>
+  <div class="view"> <button type="submit" [routerLink] = "['/client/view']" class="btn btn-dark" >Clients</button></div>
+
     <div  class="container">
 
-        <form [formGroup]="clientForm" (ngSubmit)="submitRegistration()">
+        <form [formGroup]="clientForm" (ngSubmit)="submitRegistration()" class="styled-table">
           <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
           </div>
@@ -28,7 +30,7 @@
           </div>
 
           <div class="form-group">
-            <label style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-style:italic;">Client name</label>
+            <label >Client name</label>
             <input id="name" type="text" class="form-control"  formControlName="name" required/>
             <div *ngIf="name?.touched && !name?.valid" class="alert alert-danger">
               <div *ngIf="name?.errors?.required">Field required.</div>
@@ -77,8 +79,6 @@
 
           <!-- <button type="submit" disabled="!clientForm.valid" class="btn btn-dark" >Submit</button> -->
           <button type="submit" [disabled]="!clientForm.valid" (click)="submitRegistration()" class="btn btn-dark">Submit</button>
-          <div class="view"> <button type="submit" [routerLink] = "['/client/view']" class="btn btn-dark" >Client View</button></div>
-          <div class="view2"> <button type="submit" [routerLink] = "['/client']" class="btn btn-dark" >Register a new client</button></div>
         </form>
       </div>
     </body>

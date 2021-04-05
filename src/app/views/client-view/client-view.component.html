@@ -1,9 +1,10 @@
 <div class="container">
-  <h2>CLIENTS</h2>
-    <p><a class="btn btn-light" routerLink="/client">Register a new client </a></p>
-    <table class="table table-bordered table-inverse">
+  <h1>CLIENTS</h1>
+    <p><a class="btn btn-dark" routerLink="/client">Register client</a></p>
+    <!-- <table class="table table-bordered table-inverse"> -->
+      <table class="styled-table">
       <tr>
-        <th>ID</th>
+        <!-- <th>ID</th> -->
         <th>Client name</th>
         <th>C.I.F</th>
         <th>County</th>
@@ -11,11 +12,11 @@
         <th>Address</th>
         <th>Email</th>
         <th>Action</th>
+        <th>Action</th>
       </tr>
       <tr *ngFor="let client of client">
         <td [routerLink]="['/client/view/', client.id]" class="pointer">
-          {{client.id}}</td>
-        <td class="text-right">
+          
           {{client.name}}
         </td>
         <td>
@@ -34,9 +35,10 @@
           {{client.email}}
         </td>
   
-        <button [routerLink]="['/client/', client.id]" class="btn btn-light">Update Client</button>
+        <button [routerLink]="['/client/', client.id]" class="btn btn-light">Update</button>
+        <td>
         <button *ngIf="client" (click)="deleteClientById(client.id)" class="btn btn-light">Delete</button>
-  
+      </td>
       </tr>
     </table>
   </div>
