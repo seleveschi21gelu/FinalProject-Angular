@@ -48,6 +48,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SidebarModule} from "ng-sidebar";
 import { PageEntryComponent } from './page-entry/page-entry.component';
 import { ViewsPageComponent } from './views-page/views-page.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -96,7 +100,11 @@ import { ViewsPageComponent } from './views-page/views-page.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    NoopAnimationsModule,
+      MatSortModule,
+      MatPaginatorModule,
+      MatTableModule,
 
 
   ],

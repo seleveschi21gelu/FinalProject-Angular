@@ -1,6 +1,9 @@
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { BillsService } from '../../services/bills.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -9,8 +12,22 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+
+  @ViewChild(MatPaginator) paginator: any;
+  @ViewChild(MatSort) sort: any 
+
+  dataSource:any;
+  displayedColumns: string[]=["client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus"]
 public bills: any;
-  constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) {
+    this.BillsService.getBills().subscribe((data:any)=>{
+      this.dataSource= new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort= this.sort;
+    
+    }
+      )
+   }
 
   ngOnInit(): void {
     this.getBills();
@@ -18,8 +35,8 @@ public bills: any;
     // this.updateBillById(this.route.snapshot.params.id,this.bills);
   }
 
-  getBills(){
-    this.BillsService.getBills().subscribe(
+ async  getBills(){
+   await this.BillsService.getBills().subscribe(
       data =>{
     console.log(data)
         this.bills=data},
@@ -38,8 +55,18 @@ public bills: any;
       })
 
   }
-  updateBillById(id:number,bills:any){
+  async updateBillById(id:number,bills:any){
     this.BillsService.updateBillById(id,bills);
   }
+  filter(query:string){
+    this.dataSource.filter =query.trim().toLowerCase();
+
+  }
+
+isActive: boolean=false;
+switch(){
+this.isActive = !this.isActive;
+
+}
 
 }

@@ -1,13 +1,22 @@
-<div class="container">
-  <h2>MATERIAL</h2>
-    <div class="row">
-      <p> <a class="btn btn-light" routerLink="/material/view">Back to material form</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<h1>MATERIAL</h1>
+<div class="container" >
+ <form class="styled-table">
+    <div class="row" >
+      <p> <a class="btn btn-dark" routerLink="/material/view">Back to material form</a></p>
     </div>
     <div>
-      <div class="form-group">
-        <label>ID</label>
-        <div class="form-control">{{materialRegistration.id}}</div>
-      </div>
+      
       <div class="form-group">
         <label>Material Name</label>
         <div class="form-control">{{materialRegistration.name}}</div>
@@ -17,4 +26,7 @@
         <div class="form-control">{{materialRegistration.deliveryType.name}}</div>
       </div>
     </div>
+  </form>
   </div>
+</body>
+</html>

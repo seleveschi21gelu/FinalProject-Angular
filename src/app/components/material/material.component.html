@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head >
-    <style>
-        body {
 
-        background-size: cover;
-        background-position: center;
-        }
-        </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <h2>REGISTER MATERIAL</h2>
+  <h1>REGISTER MATERIAL</h1>
     <div  class="container">
 
-        <form [formGroup]="materialForm" (ngSubmit)="submitRegistration()" novalidate>
+        <form [formGroup]="materialForm" (ngSubmit)="submitRegistration()" class="styled-table" novalidate>
           <div *ngIf="validMessage  != ''">
             <h3 class="has-info">{{validMessage}}</h3>
           </div>
@@ -37,7 +22,7 @@
             <label>Delivery Type</label>
             <!-- <input type="text" class="form-control" formControlName="deliveryType" required/> -->
             <select class="form-control" formControlName="deliveryType" required>
-              <option *ngFor="let delivery of deliveryTypeList"
+              <option class="d" *ngFor="let delivery of deliveryTypeList"
                       [ngValue]="delivery">
                       {{delivery.name}}
               </option>
@@ -52,6 +37,5 @@
         </form>
       </div>
 
-</body>
-</html>
+
 

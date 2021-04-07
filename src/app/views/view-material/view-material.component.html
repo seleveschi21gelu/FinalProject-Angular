@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-
 </head>
 <body>
   
 <div class="container">
- <h2>MATERIALS</h2>
-  <p> <a class="btn btn-light" routerLink="/material">Register a new material</a></p>
+  <h1>MATERIALS</h1>
+  <p> <a class="btn btn-dark" routerLink="/material">Register material</a></p>
     <!-- <table class="table table-bordered table-inverse"> -->
       <table class="styled-table">
       <tr>
-          <th>ID</th>
         <th>Material Name</th>
         <th>Delivery Type</th>
         <th>Action</th>
@@ -27,10 +25,8 @@
         <!-- <th class="text-right"></th> -->
       </tr>
       <tr *ngFor="let material of material">
-        <td [routerLink] = "['/material/view/', material.id]" class="pointer">
-            {{material.id}}
-          </td>
-        <td >
+        <td [routerLink] = "['/material/view', material.id]" class="pointer">
+         
           {{material.name}}
         </td>
         <td>
