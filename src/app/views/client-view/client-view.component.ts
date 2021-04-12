@@ -1,6 +1,9 @@
 import { ActivatedRoute } from '@angular/router';
 import { ClientService } from './../../services/client.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-client-view',
@@ -9,25 +12,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientViewComponent implements OnInit {
 
+  @ViewChild(MatPaginator) paginator: any;
+  @ViewChild(MatSort) sort: any 
+  
+  dataSource:any;
+  displayedColumns: string[]=["name","county","cif","telephone","address","email","action","action2"]
+
   public client:any;
 
-  constructor(private clientService:ClientService, private route:ActivatedRoute) { }
+  constructor(private clientService:ClientService, private route:ActivatedRoute) { 
+    this.clientService.getClients().subscribe((data:any)=>{
+      this.dataSource = new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
+  
+  }
 
   ngOnInit(): void {
     this.getClients();
     this.deleteClientById(this.route.snapshot.params.id)
   }
 
-  getClients(){
-    this.clientService.getClients().subscribe(
+ async getClients(){
+ await   this.clientService.getClients().subscribe(
       data =>{this.client=data},
       err=>console.error(err),
       ()=>console.log('client registered')
     );
   }
 
-  deleteClientById(id:number){
-    this.clientService.deleteClientById(id).
+ async deleteClientById(id:number){
+  await this.clientService.deleteClientById(id).
     subscribe(
       (data) =>{
         console.log(data);
@@ -35,9 +51,19 @@ export class ClientViewComponent implements OnInit {
       })
    
   }
-  updateClientById(id:number,fiscalBill:any){
+ async updateClientById(id:number,fiscalBill:any){
     this.clientService.updateClientById(id,fiscalBill);
   
   }
+  filter(query:string){
+    this.dataSource.filter =query.trim().toLowerCase();
+
+  }
+
+isActive: boolean=false;
+switch(){
+this.isActive = !this.isActive;
+
+}
 
 }

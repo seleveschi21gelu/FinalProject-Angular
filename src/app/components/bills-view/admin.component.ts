@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
   @ViewChild(MatSort) sort: any 
 
   dataSource:any;
-  displayedColumns: string[]=["client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus"]
+  displayedColumns: string[]=["id","client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus","action","action2"]
 public bills: any;
   constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) {
     this.BillsService.getBills().subscribe((data:any)=>{
@@ -36,18 +36,17 @@ public bills: any;
   }
 
  async  getBills(){
-   await this.BillsService.getBills().subscribe(
-      data =>{
-    console.log(data)
-        this.bills=data},
-      
-      err=>console.error(err),
-      ()=>console.log('bills loaded')
-    );
-  }
 
-  deleteBillById(id:number){
-    this.BillsService.deleteBillById(id).
+    await this.BillsService.getBills().subscribe(
+       data=>{this.bills =data;
+       },
+       err=>console.error(err),
+       ()=>console.log('Bills loaded')
+     );
+ }
+
+ async deleteBillById(id:number){
+   await this.BillsService.deleteBillById(id).
     subscribe(
       (data) =>{
         console.log(data);
@@ -55,7 +54,7 @@ public bills: any;
       })
 
   }
-  async updateBillById(id:number,bills:any){
+   updateBillById(id:number,bills:any){
     this.BillsService.updateBillById(id,bills);
   }
   filter(query:string){

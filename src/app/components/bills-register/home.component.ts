@@ -28,6 +28,9 @@ export class HomeComponent implements OnInit {
   clientList:any;
   billsRegistration:any;
   billsform!: FormGroup;
+ 
+
+
   validMessage: string= "";
   readonly:boolean =false;
   isAddMode: any;
@@ -45,8 +48,6 @@ export class HomeComponent implements OnInit {
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
     // this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
     this.clientService.getClients().subscribe(client => this.clientList =client);
-
-
    }
 
   ngOnInit(): void  {
@@ -54,20 +55,22 @@ export class HomeComponent implements OnInit {
     let id = this.route.snapshot.params.id;         
     this.isAddMode = !id;
 
-    this.billsform = new FormGroup({
-      //  name:new FormControl ('',Validators.required),
-       invoiceNumber: new FormControl('',Validators.required),
-       materialAndExecution:new FormControl('',Validators.required),
-       provider: new FormControl('',Validators.required),
-       invoiceDate: new FormControl('',Validators.required),
-       unitPrice: new FormControl('',Validators.required),
-       quantity:new FormControl('',Validators.required),
-       tva:new FormControl('',Validators.required),
-       paidStatus: new FormControl('',Validators.required),
-      //  flatBlock:new FormControl('',Validators.required),
-       client: new FormControl('',Validators.required)
-    });
+     
+ this.billsform=new FormGroup({
+    //  name:new FormControl ('',Validators.required),
+     invoiceNumber: new FormControl('',Validators.required),
+     materialAndExecution:new FormControl('',Validators.required),
+     provider: new FormControl('',Validators.required),
+     invoiceDate: new FormControl('',Validators.required),
+     unitPrice: new FormControl('',Validators.required),
+     quantity:new FormControl('',Validators.required),
+     tva:new FormControl('',Validators.required),
+     paidStatus: new FormControl('',Validators.required),
+    //  flatBlock:new FormControl('',Validators.required),
+     client: new FormControl('',Validators.required)
+  });
 
+// this.getBillsRegistration(this.route.snapshot.params.id)
     // if(this.route.snapshot.queryParams['id']){
     //   this.getBillsRegistration(this.route.snapshot.params.id);
     // } else {

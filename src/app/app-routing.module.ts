@@ -50,23 +50,24 @@ const routes: Routes = [
     path:'home',
     component:PageEntryComponent,
     canActivate:[AuthService]
+}, {
+  path:'admin/bills/:id',
+  component: ViewRegistrationComponent,
+  canActivate: [AuthService]
 },
+
   {
     path:'bills/:id',
     component: HomeComponent,
     canActivate: [AuthService]
   },
-
+  
   {
     path:'bills',
     component:HomeComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'bills/:id',
-    component: ViewRegistrationComponent,
-    canActivate: [AuthService]
-  },
+  
   {
     path:'flatblock',
     component:FlatblockComponent,
@@ -109,18 +110,18 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   
-  {
-    path:'update/:id',
-    component: UpdateComponent,
-    canActivate:[AuthService]
-  },
+  // {
+  //   path:'update/:id',
+  //   component: UpdateComponent,
+  //   canActivate:[AuthService]
+  // },
   {path:'client/view/:id',
   component:ClientViewByIdComponent,
   canActivate:[AuthService]
 },
   {path:'register',
   component:RegisterPageComponent,
-  canActivate:[AuthService]
+  // canActivate:[AuthService]
 },
   {
     path:'flatblock/view/:id',
@@ -153,22 +154,22 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
 
-  {
-    path:'fiscalbill',
-    component:FiscalBillComponent,
-    canActivate: [AuthService]
-  },
-  {
-    path:'fiscalbill/view',
-    component:FiscalBillViewComponent,
-    canActivate: [AuthService]
-  },
+  // {
+  //   path:'fiscalbill',
+  //   component:FiscalBillComponent,
+  //   canActivate: [AuthService]
+  // },
+  // {
+  //   path:'fiscalbill/view',
+  //   component:FiscalBillViewComponent,
+  //   canActivate: [AuthService]
+  // },
   
-  {
-    path:'fiscalbill/view/:id',
-    component:ViewFiscalBillByIdComponent,
-    canActivate: [AuthService]
-  },
+  // {
+  //   path:'fiscalbill/view/:id',
+  //   component:ViewFiscalBillByIdComponent,
+  //   canActivate: [AuthService]
+  // },
   
   {
     path:'client/view',
@@ -186,7 +187,6 @@ const routes: Routes = [
   component:ClientComponent,
   canActivate: [AuthService]
   },
-  
   {
     path:'admin',
     component: AdminComponent,

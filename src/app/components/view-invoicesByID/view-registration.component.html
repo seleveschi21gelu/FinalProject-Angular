@@ -8,18 +8,20 @@
         <div class="form-control">{{billsRegistration.id}}</div>
       </div>
       <div class="form-group">
+        <label>Client</label>
+        <div class="form-control">{{billsRegistration.client}}</div>
+      </div>
+      <div class="form-group">
+        <label>Provider</label>
+        <div class="form-control">{{billsRegistration.provider}}</div>
+      </div>
+      <div class="form-group">
         <label>Invoice Number</label>
-        <input [readonly] = "readonly">
         <div class="form-control">{{billsRegistration.invoiceNumber}}</div>
       </div>
       <label>Material Or Execution</label>
-      <div class="form-control">{{billsRegistration.materialAndExecution.name}}</div>
+      <div class="form-control">{{billsRegistration.materialAndExecution}}</div>
     </div>
-    <div class="form-group">
-      <label>Provider</label>
-      <div class="form-control">{{billsRegistration.provider.name}}</div>
-    </div>
-      
       <div class="form-group">
         <label>Invoice Date</label>
         <div class="form-control">{{billsRegistration.invoiceDate}}</div>
@@ -34,15 +36,15 @@
       </div>
       <div class="form-group">
         <label>TVA</label>
-        <div class="form-control">{{billsRegistration.TVA}}</div>
+        <div class="form-control">{{billsRegistration.tva}}</div>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label>Total</label>
         <div class="form-control">{{billsRegistration.total}}</div>
-      </div>
+      </div> -->
       <div class="form-group">
         <label>Paid Status</label>
-        <div class="form-control">{{billsRegistration.paidStatus.name}}</div>
+        <div class="form-control">{{billsRegistration.paidStatus}}</div>
       </div>
        
         <!-- <div class="form-group">

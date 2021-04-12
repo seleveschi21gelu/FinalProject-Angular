@@ -9,24 +9,22 @@
 </head>
 <body>
   <h1>REGISTER INVOICE</h1>
-  <div class="view"> <button type="submit" [routerLink] = "['/admin']" class="btn btn-dark" >Invoices </button></div>
+  <div class="view"> <button type="submit" [routerLink] = "['/admin']" class="btn btn-dark" >Go to invoices list </button></div>
     <div  class="container">
 
         <form [formGroup]="billsform" (ngSubmit)="submitRegistration()" novalidate class="styled-table">
-          <div *ngIf="validMessage  != ''">
-            <h3 class="has-info">{{validMessage}}</h3>
-          </div>
+          
 
-          <!-- <div *ngIf="billsRegistration" class="form-group"> -->
-            <!-- <label>ID</label>
+           <div *ngIf="billsRegistration" class="form-group"> 
+             <label>ID</label>
             <div class="form-control">{{billsRegistration.id}}</div>
-          </div> -->
+          </div>
 
           <div class="form-group">
             <label>Client</label>
             <select class="form-control" formControlName="client" required>
               <option *ngFor="let client of clientList"
-                      [value]="client.name">
+                      [value]='client.name'>
                       {{client.name}}
               </option>
             </select>
@@ -59,7 +57,7 @@
             <select class="form-control" formControlName="materialAndExecution" required>
               <option *ngFor="let material of materialList"
                       [value]="material.name">
-                      {{ material.name }}
+                      {{ material.name}}
               </option>
             </select>
             <div *ngIf="materialAndExecution?.touched && !materialAndExecution?.valid" class="alert alert-danger">
@@ -108,8 +106,8 @@
             </div>
           </div>
 
-
-          <!-- <div class="form-group">
+<!-- 
+         <-- <div class="form-group">
             <label>Flat Block</label>
             <select class="form-control" formControlName="flatBlock" required>
               <option *ngFor="let flatBlock of flatBlockList"
@@ -120,9 +118,12 @@
             <div *ngIf="flatBlock?.touched && !flatBlock?.valid" class="alert alert-danger">
               <div *ngIf="flatBlock?.errors?.required">Field required.</div>
             </div>
-          </div> -->
+          </div> --> 
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
 
-         <button type="submit" class="btn btn-dark"  >Submit</button>
+         <button type="submit" [disabled]="!billsform.valid" class="btn btn-dark" >Submit</button>
         
 
         </form>

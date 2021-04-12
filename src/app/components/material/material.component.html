@@ -1,11 +1,10 @@
 
   <h1>REGISTER MATERIAL</h1>
     <div  class="container">
+      <a class="btn btn-dark" routerLink="/material/view"><h4>Go to materials list</h4></a>
 
         <form [formGroup]="materialForm" (ngSubmit)="submitRegistration()" class="styled-table" novalidate>
-          <div *ngIf="validMessage  != ''">
-            <h3 class="has-info">{{validMessage}}</h3>
-          </div>
+          
           <div *ngIf="materialRegistration" class="form-group">
             <label>ID</label>
             <div class="form-control">{{materialRegistration.id}}</div>
@@ -31,7 +30,9 @@
               <div *ngIf="deliveryType?.errors?.required">Field required.</div>
             </div>
           </div>
-        
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
 
           <button type="submit" class="btn btn-dark" >Submit</button>
         </form>

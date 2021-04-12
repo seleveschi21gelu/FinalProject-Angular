@@ -35,7 +35,7 @@ export class UpdateComponent implements OnInit {
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
-    this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
+    // this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
     this.clientService.getClients().subscribe(client => this.clientList =client);
   }
 

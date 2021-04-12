@@ -53,6 +53,7 @@ export class ProviderComponent implements OnInit {
     // if(this.billsform?.valid){
     //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
     if(id){ this.providerService.updateProviderById(id, this.providerForm.value);
+      this.validMessage = "Provider updated"
     }
     else{
      this.providerService.addProvider(this.providerForm.value).subscribe();

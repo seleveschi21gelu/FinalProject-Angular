@@ -19,6 +19,8 @@ export class ViewRegistrationComponent implements OnInit {
     if(this.route.snapshot.queryParams['id']){
       this.getBillsRegistration(this.route.snapshot.params.id);
     }
+    // this.getBillsRegistration(this.route.snapshot.params.id);
+    
   }
 
 getBillsRegistration(id:number){

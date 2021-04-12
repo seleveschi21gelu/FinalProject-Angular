@@ -22,7 +22,7 @@
   <h1>REGISTER PROVIDER</h1>
     <div  class="container">
      
-      <div class="view"> <button type="submit" [routerLink] = "['/provider/view']" class="btn btn-dark" >Providers View</button></div>
+      <div class="view"> <button type="submit" [routerLink] = "['/provider/view']" class="btn btn-dark" >Go to providers list</button></div>
       <!-- <div class="view2"> <button type="submit" [routerLink] = "['/provider']" class="btn btn-dark" >Register a new provider</button></div> -->
 
         <form [formGroup]="providerForm" (ngSubmit)="submitRegistration()" class="styled-table" >
@@ -101,8 +101,11 @@
               <div *ngIf="email?.errors?.required">Field required.</div>
             </div>
           </div>
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
 
-          <button type="submit" class="btn btn-dark" >Submit</button>
+          <button type="submit" [disabled]="!providerForm.valid"  class="btn btn-dark" >Submit</button>
         
 
 

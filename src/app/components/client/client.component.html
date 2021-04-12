@@ -15,14 +15,12 @@
 </head>
 <body>
   <h1>REGISTER CLIENT</h1>
-  <div class="view"> <button type="submit" [routerLink] = "['/client/view']" class="btn btn-dark" >Clients</button></div>
+  <div class="view"> <button type="submit" [routerLink] = "['/client/view']" class="btn btn-dark" >Go to clients list</button></div>
 
     <div  class="container">
 
         <form [formGroup]="clientForm" (ngSubmit)="submitRegistration()" class="styled-table">
-          <div *ngIf="validMessage  != ''">
-            <h3 class="has-info">{{validMessage}}</h3>
-          </div>
+         
 
           <div *ngIf="clientRegistration" class="form-group">
             <label>ID</label>
@@ -76,9 +74,12 @@
               <div *ngIf="email?.errors?.required">Field required.</div>
             </div>
           </div>
+          <div *ngIf="validMessage  != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+          </div>
 
-          <!-- <button type="submit" disabled="!clientForm.valid" class="btn btn-dark" >Submit</button> -->
-          <button type="submit" [disabled]="!clientForm.valid" (click)="submitRegistration()" class="btn btn-dark">Submit</button>
+          <button type="submit" [disabled]="!clientForm.valid" class="btn btn-dark" >Submit</button>
+          <!-- <button type="submit" [disabled]="!clientForm.valid" (click)="submitRegistration()" class="btn btn-dark">Submit</button> -->
         </form>
       </div>
     </body>

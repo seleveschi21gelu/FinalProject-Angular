@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head >
-    <style>
-        body {
-
-        background-size: cover;
-        background-position: center;
-        }
-        </style>
+   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-  <h2>REGISTER DELIVERY TYPE</h2>
+  <h1>REGISTER DELIVERY TYPE</h1>
     <div  class="container">
-
-      <form [formGroup]="deliveryTypeForm" (ngSubmit)="submitRegistration()">
-          <div *ngIf = "validMessage  != ''">
-            <h3 class="has-info">{{validMessage}}</h3>
+      <a class="btn btn-dark" routerLink="/deliveryType/view"><h4>Go to delivery type list</h4></a>
+      <form [formGroup]="deliveryTypeForm" (ngSubmit)="submitRegistration()" class="styled-table" novalidate>
+        
+        <div *ngIf="deliveryTypeRegistration" class="form-group">
+          <label>ID</label>
+          <div class="form-control">{{deliveryTypeRegistration.id}}</div>
+        </div>
+        <div class="form-group">
+          <label>Delivery type name</label>
+          <input type="text" class="form-control" formControlName="name" required autofocus/>
+          <div *ngIf="name?.touched && !name?.valid" class="alert alert-danger">
+            <div *ngIf="name?.errors?.required">Field required.</div>
           </div>
-
-          <div *ngIf="deliveryTypeRegistration" class="form-group">
-            <label>ID</label>
-            <div class="form-control">{{deliveryTypeRegistration.id}}</div>
-          </div>
-          <div class="form-group" >
-            <label>Name</label>
-            <input  type="text" class="form-control" name="name" required/>
-            <div *ngIf="name?.touched && !name?.valid" class="alert alert-danger">
-              <div *ngIf="name?.errors?.required">Field required.</div>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-dark" >Submit</button>
+        </div>
+        <div *ngIf="validMessage  != ''">
+          <h3 class="has-info">{{validMessage}}</h3>
+        </div>
+        <div class="sub"><button type="submit" class="btn btn-dark" ><h5>Submit</h5></button></div>
+          
         </form>
       </div>
-
 </body>
 </html>
 

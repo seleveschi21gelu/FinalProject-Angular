@@ -31,10 +31,18 @@ h1{
 }
 label{font-size: 25px;
 }
-.form-control{font-family: "Lucida Console", "Courier New", monospace;
-    font-size: large;}
+.form-control{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
+}
 
     .alert-danger{
         font-size: 20px;
+    }
+    .has-info{
+        text-align: center;
+        color: white;
+        font-family: 'Noto Serif', serif;
+    font-size: 27px;
     }
     

@@ -1,4 +1,4 @@
-import { DeliveryType } from './../models/DeliveryType';
+
 import { ActivatedRoute } from '@angular/router';
 import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { MaterialService } from './../../services/material.service';
@@ -40,9 +40,14 @@ export class MaterialComponent implements OnInit {
     let id = this.route.snapshot.params.id;
     // if(this.billsform?.valid){
     //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
-    if(id) this.materialService.updateMaterialById(id, this.materialForm.value);
-    else this.materialService.addMaterial(this.materialForm.value).subscribe();
-  }
+    if(id){ this.materialService.updateMaterialById(id, this.materialForm.value);
+    this.validMessage="Material updated!";
+    }
+    else{ this.materialService.addMaterial(this.materialForm.value).subscribe();
+      this.validMessage="Material registrated!";
+    }
+
+}
   getMaterialRegistration(id:number){
     this.materialService.getMaterialById(id).subscribe(
       data=>{this.materialRegistration = data;

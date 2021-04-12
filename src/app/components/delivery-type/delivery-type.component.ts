@@ -2,7 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DeliveryTypeService } from '../../services/delivery-type.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DeliveryType } from '../models/DeliveryType';
+
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -17,7 +17,7 @@ export class DeliveryTypeComponent implements OnInit {
   });
   
   deliveryTypeList: any;
-  deliveryType: DeliveryType = new DeliveryType();
+ 
  
   validMessage: string = "";
   isAddMode:any;
@@ -57,16 +57,20 @@ export class DeliveryTypeComponent implements OnInit {
 
   submitRegistration(){
     let id = this.route.snapshot.params.id;
-    if(id) this.deliveryTypeService.updateDeliveryTypeById(id, this.deliveryTypeForm.value);
-    else this.deliveryTypeService.addDeliveryType(this.deliveryTypeForm.value).subscribe();
-  }
+    if(id) {this.deliveryTypeService.updateDeliveryTypeById(id, this.deliveryTypeForm.value);
+        this.validMessage = "Delivery type updated!"
+    } 
+     else{ this.deliveryTypeService.addDeliveryType(this.deliveryTypeForm.value).subscribe();
+        this.validMessage = "Delivery type registrated!"
+    }
+}
 
-  getDeliveryTypeById(id:number){
+  getDeliveryTypeRegistration(id:number){
     this.deliveryTypeService.getDeliveryTypeById(id).subscribe(
-      data=>{this.deliveryType = data;
+      data=>{this.deliveryTypeRegistration = data;
       },
       err=>console.error(err),
-      ()=>console.log('bills loaded')
+      ()=>console.log('delivery type loaded')
     );
   }
 

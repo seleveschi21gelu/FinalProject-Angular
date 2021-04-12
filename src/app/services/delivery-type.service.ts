@@ -1,4 +1,4 @@
-import { DeliveryType } from './../components/models/DeliveryType';
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -15,7 +15,7 @@ export class DeliveryTypeService {
   }
 
    getDeliverysType(){
-    return this.http.get<DeliveryType[]>('http://localhost:8080/deliveryType')
+    return this.http.get('http://localhost:8080/deliveryType')
 
    }
 
@@ -38,6 +38,6 @@ export class DeliveryTypeService {
   
 
    getDeliveryTypeById(id:number){
-     return this.http.get<DeliveryType>('http://localhost:8080/deliveryType/' + id);
+     return this.http.get('http://localhost:8080/deliveryType/' + id);
   }
 }

@@ -1,6 +1,9 @@
 import { ActivatedRoute } from '@angular/router';
 import { MaterialService } from './../../services/material.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-view-material',
@@ -9,16 +12,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewMaterialComponent implements OnInit {
   public material:any;
+  
+  @ViewChild(MatPaginator) paginator: any;
+  @ViewChild(MatSort) sort: any 
+  
+  dataSource:any;
+  displayedColumns: string[]=["name","deliveryType","action2"]
 
-  constructor(private materialService:MaterialService,private route:ActivatedRoute) { }
-
-  ngOnInit(): void {
-    this.getMaterial();
-    // this.deleteMaterialById(this.route.snapshot.params.id);
+  constructor(private materialService:MaterialService,private route:ActivatedRoute) {
+    this.materialService.getMaterials().subscribe((data:any)=>{
+      this.dataSource = new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
   }
 
-  getMaterial(){
-    this.materialService.getMaterials().subscribe(
+  ngOnInit(): void {
+    this.getMaterials();
+    this.deleteMaterialById(this.route.snapshot.params.id);
+  }
+
+ async getMaterials(){
+   await this.materialService.getMaterials().subscribe(
       data=>{
         this.material=data
       },
@@ -39,7 +54,7 @@ export class ViewMaterialComponent implements OnInit {
   //   );
 
   // }
-  deleteMaterialById(id:number){
+ async deleteMaterialById(id:number){
     this.materialService.deleteMaterialById(id).
     subscribe(
       (data) =>{
@@ -49,9 +64,20 @@ export class ViewMaterialComponent implements OnInit {
    
   }
 
-  updateMaterialById(id:number,material:any){
+ async updateMaterialById(id:number,material:any){
     this.materialService.updateMaterialById(id,material);
   }
+
+  filter(query:string){
+    this.dataSource.filter =query.trim().toLowerCase();
+
+  }
+  
+isActive: boolean=false;
+switch(){
+this.isActive = !this.isActive;
+
+}
 
   
   

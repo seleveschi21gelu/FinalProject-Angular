@@ -1,7 +1,10 @@
-import { DeliveryType } from './../models/DeliveryType';
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DeliveryTypeService } from 'src/app/services/delivery-type.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-delivery-type-view',
@@ -11,18 +14,30 @@ import { DeliveryTypeService } from 'src/app/services/delivery-type.service';
 export class DeliveryTypeViewComponent implements OnInit {
   // public deliveryTypes: DeliveryType[] = [];
   public deliveryType: any;
+   
+  @ViewChild(MatPaginator) paginator: any;
+  @ViewChild(MatSort) sort: any 
+  
+  dataSource:any;
+  displayedColumns: string[]=["name","action2"]
 
   constructor(private deliveryTypeService:DeliveryTypeService,
-    private route: ActivatedRoute, private router: Router) { }
+    private route: ActivatedRoute, private router: Router) {
+      this.deliveryTypeService.getDeliverysType().subscribe((data:any)=>{
+        this.dataSource = new MatTableDataSource(data)
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      })
+     }
 
   ngOnInit(): void {
     this.getDeliveryTypes();
   }
 
-  getDeliveryTypes(){
-    this.deliveryTypeService.getDeliverysType().subscribe(
+ async getDeliveryTypes(){
+   await this.deliveryTypeService.getDeliverysType().subscribe(
       data =>{
-        console.log("This is the data: " + data)
+        // console.log("This is the data: " + data)
         this.deliveryType=data
       },
       err=>console.error(err),
@@ -30,7 +45,7 @@ export class DeliveryTypeViewComponent implements OnInit {
     );
   }
 
-  deleteDeliveryTypeById(id:number) {
+ async deleteDeliveryTypeById(id:number) {
     this.deliveryTypeService.deleteDeliveryTypeById(id).
     subscribe(
       (data) =>{
@@ -39,8 +54,17 @@ export class DeliveryTypeViewComponent implements OnInit {
       })
 
   }
-  updateDeliveryTypeById(id:number,deliveryType:DeliveryType){
+ async updateDeliveryTypeById(id:number,deliveryType:any){
     this.deliveryTypeService.updateDeliveryTypeById(id,deliveryType);
   }
+  filter(query:string){
+    this.dataSource.filter =query.trim().toLowerCase();
 
+  }
+  
+isActive: boolean=false;
+switch(){
+this.isActive = !this.isActive;
+
+}
 }
