@@ -10,15 +10,28 @@ export class RegisterPageComponent implements OnInit {
 
   username: string="";
   password: string="";
+  user= {username:"", password:""}
+  validMessage: string ="";
   constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
   }
 
+  isSelected:boolean=false;
+  show(){
+this.isSelected=true;
+  }
+
   register(){
     console.log("register login");
-     this.authService.register(this.username,this.password);
+    console.log("username", this.username)
+     this.authService.register(this.user).subscribe(result=>{
+    
+      })
+     
    }
+
+   
  
 
 }

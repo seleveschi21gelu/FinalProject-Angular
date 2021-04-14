@@ -154,11 +154,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
 
-  // {
-  //   path:'fiscalbill',
-  //   component:FiscalBillComponent,
-  //   canActivate: [AuthService]
-  // },
+  {
+    path:'fiscalbill',
+    component:FiscalBillComponent,
+    canActivate: [AuthService]
+  },
   // {
   //   path:'fiscalbill/view',
   //   component:FiscalBillViewComponent,

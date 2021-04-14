@@ -21,15 +21,17 @@ export class ClientViewComponent implements OnInit {
   public client:any;
 
   constructor(private clientService:ClientService, private route:ActivatedRoute) { 
+   
+  
+  }
+
+  ngOnInit(): void {
     this.clientService.getClients().subscribe((data:any)=>{
       this.dataSource = new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
-  
-  }
 
-  ngOnInit(): void {
     this.getClients();
     this.deleteClientById(this.route.snapshot.params.id)
   }

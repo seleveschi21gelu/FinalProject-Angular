@@ -17,19 +17,23 @@ export class AdminComponent implements OnInit {
   @ViewChild(MatSort) sort: any 
 
   dataSource:any;
-  displayedColumns: string[]=["id","client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus","action","action2"]
+  displayedColumns: string[]=["client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus","action","action2"]
 public bills: any;
   constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) {
+ 
+   }
+
+  ngOnInit(): void {
+
     this.BillsService.getBills().subscribe((data:any)=>{
+      console.log(data);
       this.dataSource= new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort= this.sort;
     
     }
       )
-   }
 
-  ngOnInit(): void {
     this.getBills();
     this.deleteBillById(this.route.snapshot.params.id);
     // this.updateBillById(this.route.snapshot.params.id,this.bills);

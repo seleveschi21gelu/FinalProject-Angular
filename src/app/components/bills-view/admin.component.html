@@ -85,11 +85,11 @@
   </p>
   <div class="mat-elevation-z8">
       <table class = "table table-striped table-hover"mat-table #table [dataSource]="dataSource" matSort >
-      
+<!--       
         <ng-container matColumnDef="id">
           <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
           <td mat-cell *matCellDef="let i"><h3>  {{ i.id }} </h3></td>
-        </ng-container>
+        </ng-container> -->
           <!-- ImageUrl Column -->
           <ng-container matColumnDef="client">
             <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Client </th>
@@ -133,7 +133,7 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef class="action">Action</th>
             <td mat-cell *matCellDef="let i">
-                <a [routerLink]="['/bills/',i.key]"> <h5>Update</h5></a>
+                <a [routerLink]="['/bills/',i.id]"> <h5>Update</h5></a>
             </td> </ng-container>
 
            <ng-container matColumnDef="action2">

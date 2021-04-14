@@ -65,12 +65,9 @@ export class AuthService implements CanActivate{
     headers: new HttpHeaders({ 'Content-type': 'application/json'})
   }
 
-  register(username: string,password:string)   {
+  register(user:any)   {
     console.log("register auth");
-     this.http.post<any>('http://localhost:8080/api/register', {"username" : username, "password" : password}).subscribe(
-       data=>{console.log(data);
-      }
-     );
+   return this.http.post<any>('http://localhost:8080/api/register', user);
   }
 
   isLoggedIn(): Observable<boolean> {
