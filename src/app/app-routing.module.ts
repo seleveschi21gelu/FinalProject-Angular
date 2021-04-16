@@ -41,15 +41,15 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'registering',
+    path:'home',
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
  
   {
-    path:'home',
+    path:'',
     component:PageEntryComponent,
-    canActivate:[AuthService]
+  
 }, {
   path:'admin/bills/:id',
   component: ViewRegistrationComponent,

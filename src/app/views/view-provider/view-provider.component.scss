@@ -16,7 +16,7 @@ td{
     // text-align: center;
     color: #000;
     font-family: 'Noto Serif', serif;
-    font-size: 19px;
+    font-size: 17px;
     margin-top: 20px;
     // padding: 210px;
     
@@ -40,6 +40,7 @@ td{
 table{
 border-spacing: 12px 0;
 border-collapse: separate;
+width: 110%;
 // text-align:unset;
 }
 
@@ -107,7 +108,7 @@ width: 140%;
 
 mat-paginator{
     margin-left: 170px;
-width: 89%;
+width: 97%;
 height: 50px;
 margin-top: -52px;
 }
@@ -128,9 +129,15 @@ margin-top: -52px;
     height: 47px;
 }
 h3{
-    margin-top: 10px;
-    font-size: 19px;
+    margin-top: 0px;
+    font-size: 17px;
 }
 h5{
 margin-top: 15px;
+font-size: 18px;
+}
+.container{
+    width: 60%;
+    
+
 }

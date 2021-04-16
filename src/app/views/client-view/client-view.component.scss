@@ -89,7 +89,7 @@ border-collapse: separate;
     margin-left: -222px;
 }
 .search{
-    margin-left: 1060px;
+    margin-left: 955px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -103,12 +103,12 @@ margin-top: -16px;
 font-size: 21px;
 text-align: center;
 width: 11%;
-height: 56px;
+height: 54px;
 
 // margin-top: 500px;
 }
 .btn-dark.search{
-    margin-left: 1285px;
+    margin-left: 1180px;
     width: 47px;
     height: 47px;
 }
@@ -139,9 +139,9 @@ width: 140%;
 // }
 mat-paginator{
     margin-left: 170px;
-width: 89%;
-height: 56px;
-margin-top: -73px;
+width: 88%;
+height: 54px;
+margin-top: -70px;
 }
 h3{
     margin-top: 10px;
@@ -149,4 +149,7 @@ h3{
 }
 h5{
 margin-top: 15px;
+}
+.container{
+    width: 70%;
 }
