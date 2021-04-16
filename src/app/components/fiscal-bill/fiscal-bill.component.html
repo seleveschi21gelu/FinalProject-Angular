@@ -1,575 +1,572 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head >
-    <style>
-        body {
 
-        background-size: cover;
-        background-position: center;
-        }
-        </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<!DOCTYPE html>
+<html class="invoicely invoicely_invoicing">
+<head>
+    <meta charset="utf-8">
+
+    <title>Effortless Invoicing - invoicely</title>
+
+    <meta name="description" content="Send unlimited, good looking online invoices to an unlimited number of clients, in any currency, and get paid online.">
+    <meta name="keywords" content="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="invoicely">
+
+    <link href="https://invoicely.global.ssl.fastly.net/dist/css/style.main.invoicely.51b515.css" media="all" rel="stylesheet" type="text/css">    <link href="https://invoicely.global.ssl.fastly.net/dist/css/fonts_sprites.9cc6f1.css" media="all" rel="stylesheet" type="text/css">
+    <script src="https://invoicely.global.ssl.fastly.net/dist/js/jquery-1.11.3.min.b091a4.js" type="text/javascript"defer></script>
+    <link rel="canonical"
+          href="https://invoicely.com/features/invoicing">
+
+    <link rel="shortcut icon" href="/images/invoicely_shortcut_icon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="/images/invoicely_icon_apple_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="/images/invoicely_icon_apple_114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="/images/invoicely_icon_apple_72.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="/images/invoicely_icon_apple.png">
+
+  <!-- HOME PAGE HEADER -->
+  
+
+
 </head>
+
 <body>
-    <div  class="container">
 
-        <form [formGroup]="fiscalBillForm" (ngSubmit)="submitRegistration()" novalidate>
-          <div *ngIf="validMessage  != ''">
-            <h3 class="has-info">{{validMessage}}</h3>
-          </div>
-          <div class="form-group">
-            <label>Provider</label>
-            <input type="text" class="form-control" formControlName="provider" required/>
-          </div>
+<input type="hidden" name="current_page" value="invoicely_invoicing">
 
-          <div class="form-group">
-            <label>C.I.F</label>
-            <input type="text" class="form-control" formControlName="cif" required/>
-          </div>
 
-          <div class="form-group">
-            <label>Social Capital</label>
-            <input type="number" class="form-control" formControlName="socialCapital" required/>
-          </div>
+<header>
 
-          <div class="form-group">
-            <label>Headquarters</label>
-            <input type="text" class="form-control" formControlName="headquarters" required/>
-          </div>
-          
-          <div class="form-group">
-            <label>County</label>
-            <input type="text" class="form-control" formControlName="county" required/>
-          </div>
+    <div class="mobile header">
+        <a class="logo" href="/">
+            <img alt="invoicely - Free, Unlimited Invoicing For Your Business" src="https://lh3.googleusercontent.com/proxy/omRcRvEkjcQuvA2R45qng6-LhNcUGmMo_4TUoNK-BcjAgtC3n86xlJIjBsEbt7LvXP2tOYoc8ioUTA2ud20muKvE6w3uDCX9GDdBl0y7poZ717q-Z-KYuBQZ667PkvzlnRk5yt6SOTjqudaMnIVYT8pDL8xT4GnoxA9z61UALJ4rS9gxzra3g5zAehnZcrHTWyixkfjn2PtV7IG_oQ">
+        </a>
+    </div>
 
-          <div class="form-group">
-            <label>Bank</label>
-            <input type="text" class="form-control" formControlName="bank" required/>
-          </div>
-
-          <button type="submit" class="btn btn-dark" >Submit</button>
-        </form>
-      </div>
-    </body>
-    </html> -->
-
-    <!DOCTYPE html>
-    <html lang="en-US" data-website-id="1" data-oe-company-name="Odoo S.A.">
-<!--
-        ___  ___   ___   ___           
-       / _ \|   \ / _ \ / _ \          
-      | (_) | |) | (_) | (_) |         
-       \___/|___/ \___/ \___/          
-   ___ _         _ _                   
-  / __| |_  __ _| | |___ _ _  __ _ ___ 
- | (__| ' \/ _` | | / -_| ' \/ _` / -_)
-  \___|_||_\__,_|_|_\___|_||_\__, \___|
-                             |___/     
-  If you're the kind of person who reads source code, you should try our challenge:
-  https://www.odoo.com/jobs/challenge
--->
-    <head>
-                <meta charset="utf-8"/>
-                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-      <meta name="mobile-web-app-capable" content="yes"/>
-    <meta name="generator" content="Odoo"/>
-      <meta name="google-site-verification" content="pgjyH0qvN69B0m_HrTKV6h8TVnbRXp5etEHo19unPy4"/>
-        <meta name="description" content="Free billing solution on the cloud. Fully Open Source."/>
-        <meta name="keywords" content="einvoicing &amp; payments, online payments, easy invoicing, invoicing software, billing"/>
-                        <meta property="og:type" content="website"/>
-                        <meta property="og:title" content="The #1 Online Billing Software | Odoo"/>
-                        <meta property="og:site_name" content="Odoo S.A."/>
-                        <meta property="og:url" content="https://www.odoo.com/app/invoicing?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=EEU-EN-Invoicing-Core_Onine-Exact&amp;utm_term=online invoicing&amp;utm_matchtype=e&amp;utm_device=c&amp;utm_gclid=Cj0KCQjwgtWDBhDZARIsADEKwgPnRv7FVxr5XuFZh2dkpiboPW2JLO_ORroFlvcJkrQhV3Z3EsqN_VkaAnK_EALw_wcB&amp;gclid=Cj0KCQjwgtWDBhDZARIsADEKwgPnRv7FVxr5XuFZh2dkpiboPW2JLO_ORroFlvcJkrQhV3Z3EsqN_VkaAnK_EALw_wcB"/>
-                        <meta property="og:image" content="https://www.odoo.com/web/image/website/1/social_default_image?unique=f75b8fa"/>
-                        <meta property="og:description" content="Free billing solution on the cloud. Fully Open Source."/>
-                    <meta name="twitter:card" content="summary_large_image"/>
-                    <meta name="twitter:title" content="The #1 Online Billing Software | Odoo"/>
-                    <meta name="twitter:image" content="https://www.odoo.com/web/image/website/1/social_default_image?unique=f75b8fa"/>
-                    <meta name="twitter:site" content="@odoo"/>
-                    <meta name="twitter:description" content="Free billing solution on the cloud. Fully Open Source."/>
-        <link rel="canonical" href="https://www.odoo.com/app/invoicing"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
-                <title>The #1 Online Billing Software | Odoo</title>
-                <link type="image/x-icon" rel="shortcut icon" href="//odoocdn.com/web/image/website/1/favicon?unique=f75b8fa"/>
-            <link rel="preload" href="//odoocdn.com/web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin=""/>
-            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28818094-33cd6eb/1/web.assets_common.css" data-asset-xmlid="web.assets_common" data-asset-version="33cd6eb"/>
-            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28818138-fa9d192/1/web.assets_frontend.css" data-asset-xmlid="web.assets_frontend" data-asset-version="fa9d192"/>
-                <script id="web.layout.odooscript" type="text/javascript">
-                    var odoo = {
-                        csrf_token: "22424b7a88dce645aec5e5bcf3ebfcf16b0fc381o1649848759",
-                        debug: "",
-                    };
-                </script>
-            <script type="text/javascript">
-                odoo.session_info = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "translationURL": "/website/translations", "cache_hashes": {"translations": "2dacd46373f115613d64dcdd825bee0ca2245c27"}};
-                if (!/(^|;\s)tz=/.test(document.cookie)) {
-                    const userTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                    document.cookie = `tz=${userTZ}; path=/`;
-                }
-            </script>
-            <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28582159-fd107dc/1/web.assets_common_minimal_js.js" data-asset-xmlid="web.assets_common_minimal_js" data-asset-version="fd107dc"></script>
-            <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28582160-53db687/1/web.assets_frontend_minimal_js.js" data-asset-xmlid="web.assets_frontend_minimal_js" data-asset-version="53db687"></script>
-            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28817516-43d5943/1/web.assets_common_lazy.js" data-asset-xmlid="web.assets_common_lazy" data-asset-version="43d5943"></script>
-            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28817754-507b874/1/web.assets_frontend_lazy.js" data-asset-xmlid="web.assets_frontend_lazy" data-asset-version="507b874"></script>
-        <meta name="p:domain_verify" content="d266a6e14e538410370a9dabf975404d"/>
-            <noscript id="o_animate-no-js_fallback">
-                <style type="text/css">
-                    .o_animate {
-                        /* If no js - force elements rendering */
-                        visibility:visible;
-                        /* If browser support css animations support - reset animation */
-                        -webkit-animation-name: none-dummy;
-                        animation-name: none-dummy;
-                    }
-                </style>
-            </noscript>
-            <noscript>
-                <style>
-                    /* Prevent animated elements hiding */
-                    .o_animate_in_children > * {
-                        opacity: 1!important;
-                        -webkit-transform: scale(1)!important;
-                        -ms-transform: scale(1)!important;
-                        transform: scale(1)!important;
-                    }
-                </style>
-            </noscript>
-    </head>
-            <body class="">
-        <div id="wrapwrap" class="    o_billing ">
-                <!-- <header id="top" data-anchor="true" data-name="Header" class="  o_no_autohide_menu o_header_fixed o_main_header">
-    <div class="o_main_header_main">
-                <a class="float-left o_logo" href="/"></a>
-                <a href="#" role="button" class="o_mobile_menu_toggle o_no_ripple d-inline-block d-md-none">
-                    <i class="fa fa-bars"></i>
+     <div>
+        <div class="row">
+    <!--        <div class="header_logo">
+                <a class="logo" href="/">
+                    <img alt="invoicely - Free, Unlimited Invoicing For Your Business" src="/images/invoicely_index_x2.png">
                 </a>
-                <div class="o_header_buttons">
-                    <a href="/shop/cart" class="d-none">
-                        <i class="fa fa-shopping-cart"></i><sup class="my_cart_quantity badge badge-primary"></sup>
-                    </a>
-            <li class="nav-item o_no_autohide_item">
-                <a href="/web/login" class="nav-link">Sign in</a>
-            </li>
-                        <a class="btn btn-primary" href="/trial?selected_app=account">Try it free</a>
-                </div>
-                <ul class="o_primary_nav">
-                    <li class="dropdown">
-                            <a href="#" class="dropdown-toggle o-no-caret">
-                                <span class="o_app_name_title">
-                                    Invoicing
-                                </span>
-                            </a>
-                        <div class="dropdown-menu o_secondary_nav">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-3 o_finance_apps o_highlighted">
-                                        <div class="o_nav_app_family">Finance</div>
-                                        <ul>
-                                            <li><a href="/app/accounting">Accounting</a></li>
-                                            <li><a href="/app/invoicing">Invoicing</a></li>
-                                            <li><a href="/app/expenses">Expenses</a></li>
-                                            <li><a href="/app/spreadsheet">Spreadsheet (BI)</a></li>
-                                            <li><a href="/app/documents">Documents</a></li>
-                                            <li><a href="/app/sign">Sign</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_sale_apps ">
-                                        <div class="o_nav_app_family">Sales</div>
-                                        <ul>
-                                            <li><a href="/app/crm">CRM</a></li>
-                                            <li><a href="/app/sales">Sales</a></li>
-                                            <li><a href="/app/point-of-sale-shop">Point of Sale</a></li>
-                                            <li><a href="/app/subscriptions">Subscriptions</a></li>
-                                            <li><a href="/app/rental">Rental</a></li>
-                                            <li><a href="/app/amazon-connector">Amazon Connector</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_website_apps ">
-                                        <div class="o_nav_app_family">Websites</div>
-                                        <ul>
-                                            <li><a href="/app/website">Website Builder</a></li>
-                                            <li><a href="/app/ecommerce">eCommerce</a></li>
-                                            <li><a href="/app/blog">Blogs</a></li>
-                                            <li><a href="/app/forums">Forums</a></li>
-                                            <li><a href="/app/live-chat">Live Chat</a></li>
-                                            <li><a href="/app/elearning">eLearning</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_inventory_apps ">
-                                        <div class="o_nav_app_family">Inventory & MRP</div>
-                                        <ul>
-                                            <li><a href="/app/inventory">Inventory</a></li>
-                                            <li><a href="/app/manufacturing">Manufacturing</a></li>
-                                            <li><a href="/app/plm">PLM</a></li>
-                                            <li><a href="/app/purchase">Purchase</a></li>
-                                            <li><a href="/app/maintenance">Maintenance</a></li>
-                                            <li><a href="/app/quality">Quality</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3 o_hr_apps ">
-                                        <div class="o_nav_app_family">Human Resources</div>
-                                        <ul>
-                                            <li><a href="/app/employees">Employees</a></li>
-                                            <li><a href="/app/recruitment">Recruitment</a></li>
-                                            <li><a href="/app/time-off">Time Off</a></li>
-                                            <li><a href="/app/appraisals">Appraisals</a></li>
-                                            <li><a href="/app/referrals">Referrals</a></li>
-                                            <li><a href="/app/fleet">Fleet</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_marketing_apps ">
-                                        <div class="o_nav_app_family">Marketing</div>
-                                        <ul>
-                                            <li><a href="/app/social-marketing">Social Marketing</a></li>
-                                            <li><a href="/app/email-marketing">Email Marketing</a></li>
-                                            <li><a href="/app/sms-marketing">SMS Marketing</a></li>
-                                            <li><a href="/app/events">Events</a></li>
-                                            <li><a href="/app/marketing-automation">Marketing Automation</a></li>
-                                            <li><a href="/app/surveys">Surveys</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_services_apps ">
-                                        <div class="o_nav_app_family">Services</div>
-                                        <ul>
-                                            <li><a href="/app/project">Project</a></li>
-                                            <li><a href="/app/timesheet">Timesheet</a></li>
-                                            <li><a href="/app/field-service">Field Service</a></li>
-                                            <li><a href="/app/helpdesk">Helpdesk</a></li>
-                                            <li><a href="/app/planning">Planning</a></li>
-                                            <li><a href="/app/appointments">Appointments</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-3 o_productivity_apps ">
-                                        <div class="o_nav_app_family">Productivity</div>
-                                        <ul>
-                                            <li><a href="/app/discuss">Discuss</a></li>
-                                            <li><a href="/app/approvals">Approvals</a></li>
-                                            <li><a href="/app/iot">IoT</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="o_store_link d-md-flex justify-content-md-center">
-                                <a href="https://apps.odoo.com/apps/modules" class="mx-md-3 px-3"><i class="fa fa-cube fa-fw mr-2"></i>Third party apps</a>
-                                <a href="/app/studio" class="mx-md-3 px-3"><i class="fa fa-pencil fa-fw mr-2"></i>Odoo Studio</a>
-                                <a href="https://www.odoo.sh" class="mx-md-3 px-3"><i class="fa fa-cloud fa-fw mr-2"></i>Odoo Cloud Platform</a>
-                            </span>
-                        </div>
+            </div>
+            <ul class="header_links ">
+                <li class="standard">
+                    <a class="header_link main_header_link" role="button" href="/features">Features</a>
+                </li>
+
+                                    <li class="standard">
+                        <a class="header_link main_header_link" role="button" href="/customers">Customers</a>
                     </li>
-                        <span class="border-right border-default mr-lg-2 d-none d-md-inline"></span>
-    <li class="nav-item">
-            <a role="menuitem" href="/app/invoicing" class="nav-link active">
-              <span>Overview</span>
-            </a>
-</li>
-    <li class="nav-item">
-            <a role="menuitem" href="/app/invoicing-features" class="nav-link ">
-              <span>Features</span>
-            </a>
-</li>
-                        <div class="dropdown d-sm-none">
-                                <a class="btn btn-secondary-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span>Overview</span>
-                                </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="/app/invoicing-features">
-                                        <span>Features</span>
-                                    </a>
-                            </div>
-                        </div>
-                </ul>
-            </div>
-</header> -->
-                <main>
-      <div id="wrap" class="oe_structure">
-      <section class="s_responsive_to_image_block js_top_banner bg-white" style="padding-bottom: 42%; background-image: url('//odoocdn.com/openerp_website/static/src/img/2016/invoicing/invoicing_top_banner.jpg'); background-position: right center;">
+                
+                <li class="standard">
+                    <a class="header_link main_header_link" role="button" href="/pricing">Pricing</a>
+                </li>
+
+                <li class="standard">
+                    <a class="header_link main_header_link" role="button" href="https://help.invoicely.com">Help
+                        Center</a>
+                </li>
+
+                                    <li class="header_login">
+                        <a class="main_header_link" href="/login">
+                                            <span class="highlight_button login">
+                                                Login
+                                            </span>
+                        </a>
+                    </li>
+
+                    <li class="header_signup">
+                        <a class="main_header_link no_pr" href="/signup">
+                                            <span class="highlight_button signup">
+                                                Sign Up Free
+                                            </span>
+                        </a>
+                    </li>
+                
+            </ul>-->
+        </div> 
+    </div>
+</header>
+
+<div class="main">
+
+    <div class="hero feature">
         <div class="wrapper">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-8 col-lg-7 my-5">
-                  <h1 class="display-2 fw_regular mb16 mt0">Online <b>invoicing</b><br/>made easy</h1>
-                  <h4 class="mb0 fw_regular">Manage contracts, create recurring invoices, <br/>bill timesheets, get paid faster.</h4>
-                <a class="mt32 mb8 btn btn-primary o_btn_cta" href="/trial?selected_app=account">Start now - It's free</a>
-                <br/>
-  <div class="o_schedule_demo ">
-        <a target="_blank" class="" href="/calendar/i-want-a-demo-with-an-odoo-expert-am-romania-252/appointment">Schedule a demo</a>
-  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="o_offset_top_medium">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-              <!-- <div class="s_browser shadow"> -->
-                <!-- <img class="bar" src="//odoocdn.com/openerp_website/static/src/img/2016/components/browser.png" alt="" loading="lazy"/> -->
-                <!-- <div class="content">
-                  <img class="img img-responsive" src="//odoocdn.com/web/image/11186835/Invoicing-Invoices.png" alt="" data-original-title="" title="" aria-describedby="tooltip844721" loading="lazy"/>
-                </div> -->
-              <!-- </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="bg-white text-center">
-        <div class="container">
-          <div class="row mt92 mb48">
-            <div class="col-md-12">
-              <h2 class="mt0 mb8 display-3">Turn
-                                <b>Quotes into Invoices</b> with minimal effort
-                            </h2>
-              <h5 class="mb0">Bill automatically based on sales orders, delivery orders, contracts, or time and material.</h5>
-            </div>
-            <div class="col-sm-4 mt48 mb48">
-              <i class="fa fa-2x fa-copy o-icon text-gamma mb16"></i>
-              <p>Easily create invoices based on the quotes you have sent to your clients.</p>
-            </div>
-            <div class="col-sm-4 mt48 mb48">
-              <i class="fa fa-2x fa-share o-icon text-gamma mb16"></i>
-              <p>Send professional looking invoices directly to your clients in just a click.</p>
-            </div>
-            <div class="col-sm-4 mt48 mb48">
-              <i class="fa fa-2x fa-file-pdf-o o-icon text-gamma mb16"></i>
-              <p>Automatically send them by email as a PDF attachment or print and send them by mail.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="o_bg_fit-H o_bg_no-repeat" style="background-image: url('//odoocdn.com/openerp_website/static/src/img/2016/invoicing/invoicing_bg_01.jpg');background-position: center;">
-        <div class="bg-gray-lighter visible-xs-block" style="position : absolute; width : 100%; height : 100%; opacity : 1;"></div>
-        <!-- <div class="container">
-          <div class="row mt92 mb92">
-            <div class="col-sm-6 col-md-5">
-              <h2 class="mt0 mb8 display-3">Get paid faster</h2>
-              <h5 class="mb32">Online payments and automated follow-ups.</h5>
-              <p class="mb48">Accept online payments via
-                                <a href="https://www.paypal.com" target="_blank">Paypal</a>,
-                                <a href="https://payment-services.ingenico.com" target="_blank" data-original-title="" title="">Ingenico</a>,
-                                <a href="https://www.buckaroo-payments.com/Buckaroo" target="_blank">Buckaroo</a>, Stripe, Authorize.net, Atos Worldline or
-                                <a href="https://www.adyen.com" target="_blank">Adyen</a>. Eliminate the hassle of sending reminders for late or outstanding payments. Automated follow-ups are simple to configure and help to streamline billing to make payments quick and easy.
-                            </p>
-              <div class="s_testimonial text-heading font-heading">
-                <div class="thumb">
-                  <img src="//odoocdn.com/openerp_website/static/src/img/ref/bazile.jpg" alt="" class="img-responsive" loading="lazy"/>
-                </div>
-                <blockquote class="mb0">
-                  <p class="mt16">“Odoo allowed us to automate sending 10,000 invoices per month.”</p>
-                  <p>
-                    <small>Yves Morel, Director of Bazile Telecom</small>
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </section>
-      <section class="bg-white text-center-xs">
-        <div class="container">
-          <div class="row mt128">
-            <div class="col-sm-5">
-              <img style="position:absolute; top:-40px; right:0;max-width: 300px;" class="img img-responsive" src="https://www.freshbooks.com/wp-content/uploads/invoice-customization@2x.png" alt="" loading="lazy"/>
-            </div>
-            <div class="col-sm-6 col-sm-offset-6 mb92">
-              <h2 class="display-3 mt0 mb8">Simplify your accounting</h2>
-              <h5 class="mb32">Keep track of bank account movements and the status of invoices.</h5>
-              <p class="mb32">Use the status overview to help keep track of drafts, paid and unpaid invoices.
-                                <br/>Automatically record all transactions from your bank accounts by importing and reconciling your bank statements.
-                            </p>
-            </div>
-            <div class="visible-xs-block o_overflow_hidden">
-              <img style="margin-bottom: -240px;" class="img img-responsive center-block" src="//odoocdn.com/openerp_website/static/src/img/2018/accounting/accounting_screenshot_02.gif" alt="" loading="lazy"/>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="text-center-sm">
-        <div class="container">
-          <div class="row o_v_align_col mt92 mb48">
-            <div class="col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 mb48">
-              <h2 class="display-3 mt0 mb8">Analyze your sales</h2>
-              <h5 class="mb32">Access insightful data to get the big picture.</h5>
-              <p class="mb24">Get direct access to key information with dynamic and customizable dashboards. Make your own definition and analyze your invoicing by product, customer, salesperson, etc.</p>
-              <a href="/page/business-intelligence" class="btn btn-default" >Business Intelligence</a>
-            </div>
-            <div class="col-sm-10 col-sm-offset-1 col-md-6 mb48">
-              <img src="//odoocdn.com/web/image/11186862/Invoicing-Dashboard.png" class="img img-responsive shadow" data-original-title="" title="" aria-describedby="tooltip152542" loading="lazy"/>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <section class="bg-gray-lighter">
-        <div class="container text-center">
-          <h2 class="display-4 mt96">Fully
-                        <b>integrated</b> with Odoo Apps
-                    </h2>
-          <div class="row o_equal_col_md mt48 mb96 text-left">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-    <!-- <div class="card o_card_app shadow ">
-        <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #c96482;">
-            <h4 class="fw_medium my-0">Accounting</h4>
-            <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
-                <img style="margin: -3px; width: 56px;" src="//download.odoocdn.com/icons/account_accountant/static/description/icon.png" alt="Accounting" loading="lazy"/>
-            </div>
-        </div>
-        <div class="card-body">
-            <p class="mb-0">Record all invoices in your books and keep track of payments.</p>
-        </div>
-        <div class="card-footer">
-            <h6 class="text-right text-uppercase mb-0"><a href="/app/accounting">Discover</a></h6>
-        </div>
-    </div> -->
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="card o_card_app shadow ">
-        <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #d28254;">
-            <h4 class="fw_medium my-0">Sales</h4>
-            <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
-                <img style="margin: -3px; width: 56px;" src="//download.odoocdn.com/icons/sale/static/description/icon.png" alt="Sales" loading="lazy"/>
-            </div>
-        </div>
-        <div class="card-body">
-            <p class="mb-0">Easily select your invoicing method for every product and service.</p>
-        </div>
-        <div class="card-footer">
-            <h6 class="text-right text-uppercase mb-0"><a href="/app/sales">Discover</a></h6>
-        </div>
-    </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="card o_card_app shadow ">
-        <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #82aac1;">
-            <h4 class="fw_medium my-0">Purchase</h4>
-            <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
-                <img style="margin: -3px; width: 56px;" src="//download.odoocdn.com/icons/purchase/static/description/icon.png" alt="Purchase" loading="lazy"/>
-            </div>
-        </div>
-        <div class="card-body">
-            <p class="mb-0">Obtain meaningful information about supplier invoices.</p>
-        </div>
-        <div class="card-footer">
-            <h6 class="text-right text-uppercase mb-0"><a href="/app/purchase">Discover</a></h6>
-        </div>
-    </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="card o_card_app shadow ">
-        <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #73779d;">
-            <h4 class="fw_medium my-0">Project</h4>
-            <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
-                <img style="margin: -3px; width: 56px;" src="//download.odoocdn.com/icons/project/static/description/icon.png" alt="Project" loading="lazy"/>
-            </div>
-        </div>
-        <div class="card-body">
-            <p class="mb-0">Enable your project right way. Step by step get work done.</p>
-        </div>
-        <div class="card-footer">
-            <h6 class="text-right text-uppercase mb-0"><a href="/app/project">Discover</a></h6>
-        </div>
-    </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="o_bg_fit-W o_bg_arch3">
-      	<div class="container-fluid">
-      		<div class="row mt92 mb48 justify-content-center">
-      			<div class="col-6 col-xl-3 mb32 d-flex justify-content-center">
-    <div class="card shadow s_case_study ">
-    <div class="s_figure_link overflow-hidden o_gradient_alpha">
-      <a class="cover o_bg_cover" href="https://www.odoo.com/blog/customer-reviews-6/post/379" title="How ORA improves efficiency and streamlines workflow" style="background-image: url(//odoocdn.com/openerp_website/static/src/img/2016/invoicing/case_study_ora.jpg);"></a>
-      <h2 class="fw_regular mt0">How ORA improves efficiency and streamlines workflow</h2>
-    </div>
-      <div class="position-absolute w-100">
-        <span class="badge float-right bg-white" style="background-color:black">CASE STUDY</span>
-      </div>
-      <div class="card-body">
-        <p>ORA realized the importance of having a centralized information system for sales &amp; marketing, stock management, manufacturing and procurement.</p>
-      </div>
-      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-        <img class="o_panel_logo" height="30" src="//odoocdn.com/openerp_website/static/src/img/2016/invoicing/logo_ora.gif" alt="How ORA improves efficiency and streamlines workflow" loading="lazy"/>
-        <h6 class="text-uppercase my-0"><a title="How ORA improves efficiency and streamlines workflow" href="https://www.odoo.com/blog/customer-reviews-6/post/379">DISCOVER</a></h6>
-      </div>
-    </div>
-      			</div>
-      			<div class="col-6 col-xl-3 mb32 d-flex justify-content-center">
-    <div class="card shadow s_case_study ">
-    <div class="s_figure_link overflow-hidden o_gradient_delta">
-      <a class="cover o_bg_cover" href="https://www.odoo.com/blog/customer-reviews-6/post/361" title="ABL emerges as a full-fledged Multi-Company" style="background-image: url(//odoocdn.com/openerp_website/static/src/img/2016/invoicing/case_study_abl.jpg);"></a>
-      <h2 class="fw_regular mt0">ABL emerges as a full-fledged Multi-Company</h2>
-    </div>
-      <div class="position-absolute w-100">
-        <span class="badge float-right bg-white" style="background-color:black">CASE STUDY</span>
-      </div>
-      <div class="card-body">
-        <p>After 15 successful years the time had come to reorganize the company's business flow and hence the decision was made to implement Odoo.</p>
-      </div>
-      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-        <img class="o_panel_logo" height="30" src="//odoocdn.com/openerp_website/static/src/img/2016/invoicing/logo_abl.gif" alt="ABL emerges as a full-fledged Multi-Company" loading="lazy"/>
-        <h6 class="text-uppercase my-0"><a title="ABL emerges as a full-fledged Multi-Company" href="https://www.odoo.com/blog/customer-reviews-6/post/361">DISCOVER</a></h6>
-      </div>
-    </div>
-      			</div>
-      			<div class="col-6 col-xl-3 mb32 d-flex justify-content-center">
-    <div class="card shadow s_case_study ">
-    <div class="s_figure_link overflow-hidden o_gradient_epsilon">
-      <a class="cover o_bg_cover" href="/blog/customer-reviews-6/post/valkenpower-automating-with-odoo-603" title="Valkenpower: Automating with Odoo" style="background-image: url(//odoocdn.com/web/image/25379244/Valkenpower%20showroom.jpg);"></a>
-      <h2 class="fw_regular mt0">Valkenpower: Automating with Odoo</h2>
-    </div>
-      <div class="position-absolute w-100">
-        <span class="badge float-right bg-white" style="background-color:black">CASE STUDY</span>
-      </div>
-      <div class="card-body">
-        <p>Many manual tasks are now fully automated. Valkenpower's website is now able to communicate with their payment method and generate invoices to send to the customer. These were previously hand-typed or copy-pasted but are now automatically generated with the push of a button!</p>
-      </div>
-      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-        <img class="o_panel_logo" height="30" src="//odoocdn.com/web/image/25379405/valkenpower%20nieuw%20logo%20en%20tekst%20klein%20%281%29.jpg?access_token=f8ebc7c2-55ad-41ca-86d6-5ca6f0720c0d" alt="Valkenpower: Automating with Odoo" loading="lazy"/>
-        <h6 class="text-uppercase my-0"><a title="Valkenpower: Automating with Odoo" href="/blog/customer-reviews-6/post/valkenpower-automating-with-odoo-603">DISCOVER</a></h6>
-      </div>
-    </div>
-      			</div>
-      		</div>
-      	</div>
-      </section> -->
-        <!-- <section class="s_users_mosaic">
-            <div id="mosaic"></div>
-            <div class="box">
-                <div class="h1 title">
-                    <span class="number">5</span>Million users<br/>
-                    <span class="sub">grow their business with Odoo</span>
+            <div class="restrainer">
+                <div class="inner">
+
+                    <!-- <a href="/features/dashboard" class="feature_button previous"></a>
+                    <a href="/features/payments" class="feature_button next"></a> -->
+
+                    <div class="width">
+
+                        <div class="breadcrumbs">
+                            <a href="/features">Features</a> Invoicing                        </div>
+
+                        <h1 class="hero_heading">Effortless Invoicing</h1>
+
+                        <p class="hero_subheading">Create professional and elegant looking estimates and invoices in any language or currency in a matter of seconds, and easily deliver them to your clients.</p>
+
+                    </div>
+
                 </div>
             </div>
+        </div>
+    </div>
+
+    <section class="feature_image_wrap">
+
+        <div class="inner">
+
+            <img src="https://tccomptables.ca/wp-content/uploads/2020/10/RB-laptop-mobile-hero-global-dashboard.png" width="540" draggable="false">
+
+            <!-- <div class="mt20">
+                <a class="strip_cta" href="/signup">Send your first invoice today</a>
+                <span class="cursive">It's free!</span>
+            </div> -->
+
+        </div>
+
+    </section>
+
+    
+            <section class="single_feature bg_top colored">
+
+            <div class="inner">
+
+                <div class="feature_box left mt15">
+                    <h1>Send unlimited invoices, for free</h1>
+                    <p>Stay organized and take control of your invoicing and accounting needs with ease — invoicely lets
+                        you send unlimited invoices for free, at any account level.</p>
+                </div>
+
+                <div class="feature_image right">
+                    <img src="https://thumbs.dreamstime.com/z/businessman-preparing-e-invoicing-bill-computer-mature-workplace-148975578.jpg" height="175">
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            
+
         </section>
-        <section class="o_gradient o_overflow_hidden">
-            <div class="container mt32 mb16">
-                <div class="row o_v_align_col_sm">
-                    <div class="col-md-6 text-center text-md-right">
-                        <h2 class="display-4 text-white mb4 mt16"><b>Unleash</b> your <b>growth potential</b></h2>
-                        <p class="text-white mb16"><small>No credit card required - Instant access</small></p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <a class="mt32 mb32 btn btn-lg btn-primary o_btn_cta" href="/trial?selected_app=account">Start Now - It's Free</a>
-                    </div>
+<!-- 
+        <section class="single_feature naked">
+
+            <div class="inner">
+
+                <div class="feature_image left">
+                    <img src="/images/feature_recurring.png" height="170"
+                         style="border: 2px solid #d7d7d9;border-radius: 3px;">
                 </div>
+
+                <div class="feature_box right mt15">
+                    <h1>Recurring invoicing</h1>
+                    <p>Save time & effort and get paid faster with recurring invoice profiles, and send automatic
+                        payment reminders to secure a steady cashflow for your business.</p>
+                </div>
+
+                <div class="clearfix"></div>
+
             </div>
+
         </section> -->
+        <section class="bg-gray-lighter">
+          <div class="container text-center">
+            <h2 class="display-4 mt96">
+                       Manage your forms easily <!--<b>integrated</b> with Odoo Apps-->
+                      </h2>
+            <div class="row o_equal_col_md mt48 mb96 text-left">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+      <!-- <div class="card o_card_app shadow ">
+          <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #c96482;">
+              <h4 class="fw_medium my-0">Material & Delivery type</h4>
+              <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
+                  <img style="margin: -3px; width: 56px;" src="https://download.odoocdn.com/icons/account/static/description/icon.png" alt="Accounting" loading="lazy"/>
+              </div>
+          </div>
+          <div class="card-body">
+              <p class="mb-0">Record a material or a delivery type for your invoice.</p>
+          </div>
+          <div class="card-footer">
+              <h6 class="text-right text-uppercase mb-0"><a href="/deliveryType">DELIVERY TYPE</a></h6>
+              <h6 class="del"><a href="/material">MATERIAL</a></h6>
+
+            </div>
+      </div> -->
+      <div class="card o_card_app shadow ">
+        <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #73779d;">
+            <h4 class="fw_medium my-0">Invoice</h4>
+            <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
+                <img style="margin: -3px; width: 56px;" src="https://download.odoocdn.com/icons/account/static/description/icon.png" alt="Project" loading="lazy"/>
+            </div>
+        </div>
+        <div class="card-body">
+            <p class="mb-0">Comlete your invoice form with data and keep the register safe and updated.</p>
+        </div>
+        <div class="card-footer">
+            <h6 class="text-right text-uppercase mb-0"><a href="/bills">Register invoice</a></h6>
+        </div>
     </div>
-                </main>
-                 <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc  o_footer_slideout">
+              </div>
+              
+              <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card o_card_app shadow">
+          <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #d28254;">
+              <h4 class="fw_medium my-0">Provider</h4>
+              <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
+                  <img style="margin: -3px; width: 56px;" src="https://download.odoocdn.com/icons/account/static/description/icon.png" alt="Sales" loading="lazy"/>
+              </div>
+          </div>
+          <div class="card-body">
+              <p class="mb-0">You can register a provider easily and use for many invoices or you can create a new one any time.</p>
+          </div>
+          <div class="card-footer">
+              <h6 class="text-right text-uppercase mb-0"><a href="/app/sales">Register provider</a></h6>
+          </div>
+          <!-- <div class="card-footer">
+              <h6 class="text-right text-uppercase mb-0"><a href="/app/sales">Register</a></h6>
+          </div> -->
+      </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card o_card_app shadow ">
+          <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #82aac1;">
+              <h4 class="fw_medium my-0">Client</h4>
+              <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
+                  <img style="margin: -3px; width: 56px;" src="https://download.odoocdn.com/icons/account/static/description/icon.png" alt="Purchase" loading="lazy"/>
+              </div>
+          </div>
+          <div class="card-body">
+              <p class="mb-0">Register a client for completing your invoice or using one already existing.</p>
+          </div>
+          <div class="card-footer">
+              <h6 class="text-right text-uppercase mb-0"><a href="/client">Register Client</a></h6>
+          </div>
+      </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="card o_card_app shadow ">
+          <div class="o_card_app_top align-items-center d-flex justify-content-between" style="border-top-color: #c96482;">
+              <h4 class="fw_medium my-0">Material & Delivery type</h4>
+              <div style="width: 50px; height: 50px; overflow: hidden;" class="mt-n1">
+                  <img style="margin: -3px; width: 56px;" src="https://download.odoocdn.com/icons/account/static/description/icon.png" alt="Accounting" loading="lazy"/>
+              </div>
+          </div>
+          <div class="card-body">
+              <p class="mb-0">Record a material or a delivery type for your invoice.</p>
+          </div>
+          <div class="card-footer">
+              <h6 class="text-right text-uppercase mb-0"><a href="/deliveryType">DELIVERY TYPE</a></h6>
+              <h6 class="del"><a href="/material">MATERIAL</a></h6>
+
+            </div>
+      </div> 
+      
+      
+              </div>
+            </div>
+          </div>
+        </section>
+<br>
+        <section class="single_feature bg_center colored">
+
+            <div class="inner">
+
+                <div class="feature_box left mt15">
+                    <h1>From Estimate to Invoice</h1>
+                    <p>Create and send professional looking estimates and — once accepted by your client — convert them
+                        into invoices at the click of a button.</p>
+                </div>
+
+                <div class="feature_image right">
+                    <img src="https://einvoice.wepdigital.com/assets/img/invoice.png" height="170"
+                         style="border: 2px solid #d7d7d9;border-radius: 3px;">
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+        </section>
+
+        <!-- <section class="single_feature naked">
+
+            <div class="inner">
+
+                <div class="feature_image left">
+                    <img src="https://image.freepik.com/free-vector/invoice-concept-illustration_114360-2322.jpg" height="175">
+                </div>
+
+                <div class="feature_box right mt15">
+                    <h1>View and send account statements</h1>
+                    <p>Dynamically generated account statements are a great reference of all past transactions between
+                        your business and a specific vendor or client — view and send them at any time.</p>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+        </section> -->
+
+        <section class="single_feature bg_bottom colored">
+<!-- 
+            <div class="inner">
+
+                <div class="feature_box left mt15">
+                    <h1>Customize your invoices</h1>
+                    <p>Make your brand stick out from the rest by adding your individual logo to invoices and estimates,
+                        to go along with the branding colors specific to your business.</p>
+                </div>
+
+                <div class="feature_image right">
+                    <img src="https://image.freepik.com/free-vector/invoice-concept-illustration_114360-2322.jpg" height="175">
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div> -->
+
+        </section>
+    
+    
+    
+    
+    
+    
+<!-- <section id="quick_sign_up" class="quick_sign_up" style=" background: #ffffff; ">
+
+    <div class="inner">
+        <form action="/signup" method="post">
+
+            <h2 class="cta_text">Send your first invoice today <span class="cursive"> — It's free!</span></h2>
+
+            <fieldset>
+                <input autocomplete="off" name="prefill_email" type="email" placeholder="Your email address">
+                <input autocomplete="off" name="prefill_first_name" type="text" placeholder="Your first name">
+                <button type="submit" id="quick_sign_up">Get started</button>
+            </fieldset>
+
+        </form>
+    </div>
+
+</section> -->
+
+    <!-- FAQ HERE -->
+
+    
+<section class="see_more_features" >
+
+    <div class="inner">
+
+        <h1>
+          Explore registers</h1>
+
+        
+        <ul>
+            <li class="invoicing">
+                <a href="/admin">
+                    <h4>Invoicing</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQqxeDEq20te1iFMTU3Gfed7dGbGB7K7Y1IgvTUsoaYbaAGM7ZEeKo2aiukDX-ZHCHAU&usqp=CAU" height="160">
+                </a>
+            </li>
+            <li class="payments">
+                <a href="/admin">
+                    <h4>Invoices register</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQqxeDEq20te1iFMTU3Gfed7dGbGB7K7Y1IgvTUsoaYbaAGM7ZEeKo2aiukDX-ZHCHAU&usqp=CAU" height="160">
+                </a>
+            </li>
+            <li class="track">
+                <a href="/client/view">
+                    <h4>Clients register</h4>
+                    <img src="https://image.shutterstock.com/image-vector/clients-icon-600w-490858993.jpg" height="160">
+                </a>
+            </li>
+            <li class="business">
+                <a href="/provider/view">
+                    <h4>Providers register</h4>
+                    <img src="https://image.flaticon.com/icons/png/512/10/10708.png" height="150">
+                </a>
+            </li>
+            <div class="aaa">
+            <li class="branding">
+                <a href="/features/branding" >
+                    <h4>Materials register</h4>
+                    <img src="https://thumbs.dreamstime.com/z/builder-building-materials-icon-detailed-set-construction-materials-icons-premium-quality-graphic-design-one-112557285.jpg" height="50px" width="50px" class="c">
+                </a>
+                <a href="/features/branding" class="aaa">
+                  <h4>Delivery type register</h4>
+                  <img src="https://as2.ftcdn.net/jpg/02/90/98/39/500_F_290983972_mYCCKvVWzmQUhNoWIdwjSdlPADb3Prf2.jpg" height="50px" width="50px">
+              </a>
+            </li>
+          </div>
+            <li class="dashboard">
+                <a href="/features/dashboard">
+                    <h4>Dashboard</h4>
+                    <img src="/images/features_collection_dashboard.png" height="160">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</section>
+
+            
+
+<section class="single_customer_reference">
+
+    <div class="inner">
+
+        <!-- <img src="/images/assets/kim_g.jpg" width="150"> -->
+        <div class="content">
+            <p class="pp">"Sick of Paper Invoices? Consider switching to a web app like invoicely to manage & track all of your invoices from a Single Dashboard."</p>
+            <!-- <div class="lower">
+                <span class="name">Kim George</span>
+                <span class="context">Founder of Small Business Sense</span>
+            </div> -->
+
+            <!-- <a class="more" title="See what customers have to say about invoicely" href="/customers">Read more
+                comments</a> -->
+
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+</section>
+    
+    
+    
+    
+    
+</div>
+
+
+<!-- <footer class="main_footer">
+
+    <section class="upper">
+
+        <div class="inner">
+
+            <div class="upper_footer_left">
+                <label>INVOICES</label>
+                <p>5,664,678 invoices have been sent</p>
+                <small>in the past 30 days.</small>
+            </div>
+
+            <div class="upper_footer_right">
+                <label>SYSTEMS</label>
+                <p class="status">● All systems operational</p>
+                <small>No maintenance planned.</small>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+    </section>
+
+    <section class="middle">
+
+        <div class="inner">
+
+            <span>Anything you need help with? </span>
+            <a target="_blank" class="customer_support" title="Browse through our Help Center"
+               href="https://help.invoicely.com">Help Center</a>
+
+        </div>
+
+    </section>
+
+    <section class="lower">
+
+        <div class="inner">
+
+            <ul class="footer_sitemap">
+
+                <li class="sitemap_block">
+                    <ul>
+                        <li class="sitemap_heading"><a>General</a></li>
+                        <li><a title="Home" href="/">invoicely Home</a></li>
+                        <li><a title="About us" href="/about">About invoicely</a>
+                        </li>
+                        <li><a title="Explore features" href="/features">Features</a></li>
+                        <li><a title="Pricing & subscription plans" href="/pricing">Pricing Plans</a></li>
+                        <li><a title="invoicely Blog"
+                               href="https://blog.invoicely.com">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_block">
+                    <ul>
+                        <li class="sitemap_heading"><a>Press</a></li>
+                        <li><a download title="Download invoicely Presskit"
+                               href="https://invoicely.com/other/invoicely-presskit.zip">Download
+                                Presskit</a></li>
+                        <li><a title="Get in touch" href="/contact">Contact Us</a></li>
+                        <li><a title="Customers" href="/customers">Customers</a></li>
+                        <li class="phantom"><a>&nbsp;</a></li>
+                        <li class="phantom"><a>&nbsp;</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_block">
+                    <ul>
+                        <li class="sitemap_heading"><a>Legal</a></li>
+                        <li><a title="Terms & Conditions" href="/legal/terms">Terms & Conditions</a></li>
+                        <li><a title="Privacy Policy" href="/legal/privacy">Privacy Policy</a></li>
+                        <li><a title="Cookie Policy" href="/legal/cookies">Cookie Policy</a></li>
+                        <li class="phantom"><a>&nbsp;</a></li>
+                        <li class="phantom"><a>&nbsp;</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_block social">
+
+                    <div class="mobile_apps">
+
+                        <span>Download mobile apps</span>
+
+                        <a target="_blank" title="Get invoicely on the iOS App Store" class="ios"
+                           href="https://apps.apple.com/app/invoicely/id1483521342"></a>
+                        <a target="_blank" title="Get invoicely on the Android Play Store" class="android"
+                           href="https://play.google.com/store/apps/details?id=com.apilayer.invoicely.android&hl=en"></a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section class="extra">
+        <div class="inner">
+            <small>Copyright &copy; 2021 invoicely, a product of Stack Holdings GmbH
+                (FN443956b).</small>
+        </div>
+    </section>
+
+</footer> -->
+     <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc  o_footer_slideout">
     <div id="footer" class="container o_not_editable ">
-                <span class="o_logo o_logo_inverse d-block mx-auto o_footer_logo my-5"></span>
+                <!-- <span class="o_logo o_logo_inverse d-block mx-auto o_footer_logo my-5"></span> -->
                 <div class="row">
                     <div class="col-12 col-lg-7 col-xl-6">
                         <div class="row">
                             <div class="col-12 col-md-4 mb-3 mb-md-0">
                                 <div class="row">
+                                  
                                     <div class="col-6 col-md-12">
                                         <span class="o_footer_title">Electronic invoice</span>
                                          <ul class="o_footer_links list-unstyled">
@@ -717,7 +714,7 @@
             </div> -->
         <!-- </div> -->
                         <!-- </div> -->
-                        <hr class="mt-3 mb-4"/>
+                        <hr class="line"/>
                         <p class="small text-muted">This application was created to make it easier to fill in invoices and forms for users.
                           Using this application you can keep your registry permanently updated.
                         </p>
@@ -741,102 +738,29 @@ You can add, view data from registers easily. You can easily control the data in
                 </div>
             </div>
     </footer>
-            </div>
-        <script>
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1933323013468646');
-          fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1933323013468646&amp;ev=PageView&amp;noscript=1" loading="lazy"/></noscript>
-        <script>(function(w,d,t,r,u){
-            var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4014144"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){
-                 try {
-                   var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
-                 } catch(e) { console.error(e) }
-            },i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
-        <script>
-        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_422vs5ak');rdt('track', 'PageVisit');
-        </script>
-        <script>
-        !function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
-        qp('init', '5c64139c25674553a0ef358c36d870f4');
-        qp('track', 'ViewContent');
-        </script>
-        <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/5c64139c25674553a0ef358c36d870f4/pixel?tag=ViewContent&amp;noscript=1" loading="lazy"/></noscript>
-        <script>
-        !function(e){if(!window.pintrk){window.pintrk = function () {
-        window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
-          n=window.pintrk;n.queue=[],n.version="3.0";var
-          t=document.createElement("script");t.async=!0,t.src=e;var
-          r=document.getElementsByTagName("script")[0];
-          r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
-        pintrk('load', '2612889654971', {'fp_cookie': false});
-        pintrk('page');
-        </script>
-        <noscript>
-        <img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&amp;tid=2612889654971&amp;noscript=1" loading="lazy"/>
-        </noscript>
-        <script type="text/javascript">
-          _linkedin_partner_id = "586737";
-          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-          window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-        </script>
-        <script type="text/javascript">
-          (function(){var s = document.getElementsByTagName("script")[0];
-          var b = document.createElement("script");
-          b.type = "text/javascript";
-          b.async = true;
-          b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-          s.parentNode.insertBefore(b, s);})();
-        </script>
-                    <script>
-                window.addEventListener('load', function () {
-                    odoo.define('im_livechat.livesupport', function (require) {
-                    });
-                });
-                    </script>
-            <div id="o_live_modal" class="modal fade" tabindex="-1" role="dialog" contentEditable="false">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="mt8"><b>Webinar - Accounting</b> on YouTube</h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span title="Close" class="fa fa-times"></span></button>
-                            <p class="text-black">
-                                <b>1.</b> Use the live chat to ask your questions.<br/>
-                                <b>2.</b> The operator answers within a few minutes.
-                            </p>
-                        </div>
-                        <div class="modal-body bg-gray-lighter">
-                            <img src="//odoocdn.com/openerp_website/static/src/img/2016/live-support/info.gif" class="img img-fluid" alt="" loading="lazy"/>
-                        </div>
-                        <div class="modal-footer">
-                            <a class="btn btn-primary btn-lg" target="_blank" href="https://youtu.be/Jzmil21Gt64">Watch now<i class="fa fa-1x fa-long-arrow-right ml8"></i></a>
-                        </div>
-                    </div>
-                 </div> 
 
-                
-            
-            </div> 
-            
-        <!-- <script id="tracking_code">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-52174891-1', 'auto');
-            ga('require', 'displayfeatures');
-            ga('set', 'anonymizeIp', true);
-            ga('send','pageview');
-        </script> -->
+<script src="https://browser.sentry-cdn.com/4.4.1/bundle.min.js" crossorigin="anonymous"></script>
+    <script>Sentry.init({"dsn":"https://17ca735bdaaa4b2982f2d837bec0382f@o485802.ingest.sentry.io/1428326","environment":"stack-invoicely-production","release":"a7b1602f","error_types":32757});</script>
 
-        
-    </body>
-        </html>
+<script src="https://invoicely.global.ssl.fastly.net/dist/js/sticky/jquery.sticky.112dbb.js" type="text/javascript"defer></script><script src="https://invoicely.global.ssl.fastly.net/dist/js/scripts.main.shared.2c81f8.js" type="text/javascript"defer></script><script src="https://invoicely.global.ssl.fastly.net/dist/js/scripts.main.invoicely.45c1dc.js" type="text/javascript"defer></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-62924033-11', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
