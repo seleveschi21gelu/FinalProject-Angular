@@ -1,5 +1,6 @@
+<ng-container *ngIf="isLoggedIn">
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" routerLink='/home'>Menu</a>
+    <a class="navbar-brand" routerLink='/home'>Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,13 +62,14 @@
       </div>
         
      </ng-container> 
+     <ng-container *ngIf="isLoggedIn">
      <form class="form-inline my-2 my-lg-0">
       <a class="logoutt" routerLink='/login' (click) ="logout()" value="logout"> Logout <span class="sr-only">(current)</span></a>
   </form>
-       
+</ng-container>
        <ng-container *ngIf="!isLoggedIn">
         <form class="form-inline my-2 my-lg-0">
-            <a class="nav-link" routerLink='/login' value="logout"> Login <span class="sr-only">(current)</span></a>
+            <a class="login" routerLink='/login' value="logout"> Login <span class="sr-only">(current)</span></a>
         </form>
       </ng-container>
-  </nav>
+  </nav></ng-container>
