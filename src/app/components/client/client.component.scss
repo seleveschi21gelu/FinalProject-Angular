@@ -19,8 +19,10 @@
     text-align: right;
 }
 .container{
-    width: 70%;
+    margin-top: -60px;
+    width: 60%;
     font-size: larger;
+    height: 900px;
 }
 .styled-table {
     // border-collapse: collapse;
@@ -47,16 +49,23 @@ h1{
 label{
     font-size: 25px;
 }
-.btn-dark{
+.btn-dark.list{
+
 font-size: 19px;
-margin-top: 20px;
+margin-top: -40px;
 font-family: 'Abril Fatface' ;
-margin-left: -70px;
+margin-left: -275px;
 
 }
 .has-info{
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'Noto Serif', serif;
 font-size: 27px;
+}
+.btn-dark.submit{
+    margin-top: 15px;
+    height: 40px;
+    font-size: 17px;
+
 }

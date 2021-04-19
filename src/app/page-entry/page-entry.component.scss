@@ -142,7 +142,7 @@
 width: 400px;
 height: 300px;
 margin-left: -50px;
-margin-top: -120px;
+margin-top: -90px;
 }
 .simplify{margin-top: -240px;
   margin-left: 550px;
@@ -219,18 +219,18 @@ width: 1050px;
   margin-left: -100px;
 }
 .col-lg-4.col-md-4.avantaje-b{
-  margin-top: -280px;
+  margin-top: -310px;
   margin-left: 490px;
 
 }
 .col-lg-4.col-md-4.avantaje-c{
   margin-left: 455px;
-margin-top: -170px;
+  margin-top: -170px;
 }
 .av-img {
-  border-radius: 50%;
+  border-radius: 55%;
   margin-top: -70px;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 .categ-av {
   margin-left: -20px;
@@ -246,8 +246,25 @@ h2.title{
 }
 h3.subtitle{
   text-align: center;
+  margin-bottom: 30px;
 }
 .img.img-responsive.shadow{
   margin-top: -30px;
   margin-left: 60px;
+}
+
+
+// element.style {
+//   padding-bottom: 42%;
+//   background-image: url('//odoocdn.com/openerp_website/static/src/img/2016/invoicing/invoicing_top_banner.jpg');
+//   background-position: right center;
+// }
+.btn-dark{
+  margin-top: 120px;
+  margin-left: -200px;
+  width: 140px;
+}
+.bif{margin-bottom: 10px;}
+.avantaje-c.row{
+  height: 665px;
 }

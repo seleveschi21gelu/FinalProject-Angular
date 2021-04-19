@@ -15,8 +15,10 @@ h1{
     text-align: right;
 }
 .container{
-    width: 70%;
+    margin-top: -80px;
+    width: 60%;
     font-size: larger;
+    height: 1200px;
 }
 .styled-table {
     // border-collapse: collapse;
@@ -33,14 +35,14 @@ color:black solid;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: large;
 }
-.btn-dark{
+.btn-dark.list{
     font-size: 20px;
-    margin-top: 20px;
-    margin-left: -80px;
+    margin-top: -85px;
+    margin-left: -295px;
 }
 .has-info{
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'Noto Serif', serif;
 font-size: 27px;
 }

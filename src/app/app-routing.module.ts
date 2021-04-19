@@ -41,33 +41,37 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'home',
+    path:'registering',
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
  
   {
-    path:'',
+    path:'home',
     component:PageEntryComponent,
-  
-}, {
-  path:'admin/bills/:id',
-  component: ViewRegistrationComponent,
-  canActivate: [AuthService]
+    canActivate:[AuthService]
 },
 
+{
+  path:'admin',
+  component: AdminComponent,
+  canActivate: [AuthService]
+},
   {
     path:'bills/:id',
     component: HomeComponent,
     canActivate: [AuthService]
   },
-  
+  {
+    path:'bills/:id',
+    component: ViewRegistrationComponent,
+    canActivate: [AuthService]
+  },
   {
     path:'bills',
     component:HomeComponent,
     canActivate: [AuthService]
   },
-  
   {
     path:'flatblock',
     component:FlatblockComponent,
@@ -110,11 +114,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   
-  // {
-  //   path:'update/:id',
-  //   component: UpdateComponent,
-  //   canActivate:[AuthService]
-  // },
+  {
+    path:'update/:id',
+    component: UpdateComponent,
+    canActivate:[AuthService]
+  },
   {path:'client/view/:id',
   component:ClientViewByIdComponent,
   canActivate:[AuthService]
@@ -154,11 +158,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
 
-  {
-    path:'fiscalbill',
-    component:FiscalBillComponent,
-    canActivate: [AuthService]
-  },
+  // {
+  //   path:'fiscalbill',
+  //   component:FiscalBillComponent,
+  //   canActivate: [AuthService]
+  // },
   // {
   //   path:'fiscalbill/view',
   //   component:FiscalBillViewComponent,
@@ -186,11 +190,6 @@ const routes: Routes = [
   path:'client/:id',
   component:ClientComponent,
   canActivate: [AuthService]
-  },
-  {
-    path:'admin',
-    component: AdminComponent,
-    canActivate: [AuthService]
   },
   {
     path:'login',

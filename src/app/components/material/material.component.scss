@@ -45,9 +45,9 @@ td{
 }
 .has-info{
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'Noto Serif', serif;
-font-size: 27px;
+    font-size: 27px;    
 }
 button{
     margin-top: 20px;
@@ -63,6 +63,18 @@ a{
     
 }
 h4{
-    // margin-top: -5.5px;
-    font-size: 20px;
+    // margin-top: px;
+    font-size: 14px;
+    color: white;
+    
+}
+.container{
+    margin-top: -150px;
+    width: 70%;
+}
+.btn-dark.list{
+    margin-left: 695px;
+    width: 160px;
+    height: 33px;
+
 }

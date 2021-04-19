@@ -28,6 +28,7 @@ h1{
 .container{
     width: 70%;
     font-size: larger;
+    height: 1200px;
 }
 label{font-size: 25px;
 }
@@ -41,8 +42,13 @@ label{font-size: 25px;
     }
     .has-info{
         text-align: center;
-        color: white;
+        color: black;
         font-family: 'Noto Serif', serif;
     font-size: 27px;
+    }
+    .btn-dark.submit{
+        margin-top: 20px;
+        height: 40px;
+        font-size: 17px;
     }
     
