@@ -1,7 +1,6 @@
 h1{
-    margin-top: 80px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-family: 'Noto Serif', serif;
     font-size: 55px;
 
@@ -64,7 +63,7 @@ border-collapse: separate;
     margin-left: -222px;
 }
 .search{
-    margin-left:708px;
+    margin-left:505px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -77,13 +76,13 @@ border-collapse: separate;
     margin-top: -16px;
     font-size: 18px;
     text-align: center;
-    width: 16%;
+    width: 20%;
     height: 49px;
     
     // margin-top: 500px;
     }
 .btn-dark.search{
-    margin-left:933px;
+    margin-left:728px;
     width: 47px;
     height: 47px;
 }
@@ -94,6 +93,7 @@ font-size: 27px;
 font-family: 'Noto Serif', serif;
 margin-top: -80px;
 margin-bottom: 41px;
+margin-left: 100px;
 }
 .mat-elevation-z8{
 width: 70%;
@@ -103,24 +103,43 @@ margin-left: 200px;
 .action{
     font-size: 27px;
     font-family: 'Noto Serif', serif;
+    // text-align: center;
     
 }
 
 mat-paginator{
-    margin-left: 132px;
-width: 83%;
+    margin-left: 114px;
+width: 80%;
 height: 49px;
 margin-top: -49px;
 }
 h3{
     margin-top: 1px;
-    font-size: 14px;
+    font-size: 13.5px;
+    color: white;
+    
 }
 h5{
 margin-top: 15px;
+margin-left: 45px;
+font-size: 19px;
 }
 button{
     margin-top: 20px;
     font-size: 19px;
     font-family: 'Noto Serif', serif;
+}
+.container{
+    width: 850px;
+    margin-left: 260px;
+    height: 900px;
+}
+h6{
+    font-size: 22px;
+    margin-left: 0px;
+}
+h6.a{
+    font-size: 22px;
+    margin-left: 40px;
+    margin-top:15px
 }

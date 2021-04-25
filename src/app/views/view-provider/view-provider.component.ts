@@ -20,14 +20,15 @@ export class ViewProviderComponent implements OnInit {
 
   public provider: any;
   constructor(private providerService :ProviderService,private route:ActivatedRoute) {
+   
+   }
+
+  ngOnInit(): void {
     this.providerService.getProviders().subscribe((data:any)=>{
       this.dataSource = new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     })
-   }
-
-  ngOnInit(): void {
     this.getProviderRegistration();
     this.deleteProviderById(this.route.snapshot.params.id)
   }

@@ -23,15 +23,17 @@ export class DeliveryTypeViewComponent implements OnInit {
 
   constructor(private deliveryTypeService:DeliveryTypeService,
     private route: ActivatedRoute, private router: Router) {
-      this.deliveryTypeService.getDeliverysType().subscribe((data:any)=>{
-        this.dataSource = new MatTableDataSource(data)
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-      })
+      
      }
 
   ngOnInit(): void {
+    this.deliveryTypeService.getDeliverysType().subscribe((data:any)=>{
+      this.dataSource = new MatTableDataSource(data)
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
     this.getDeliveryTypes();
+    this.deleteDeliveryTypeById(this.route.snapshot.params.id);
   }
 
  async getDeliveryTypes(){
@@ -46,7 +48,7 @@ export class DeliveryTypeViewComponent implements OnInit {
   }
 
  async deleteDeliveryTypeById(id:number) {
-    this.deliveryTypeService.deleteDeliveryTypeById(id).
+   await this.deliveryTypeService.deleteDeliveryTypeById(id).
     subscribe(
       (data) =>{
         console.log(data);

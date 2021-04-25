@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/bills-register/home.component'
-import { formatCurrency } from '@angular/common';
 import { ViewRegistrationComponent } from './components/view-invoicesByID/view-registration.component';
 import { FlatblockComponent } from './components/flatblock/flatblock.component';
 import { ProviderComponent } from './components/provider/provider.component';

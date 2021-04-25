@@ -18,7 +18,7 @@ body {
   }
   
   html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-image: url('https://images.unsplash.com/photo-1575766684547-0dcebfa935a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1081&q=80');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -28,5 +28,47 @@ body {
      margin-top: 100px;
     
    }
-   
   
+   .text-info {
+    color: white !important;
+}
+.text-info {
+    color: white!important;
+}
+.btn-info:disabled {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+ 
+}
+.btn-info {
+   color: #fff; 
+   background-color: black; 
+   border-color: black; 
+}
+.alert.alert-danger.success{
+color: #000;
+}
+h2{color: white;
+text-align: center;
+font-size: 35px;
+margin-bottom: 40px;}
+
+.card[_ngcontent-gby-c144] {
+  height: 370px;
+  margin-top: 90px;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}

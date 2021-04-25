@@ -1,5 +1,5 @@
 h1{
-    margin-top: 80px;
+    // margin-top: 80px;
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Noto Serif', serif;
@@ -89,7 +89,7 @@ border-collapse: separate;
     margin-left: -222px;
 }
 .search{
-    margin-left: 955px;
+    margin-left: 864px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -108,7 +108,7 @@ height: 54px;
 // margin-top: 500px;
 }
 .btn-dark.search{
-    margin-left: 1180px;
+    margin-left: 1086px;
     width: 47px;
     height: 47px;
 }
@@ -138,18 +138,22 @@ width: 140%;
 
 // }
 mat-paginator{
-    margin-left: 170px;
-width: 88%;
+    margin-left: 150px;
+width: 88.5%;
 height: 54px;
 margin-top: -70px;
 }
 h3{
-    margin-top: 10px;
-    font-size: 19px;
+    margin-top: 9px;
+    font-size: 17px;
+    color: white;
+
 }
 h5{
 margin-top: 15px;
 }
 .container{
-    width: 70%;
+    width: 65%;
+    margin-left: 290px;
+    height: auto;
 }

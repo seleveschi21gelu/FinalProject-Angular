@@ -38,16 +38,16 @@
                 <title>The #1 Online Billing Software | Odoo</title>
                 <link type="image/x-icon" rel="shortcut icon" href="//odoocdn.com/web/image/website/1/favicon?unique=52b5497"/>
             <link rel="preload" href="//odoocdn.com/web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin=""/>
-            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28881036-fae83a0/1/web.assets_common.css" data-asset-xmlid="web.assets_common" data-asset-version="fae83a0"/>
-            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28881188-a9e2c3a/1/web.assets_frontend.css" data-asset-xmlid="web.assets_frontend" data-asset-version="a9e2c3a"/>
+            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28910499-7ac839f/1/web.assets_common.css" data-asset-xmlid="web.assets_common" data-asset-version="7ac839f"/>
+            <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28911352-52b9fe3/1/web.assets_frontend.css" data-asset-xmlid="web.assets_frontend" data-asset-version="52b9fe3"/>
                 <script id="web.layout.odooscript" type="text/javascript">
                     var odoo = {
-                        csrf_token: "e56329fbeba6131870b8689807790b37cb1f0538o1650357968",
+                        csrf_token: "ca1da80a330a76c22e0f74a9792f793628d5414ao1650702358",
                         debug: "",
                     };
                 </script>
             <script type="text/javascript">
-                odoo.session_info = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "translationURL": "/website/translations", "cache_hashes": {"translations": "0d67c6e38e6071091ac3243df6fc40e71b3f5af9"}};
+                odoo.session_info = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "translationURL": "/website/translations", "cache_hashes": {"translations": "2dacd46373f115613d64dcdd825bee0ca2245c27"}};
                 if (!/(^|;\s)tz=/.test(document.cookie)) {
                     const userTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
                     document.cookie = `tz=${userTZ}; path=/`;
@@ -55,8 +55,8 @@
             </script>
             <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28880989-fd107dc/1/web.assets_common_minimal_js.js" data-asset-xmlid="web.assets_common_minimal_js" data-asset-version="fd107dc"></script>
             <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28880990-53db687/1/web.assets_frontend_minimal_js.js" data-asset-xmlid="web.assets_frontend_minimal_js" data-asset-version="53db687"></script>
-            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28880991-17c34eb/1/web.assets_common_lazy.js" data-asset-xmlid="web.assets_common_lazy" data-asset-version="17c34eb"></script>
-            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28880992-7764e9d/1/web.assets_frontend_lazy.js" data-asset-xmlid="web.assets_frontend_lazy" data-asset-version="7764e9d"></script>
+            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28910514-019750c/1/web.assets_common_lazy.js" data-asset-xmlid="web.assets_common_lazy" data-asset-version="019750c"></script>
+            <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28911355-17ec464/1/web.assets_frontend_lazy.js" data-asset-xmlid="web.assets_frontend_lazy" data-asset-version="17ec464"></script>
         <meta name="p:domain_verify" content="d266a6e14e538410370a9dabf975404d"/>
             <noscript id="o_animate-no-js_fallback">
                 <style type="text/css">
@@ -237,8 +237,10 @@
               <div class="col-md-8 col-lg-7 my-5">
                   <h1 class="display-2 fw_regular mb16 mt0">Monitorize <b>invoices</b><br/>easier online</h1>
                   <h4 class="mb0 fw_regular">Register bills, keep your invoices up to date. <br/>Check your invoices and manage them easy.</h4>
-                <a class="mt32 mb8 btn btn-primary o_btn_cta" href="/register">Start now -> Register</a>
-                <a class="btn btn-dark" href="/login">Login</a>
+                  <ng-container *ngIf="!isLoggedIn">
+
+                  <a class="mt32 mb8 btn btn-primary o_btn_cta" href="/register">Start now -> Register</a>
+                <a class="btn btn-dark" href="/login">Login</a></ng-container>
                 <br/>
   <!-- <div class="o_schedule_demo ">
         <a target="_blank" class="" href="/calendar/i-want-a-demo-with-an-odoo-expert-am-romania-252/appointment">Schedule a demo</a>

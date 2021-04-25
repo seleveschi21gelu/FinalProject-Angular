@@ -16,10 +16,10 @@ export class ViewRegistrationComponent implements OnInit {
   constructor(private billsService:BillsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    if(this.route.snapshot.queryParams['id']){
-      this.getBillsRegistration(this.route.snapshot.params.id);
-    }
-    // this.getBillsRegistration(this.route.snapshot.params.id);
+    // if(this.route.snapshot.queryParams['id']){
+    //   this.getBillsRegistration(this.route.snapshot.params.id);
+    // }
+    this.getBillsRegistration(this.route.snapshot.params.id);
     
   }
 

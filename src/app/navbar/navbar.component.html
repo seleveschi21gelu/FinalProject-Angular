@@ -5,36 +5,40 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   
-     <ng-container *ngIf="isLoggedIn"> 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <div class="gg"> -->
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item" class="gg">
+     <!-- <ng-container *ngIf="isLoggedIn">  -->
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <!-- <ul class="navbar-nav mr-auto "> -->
+          <div class="invoice">
             <div class="reg">
             <a class="nav-link" class="aaa" routerLink='/bills'>Register invoice <span class="sr-only">(current)</span></a>
-          </div> </li>
-          <li class="nav-item" class="gg">
+          </div> 
+        </div>
+        <div class="provider">
+
             <div class="reg">
             <a class="nav-link" class="aaa" routerLink='/provider'> Register provider <span class="sr-only">(current)</span></a>
-          </div> </li>
-          <li class="nav-item" class="gg">
+          </div></div>
+          <div class="client">
+
             <div class="reg">
             <a class="nav-link" class="aaa" routerLink='/client'> Register client <span class="sr-only">(current)</span></a>
-          </div></li>
+          </div></div>
+  
       <div class="register">
-          <li class="view" ngbDropdown class="nav-item dropdown show">
+          <div class="view" ngbDropdown class="nav-item dropdown show">
             <a ngbDropdownToggle class="nav-link dropdown-toggle" class="dd"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Register form
             </a>
-            <div ngbDropdownMenu class="dropdown-menu"  aria-labelledby="navbarDropdown">
+            <div ngbDropdownMenu class="dropdown-menuu"  aria-labelledby="navbarDropdown">
               <a ngbDropdownItem class="dropdown-item"  routerLink="/material">Material Register</a>
               <a ngbDropdownItem class="dropdown-item"  routerLink="/deliveryType">Delivery Type Register</a>
               <!-- <a ngbDropdownItem class="dropdown-item"  routerLink="/flatblock">Flatblock Register</a> -->
               <div class="dropdown-divider"></div>
             </div>
-          </li>
+          </div>
         </div>
-           <li ngbDropdown class="nav-item dropdown">
+        <div class="view">
+           <div ngbDropdown class="nav-item dropdown">
             <a ngbDropdownToggle class="nav-link dropdown-toggle" class="dd" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               View Registers
             </a>
@@ -45,9 +49,12 @@
               <a ngbDropdownItem class="dropdown-item" routerLink="/material/view">Material View Form</a>
               <a ngbDropdownItem class="dropdown-item" routerLink="/deliveryType/view">Delivery Type View Form</a>
               <div class="dropdown-divider"></div>
+      <a class="logoutt" routerLink='/firstPage' (click) ="logout()" value="logout"><h6> Logout</h6> <span class="sr-only">(current)</span></a>
+
             
             </div>
-          </li>
+           </div>
+          </div>
           <!-- <li ngbDropdown class="nav-item dropdown">
             <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               View form
@@ -57,19 +64,22 @@
               <a ngbDropdownItem class="dropdown-item" routerLink="/flatblock/view">Flatblock View Form</a>
               <div class="dropdown-divider"></div>
             </div>-->
-        </ul> 
+        <!-- </ul>  -->
         
-      </div>
+      <!-- </div> -->
         
-     </ng-container> 
+     <!-- </ng-container>  -->
+     <!-- <div class="logout">
      <ng-container *ngIf="isLoggedIn">
      <form class="form-inline my-2 my-lg-0">
       <a class="logoutt" routerLink='/login' (click) ="logout()" value="logout"> Logout <span class="sr-only">(current)</span></a>
   </form>
 </ng-container>
+</div> -->
+<div class="login">
        <ng-container *ngIf="!isLoggedIn">
         <form class="form-inline my-2 my-lg-0">
             <a class="login" routerLink='/login' value="logout"> Login <span class="sr-only">(current)</span></a>
         </form>
-      </ng-container>
+      </ng-container></div>
   </nav></ng-container>

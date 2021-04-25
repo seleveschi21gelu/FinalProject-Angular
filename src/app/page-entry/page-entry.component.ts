@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageEntryComponent implements OnInit {
 
-  constructor() { }
+    isLoggedIn :any;
+
+  constructor(private authService:AuthService){
+    let auth = this.authService.authFromLocalStorage;
+    if(auth!== ''){
+      this.isLoggedIn=true;
+    }else {
+      this.isLoggedIn=false;
+    }
+
+    this.authService.isLoggedIn().subscribe(value =>
+        this.isLoggedIn = value
+      )
+    }
 
   ngOnInit(): void {
   }

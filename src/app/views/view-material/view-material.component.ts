@@ -20,16 +20,20 @@ export class ViewMaterialComponent implements OnInit {
   displayedColumns: string[]=["name","deliveryType","action2"]
 
   constructor(private materialService:MaterialService,private route:ActivatedRoute) {
+    
+  }
+
+  ngOnInit(): void {
+ 
     this.materialService.getMaterials().subscribe((data:any)=>{
       this.dataSource = new MatTableDataSource(data)
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-    })
-  }
+    });
 
-  ngOnInit(): void {
     this.getMaterials();
     this.deleteMaterialById(this.route.snapshot.params.id);
+
   }
 
  async getMaterials(){
@@ -55,7 +59,7 @@ export class ViewMaterialComponent implements OnInit {
 
   // }
  async deleteMaterialById(id:number){
-    this.materialService.deleteMaterialById(id).
+  await this.materialService.deleteMaterialById(id).
     subscribe(
       (data) =>{
         console.log(data);

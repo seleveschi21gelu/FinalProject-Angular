@@ -41,15 +41,15 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
   {
-    path:'registering',
+    path:'home',
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
  
   {
-    path:'home',
+    path:'firstPage',
     component:PageEntryComponent,
-    canActivate:[AuthService]
+    // canActivate:[AuthService]
 },
 
 {
@@ -62,14 +62,14 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'bills/:id',
-    component: ViewRegistrationComponent,
-    canActivate: [AuthService]
-  },
+ 
   {
     path:'bills',
     component:HomeComponent,
+    canActivate: [AuthService]
+  }, {
+    path:'admin/view/:id',
+    component: ViewRegistrationComponent,
     canActivate: [AuthService]
   },
   {
@@ -158,11 +158,11 @@ const routes: Routes = [
     canActivate: [AuthService]
   },
 
-  // {
-  //   path:'fiscalbill',
-  //   component:FiscalBillComponent,
-  //   canActivate: [AuthService]
-  // },
+  {
+    path:'fiscalbill',
+    component:FiscalBillComponent,
+    canActivate: [AuthService]
+  },
   // {
   //   path:'fiscalbill/view',
   //   component:FiscalBillViewComponent,

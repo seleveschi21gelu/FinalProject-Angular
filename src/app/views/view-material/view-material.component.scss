@@ -1,17 +1,16 @@
 h1{
-    margin-top: 80px;
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Noto Serif', serif;
     font-size: 55px;
 
 }
-// th{
-//     // text-align: center;
+th{
+    text-align: center;
 
     
 
-// }
+}
 td{
     // text-align: center;
     color: #000;
@@ -63,8 +62,9 @@ border-collapse: separate;
     width: 140%;
     margin-left: -222px;
 }
+.container{width: 70%;}
 .search{
-    margin-left:708px;
+    margin-left:663px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -83,14 +83,15 @@ border-collapse: separate;
     // margin-top: 500px;
     }
 .btn-dark.search{
-    margin-left:933px;
+    margin-left:888px;
     width: 45px;
     height: 45px;
 }
 .title{
  
-color: #6b705c;
-font-size: 27px;
+color: black;
+
+font-size: 22px;
 font-family: 'Noto Serif', serif;
 margin-top: -80px;
 margin-bottom: 41px;
@@ -107,15 +108,34 @@ margin-left: 200px;
 }
 
 mat-paginator{
-    margin-left: 132px;
+    margin-left: 124px;
 width: 83%;
 height: 50px;
 margin-top: -50px;
 }
 h3{
-    margin-top: 1px;
+    // margin-top: -1px;
     font-size: 16px;
+    color: white;
 }
 h5{
 margin-top: 15px;
+font-size: 17px;
+text-align: center;
+}
+h6.d{
+    margin-left: 90px;
+    font-size: 22px;
+}
+h6.a{
+    margin-left: 35px;
+    font-size: 22px;
+}
+
+h6.n{
+    margin-left: 52px;
+    font-size: 22px;
+}
+h6{
+    margin-top: 11px;
 }

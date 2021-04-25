@@ -1,79 +1,95 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" data-website-id="1" data-oe-company-name="Odoo S.A.">
+<!--
+    ___  ___   ___   ___           
+   / _ \|   \ / _ \ / _ \          
+  | (_) | |) | (_) | (_) |         
+   \___/|___/ \___/ \___/          
+___ _         _ _                   
+/ __| |_  __ _| | |___ _ _  __ _ ___ 
+| (__| ' \/ _` | | / -_| ' \/ _` / -_)
+\___|_||_\__,_|_|_\___|_||_\__, \___|
+                         |___/     
+If you're the kind of person who reads source code, you should try our challenge:
+https://www.odoo.com/jobs/challenge
+-->
 <head>
-  
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <title>Document</title>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+<meta name="generator" content="Odoo"/>
+  <meta name="google-site-verification" content="pgjyH0qvN69B0m_HrTKV6h8TVnbRXp5etEHo19unPy4"/>
+                    <meta property="og:type" content="website"/>
+                    <meta property="og:title" content="Login | Odoo"/>
+                    <meta property="og:site_name" content="Odoo S.A."/>
+                    <meta property="og:url" content="https://odoocdn.com/web/login"/>
+                    <meta property="og:image" content="https://odoocdn.com/web/image/website/1/social_default_image?unique=52b5497"/>
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:title" content="Login | Odoo"/>
+                <meta name="twitter:image" content="https://odoocdn.com/web/image/website/1/social_default_image?unique=52b5497"/>
+                <meta name="twitter:site" content="@odoo"/>
+    <link rel="canonical" href="https://www.odoo.com/web/login"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+            <title> Login | Odoo </title>
+            <link type="image/x-icon" rel="shortcut icon" href="//odoocdn.com/web/image/website/1/favicon?unique=52b5497"/>
+        <link rel="preload" href="//odoocdn.com/web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin=""/>
+        <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28884645-33abd89/1/web.assets_common.css" data-asset-xmlid="web.assets_common" data-asset-version="33abd89"/>
+        <link type="text/css" rel="stylesheet" href="//odoocdn.com/web/content/28884711-495dbb6/1/web.assets_frontend.css" data-asset-xmlid="web.assets_frontend" data-asset-version="495dbb6"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <script id="web.layout.odooscript" type="text/javascript">
+                var odoo = {
+                    csrf_token: "bb4a310e2c4d6a60bbec6f28695e5ca55e9e816co1650376571",
+                    debug: "",
+                };
+            </script>
+        <script type="text/javascript">
+            odoo.session_info = {"is_admin": false, "is_system": false, "is_website_user": true, "user_id": false, "is_frontend": true, "translationURL": "/website/translations", "cache_hashes": {"translations": "2dacd46373f115613d64dcdd825bee0ca2245c27"}};
+            if (!/(^|;\s)tz=/.test(document.cookie)) {
+                const userTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                document.cookie = `tz=${userTZ}; path=/`;
+            }
+        </script>
+        <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28880989-fd107dc/1/web.assets_common_minimal_js.js" data-asset-xmlid="web.assets_common_minimal_js" data-asset-version="fd107dc"></script>
+        <script defer="defer" type="text/javascript" src="//odoocdn.com/web/content/28880990-53db687/1/web.assets_frontend_minimal_js.js" data-asset-xmlid="web.assets_frontend_minimal_js" data-asset-version="53db687"></script>
+        <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28884553-b5bf36b/1/web.assets_common_lazy.js" data-asset-xmlid="web.assets_common_lazy" data-asset-version="b5bf36b"></script>
+        <script defer="defer" type="text/javascript" data-src="//odoocdn.com/web/content/28884561-e1843f7/1/web.assets_frontend_lazy.js" data-asset-xmlid="web.assets_frontend_lazy" data-asset-version="e1843f7"></script>
+    <meta name="p:domain_verify" content="d266a6e14e538410370a9dabf975404d"/>
+        <noscript id="o_animate-no-js_fallback">
+            <style type="text/css">
+                .o_animate {
+                    /* If no js - force elements rendering */
+                    visibility:visible;
+                    /* If browser support css animations support - reset animation */
+                    -webkit-animation-name: none-dummy;
+                    animation-name: none-dummy;
+                }
+            </style>
+        </noscript>
+        <noscript>
+            <style>
+                /* Prevent animated elements hiding */
+                .o_animate_in_children > * {
+                    opacity: 1!important;
+                    -webkit-transform: scale(1)!important;
+                    -ms-transform: scale(1)!important;
+                    transform: scale(1)!important;
+                }
+            </style>
+        </noscript>
 </head>
-<body>
-  <div class="container">
-    <h1>INVOICES</h1>
-    <!-- <p><a class="btn btn-dark" routerLink="/bills">Register invoice</a></p> -->
-      <!-- <table class="styled-table" *ngIf="bills">
+        <body>
+    <div id="wrapwrap" class="    o_login ">
+            <header id="top" data-anchor="true" data-name="Header" class="  o_no_autohide_menu o_header_fixed o_main_header">
+</header>
+    <main>
+      <h1>INVOICES</h1>
 
-      <tr>
-        
-        <th>Client name</th>
-        <th>Provider</th>
-        <th>Invoice number</th>
-        <th>Material</th>
-        <th>InvoiceDate</th>
-        <th>Unit Price</th>
-        <th>Quantity</th>
-        <th>TVA %</th>
-        <th>Total W/O TVA</th>
-        <th>Total with TVA</th>
-        <th>Paid Status</th>
-        <th>Action</th>
-        <th>Action</th>
-      </tr>
-      <tr *ngFor="let bill of bills">
-        <td [routerLink]="['/bills/', bill.id]" class="pointer">
-            {{bill.client.name}}
-          </td>
-          <td>
-            {{bill.provider.name}}
-          </td>
-        <td >
-          {{bill.invoiceNumber}}
-        </td>
-        <td>
-          {{bill.material.name}}
-        </td>
-        <td>
-          {{bill.invoiceDate|date:"dd/MM/yyyy"}}
-        </td>
-        <td>
-          {{bill.unitPrice}}
-        </td>
-        <td>
-          {{bill.quantity}}
-        </td>
-        <td>
-          {{bill.tva}}
-        </td>
-        <td>
-          {{bill.totalWithoutTva}}
-        </td>
-        <td>
-          {{bill.totalWithTva}}
-        </td>
-        <td>
-          {{bill.paidStatus.name}}
-        </td>
-        
-  <td>
-        <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update</button>
-      </td>  <td>
-        <button *ngIf="bill" (click)="deleteBillById(bill.id)" class="btn btn-light">Delete</button></td>
-      
-      </tr>
-    </table> -->
+  
+  <div class="container">
+   
+   
 
     <p>
       <input *ngIf = "isActive"
@@ -84,91 +100,86 @@
       <button *ngIf="!isActive" (click)="switch()" class="btn btn-dark search"><i class="fa fa-search"></i></button>
   </p>
   <div class="mat-elevation-z8">
-      <table class = "table table-striped table-hover"mat-table #table [dataSource]="dataSource" matSort >
-<!--       
-        <ng-container matColumnDef="id">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-          <td mat-cell *matCellDef="let i"><h3>  {{ i.id }} </h3></td>
-        </ng-container> -->
-          <!-- ImageUrl Column -->
-          <ng-container matColumnDef="client">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h6> Client</h6> </th>
-            <td mat-cell *matCellDef="let i" [routerLink]="['/bills/',i.id]" class="pointer"><h3> {{i.client}} </h3></td>
-          </ng-container>
-          <!-- Title Column -->
-          <ng-container matColumnDef="provider">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h6> Provider</h6> </th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.provider }} </h3></td>
-          </ng-container>
-          <!-- Price Column -->
-          <ng-container matColumnDef="invoiceNumber">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h2> Invoice Number</h2> </th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.invoiceNumber }} </h3></td>
-          </ng-container>
-          <ng-container matColumnDef="material">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h6> Material </h6></th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.materialAndExecution}}</h3> </td>
-          </ng-container>
-          <ng-container matColumnDef="invoiceDate">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h2>Date </h2></th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.invoiceDate | date: 'shortDate' }}</h3> </td>
-          </ng-container>
+    <table class = "table table-striped table-hover"mat-table #table [dataSource]="dataSource" matSort >
+    
+        <!-- ImageUrl Column -->
+        <ng-container matColumnDef="client">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Client</th>
+          <td mat-cell *matCellDef="let i"  [routerLink]="['/client/view',i.id]" class="pointer"><h5> {{i.client}} </h5></td>
+        </ng-container>
+        <!-- Title Column -->
+        <ng-container matColumnDef="provider">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Provider </th>
+          <td mat-cell *matCellDef="let i"  [routerLink]="['/provider/', i.id]" class="pointer" ><h5>{{ i.provider }}</h5> </td>
+        </ng-container>
+        <!-- Price Column -->
+        <ng-container matColumnDef="invoiceNumber">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Invoice Number</th>
+          <td mat-cell *matCellDef="let i" [routerLink]="['/admin/view',i.id]" class="pointer"><h5>  {{ i.invoiceNumber }}</h5> </td>
+        </ng-container>
+        <ng-container matColumnDef="material">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Material </th>
+          <td mat-cell *matCellDef="let i"><h5>  {{i.materialAndExecution}}</h5> </td>
+        </ng-container>
+        <ng-container matColumnDef="invoiceDate">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+          <td mat-cell *matCellDef="let i"><h5>{{i.invoiceDate| date: 'dd/MM/yyyy'}}</h5> </td>
           <ng-container matColumnDef="unitPrice">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h2> Unit Price </h2></th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.unitPrice }}</h3> </td>
-          </ng-container>
-          <ng-container matColumnDef="quantity">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h6> Quantity</h6> </th>
-            <td mat-cell *matCellDef="let i" ><h3>  {{ i.quantity }}</h3> </td>
-          </ng-container>
-          <ng-container matColumnDef="tva">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h6> TVA </h6></th>
-            <td mat-cell *matCellDef="let i"><h3>  {{ i.tva }}</h3> </td>
-          </ng-container>
-          <ng-container matColumnDef="paidStatus">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h2 class="daa"> Paid Status</h2> </th>
-            <td mat-cell *matCellDef="let i"><h3> {{ i.paidStatus }}</h3> </td>
+            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Unit Price </th>
+            <td mat-cell *matCellDef="let i"><h5> {{ i.unitPrice }}</h5> </td>
           </ng-container>
 
-          <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef class="action"><h6>Action</h6></th>
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</th>
+          <td mat-cell *matCellDef="let i"><h5> {{ i.quantity }}</h5> </td>
+        </ng-container>
+        <ng-container matColumnDef="tva">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>TVA</th>
+          <td mat-cell *matCellDef="let i"><h5>  {{ i.tva }}</h5> </td>
+        </ng-container>
+        <ng-container matColumnDef="paidStatus">
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Paid Status</th>
+          <td mat-cell *matCellDef="let i"><h5> {{ i.paidStatus }}</h5> </td>
+        </ng-container>
+
+
+
+          <!-- Edit Column -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef class="action">Action</th>
             <td mat-cell *matCellDef="let i">
-                <a [routerLink]="['/bills/',i.id]"> <h5>Update</h5></a>
-            </td> </ng-container>
-
+                <a [routerLink]="['/bills/', i.id]"><h5>Update</h5></a>
+            </td> 
+          </ng-container> 
            <ng-container matColumnDef="action2">
-            <th mat-header-cell *matHeaderCellDef class="action"><h6>Action</h6></th>
+            
+            <th mat-header-cell *matHeaderCellDef class="action">Action  </th>
             <td mat-cell *matCellDef="let i">
               <a [routerLink]="['/admin']" (click)="deleteBillById(i.id)"><h5>Delete</h5></a>
           </td> 
           </ng-container> 
+          <!-- <button *ngIf="client" (click)="deleteClientById(client.id)" class="btn btn-light">Delete</button> -->
           
-          <!-- <tr>
-            <th>Action</th>
-          </tr>
-          <tr *ngFor="let bill of bills">
+          <!-- <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let c">
+                <button *ngIf="client" (click)="deleteClientById(c.id)">Delete</button>
+            </td> 
+            
+          </ng-container>  -->
+          <!-- <button *ngIf="client" (click)="deleteBillById(client.id)" class="btn btn-light">Delete</button> -->
+         
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <p><a class="btn btn-dark"  routerLink="/bills"><h3>Register Invoice</h3></a></p>
 
-          <td>
-            <button [routerLink]="['/bills/',bill.id]" class="btn btn-light">Update</button>
-          </td>
-        </tr> -->
-          <!-- Edit Column -->
-           <!-- <ng-container matColumnDef="action">
-              <th mat-header-cell *matHeaderCellDef>  </th>
-              <td mat-cell *matCellDef="let p">
-                  <a [routerLink]="['/admin/products/', p.key]">Edit</a>
-              </td>
-             </ng-container> -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div></div>
 
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
-    </table>
-    <p><a class="btn btn-dark" routerLink="/bills"><h3>Register invoice</h3></a></p>
-
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-  </div>
-  </div>
-
+</main>
+</div>
 </body>
 </html>
