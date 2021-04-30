@@ -189,6 +189,7 @@ width: 1050px;
 
 .avantaje-c {
   background-color: #29ABE2;
+  
 }
 .avantaje-a, .avantaje-c {
   border-radius: 17px;
@@ -205,7 +206,7 @@ width: 1050px;
   margin-left: 150px;
 }
 .col-lg-4.col-md-4.avantaje{
-  margin-left: 490px;
+  margin-left: 505px;
   margin-top: -480px;
 }
 .col-lg-4.col-md-4.row{
@@ -220,11 +221,13 @@ width: 1050px;
 }
 .col-lg-4.col-md-4.avantaje-b{
   margin-top: -310px;
-  margin-left: 490px;
+  margin-left: 505px;
+ 
+
 
 }
 .col-lg-4.col-md-4.avantaje-c{
-  margin-left: 455px;
+  margin-left: 470px;
   margin-top: -170px;
 }
 .av-img {
@@ -232,6 +235,15 @@ width: 1050px;
   margin-top: -70px;
   margin-left: 80px;
 }
+.av-text{
+  font-family: 'Noto Serif', serif;
+font-size: 15px;
+}
+.av-title{
+  font-family: 'Noto Serif', serif;
+font-size: 17px;
+}
+
 .categ-av {
   margin-left: -20px;
   margin-top: 40px;
@@ -243,8 +255,10 @@ width: 1050px;
 h2.title{
   margin-top: 20px;
   text-align: center;
+  font-family: 'Noto Serif', serif;
 }
 h3.subtitle{
+  font-family: 'Noto Serif', serif;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -268,3 +282,32 @@ h3.subtitle{
 .avantaje-c.row{
   height: 665px;
 }
+li{color: rgba(255, 255, 255, 0.7) !important; 
+  font-family: 'Noto Serif', serif;
+}
+.small.text-muted.mb-4{
+  font-family: 'Noto Serif', serif;
+font-size: 15px;
+}
+.small.text-muted{
+  font-family: 'Noto Serif', serif;
+font-size: 15px;
+}
+span{
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
+
+}
+a{  font-family: 'Noto Serif', serif;
+  
+}
+#wrapwrap > footer .o_footer_links a, #wrapwrap > footer .o_footer_copyright a {
+  font-size: 16px;
+  font-weight: 500;
+}
+span.bold{
+  font-size: 45px;
+  margin-left: 23px;
+}
+
+
