@@ -17,7 +17,7 @@
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" #f="ngForm" (ngSubmit)="register()" class="form">
                             
-                            <h2 class="text-center text-info">REGISTER</h2>
+                            <h1 class="text-center text-info">REGISTER</h1>
                             <div class="form-group">
                                 <label for="username" class="text-info">Username:</label><br>
                               
@@ -35,9 +35,14 @@
                                     <div *ngIf="password?.errors?.minlength">Name must have at least 6 characters.</div>
                                 </div>
                             </div>
-                               <div *ngIf="isSelected"><h2>Registered succeesfuly</h2></div>
-                                <input type="submit" (click)="show()" [disabled]="!f.valid" name="submit" class="btn btn-info btn-md" value="submit"> 
+                               <div *ngIf="isSelected"><h2>Registered succeesfuly</h2>
+                               <!-- <p><a class="btn btn-dark login" routerLink="/login"><h4>Login</h4></a></p> -->
                             
+                            </div>
+                             <div class="buttons">
+                                <p><a *ngIf="isSelected" class="btn btn-dark login" routerLink="/login"><h4>Login</h4></a></p>
+                                <input type="submit" (click)="show()" [disabled]="!f.valid" name="submit" class="btn btn-info btn-md" value="Submit"> 
+                            </div>
                         </form>
                     </div>
                 </div>
