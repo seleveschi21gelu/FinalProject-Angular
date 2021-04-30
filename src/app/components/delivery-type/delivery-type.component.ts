@@ -26,27 +26,12 @@ export class DeliveryTypeComponent implements OnInit {
 
 
   constructor(private deliveryTypeService:DeliveryTypeService, private route:ActivatedRoute) {
-    // let id = this.route.snapshot.params.id;
-
-    // if (id !== undefined) {
-    //   this.deliveryTypeService.getDeliveryTypeById(id).subscribe(data=>this.deliveryType = data)
-    // } else {
-    //   this.deliveryType = new DeliveryType();
-    // }
-
-    // this.deliveryTypeService.getDeliverysType().subscribe(delivery=>this.deliveryTypeList=delivery);
-
-
+  
   }
 
   ngOnInit(): void {
     let id = this.route.snapshot.params.id;         
     this.isAddMode = !id;
-    // this.deliveryTypeForm=new FormGroup({
-    //   name:new FormControl('',Validators.required)
-    // });
-
-    
     if(!this.isAddMode) {
       this.deliveryTypeService.getDeliveryTypeById(id)
       .pipe(first())

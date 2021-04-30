@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
   deliveryTypeList:any;
   providerList:any;
   materialList:any;
-  // flatBlockList:any;
   clientList:any;
   billsRegistration:any;
   billsform!: FormGroup;
@@ -39,14 +38,12 @@ export class HomeComponent implements OnInit {
               private statusService:StatusService,
               private providerService:ProviderService,
               private materialService:MaterialService,
-              // private flatBlockService:FlatblockService,
               private clientService:ClientService,
               private route: ActivatedRoute) {
 
     this.statusService.getStatusList().subscribe(statuses => this.statusList =statuses);
     this.providerService.getProviders().subscribe(providers => this.providerList =providers);
     this.materialService.getMaterials().subscribe(materials => this.materialList =materials);
-    // this.flatBlockService.getFlatBlocks().subscribe(flatBlocks => this.flatBlockList =flatBlocks);
     this.clientService.getClients().subscribe(client => this.clientList =client);
    }
 
@@ -57,7 +54,6 @@ export class HomeComponent implements OnInit {
 
      
  this.billsform=new FormGroup({
-    //  name:new FormControl ('',Validators.required),
      invoiceNumber: new FormControl('',Validators.required),
      materialAndExecution:new FormControl('',Validators.required),
      provider: new FormControl('',Validators.required),
@@ -66,16 +62,8 @@ export class HomeComponent implements OnInit {
      quantity:new FormControl('',Validators.required),
      tva:new FormControl('',Validators.required),
      paidStatus: new FormControl('',Validators.required),
-    //  flatBlock:new FormControl('',Validators.required),
      client: new FormControl('',Validators.required)
   });
-
-// this.getBillsRegistration(this.route.snapshot.params.id)
-    // if(this.route.snapshot.queryParams['id']){
-    //   this.getBillsRegistration(this.route.snapshot.params.id);
-    // } else {
-    //   this.billsRegistration = new Edit();
-    // }
 
     if(!this.isAddMode) {
       this.billsService.getBill(id)
@@ -85,23 +73,8 @@ export class HomeComponent implements OnInit {
 
   }
   submitRegistration(){
-    // if(this.billsform?.valid){
-    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
-    //   this.billsService.addBill(this.billsform.value).subscribe(
-    //     _data => {
-    //       this.billsform?.reset();
-    //       return true;
-    //     },
-    //     error => {
-    //       return throwError(error);
-    //     }
-    //   )
-    // } else{
-    //   this.validMessage = "Please fill out the form before submitting";
-    // }
-    
       let id = this.route.snapshot.params.id;
-      // if(this.billsform?.valid){
+      
       if(id) {
         this.billsService.updateBillById(id, this.billsform.value);
         this.validMessage = "Your invoice registration has been updated. Thank you!";
@@ -148,11 +121,6 @@ export class HomeComponent implements OnInit {
   get paidStatus(){
     return this.billsform.get('paidStatus');
   }
-
-  // get flatBlock(){
-  //   return this.billsform.get('flatBlock');
-  // }
-
   get invoiceDate(){
     return this.billsform.get('invoiceDate')
   }

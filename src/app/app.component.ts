@@ -1,4 +1,3 @@
-import { Edit } from './components/models/edit';
 import { Component } from '@angular/core';
 
 @Component({

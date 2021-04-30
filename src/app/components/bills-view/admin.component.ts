@@ -36,7 +36,6 @@ public bills: any;
 
     this.getBills();
     this.deleteBillById(this.route.snapshot.params.id);
-    // this.updateBillById(this.route.snapshot.params.id,this.bills);
   }
 
  async  getBills(){

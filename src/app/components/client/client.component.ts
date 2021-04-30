@@ -44,8 +44,6 @@ readonly:boolean =false;
 
   submitRegistration(){
     let id = this.route.snapshot.params.id;
-    // if(this.billsform?.valid){
-    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
     if(id){ this.clientService.updateClientById(id, this.clientForm.value);
       this.validMessage = "Client updated!";
     

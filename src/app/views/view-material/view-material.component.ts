@@ -47,17 +47,6 @@ export class ViewMaterialComponent implements OnInit {
 
   }
 
-  
-  // deleteMaterialById(id:number){
-  //   this.materialService.deleteMaterialById(id).subscribe(
-  //     data=>{
-  //       this.material=data
-  //     },
-  //     err=>console.error(err),
-  //     ()=>console.log('material deleted')
-  //   );
-
-  // }
  async deleteMaterialById(id:number){
   await this.materialService.deleteMaterialById(id).
     subscribe(
@@ -82,8 +71,4 @@ switch(){
 this.isActive = !this.isActive;
 
 }
-
-  
-  
-
 }

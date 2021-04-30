@@ -12,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./delivery-type-view.component.scss']
 })
 export class DeliveryTypeViewComponent implements OnInit {
-  // public deliveryTypes: DeliveryType[] = [];
+  
   public deliveryType: any;
    
   @ViewChild(MatPaginator) paginator: any;
@@ -39,7 +39,6 @@ export class DeliveryTypeViewComponent implements OnInit {
  async getDeliveryTypes(){
    await this.deliveryTypeService.getDeliverysType().subscribe(
       data =>{
-        // console.log("This is the data: " + data)
         this.deliveryType=data
       },
       err=>console.error(err),

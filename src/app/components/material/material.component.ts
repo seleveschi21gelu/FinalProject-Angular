@@ -38,8 +38,6 @@ export class MaterialComponent implements OnInit {
   }
   submitRegistration(){
     let id = this.route.snapshot.params.id;
-    // if(this.billsform?.valid){
-    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
     if(id){ this.materialService.updateMaterialById(id, this.materialForm.value);
     this.validMessage="Material updated!";
     }

@@ -2,7 +2,6 @@ import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProviderService } from './../../services/provider.service';
 import { Component, OnInit } from '@angular/core';
-import { throwError } from 'rxjs';
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -32,7 +31,6 @@ export class ProviderComponent implements OnInit {
     public providerRegistration:any;
 
   constructor(private providerService:ProviderService, private route:ActivatedRoute) {
-    // this.providerService.getProviders().subscribe(provider=>this.providerList=provider);
 
   }
 
@@ -50,8 +48,6 @@ export class ProviderComponent implements OnInit {
   }
   submitRegistration(){
     let id = this.route.snapshot.params.id;
-    // if(this.billsform?.valid){
-    //   this.validMessage = "Your invoice registration has been submitted. Thank you!";
     if(id){ this.providerService.updateProviderById(id, this.providerForm.value);
       this.validMessage = "Provider updated"
     }
