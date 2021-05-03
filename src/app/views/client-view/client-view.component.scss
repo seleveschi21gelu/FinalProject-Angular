@@ -45,7 +45,7 @@ height: 54px;
     height: 47px;
 }
 .title{
-color: #6b705c;
+color: black;
 font-size: 27px;
 font-family: 'Noto Serif', serif;
 margin-top: -80px;
@@ -58,6 +58,7 @@ width: 140%;
 .action{
     font-size: 27px;
     font-family: 'Noto Serif', serif;
+    color: black;
     
 }
 mat-paginator{
@@ -74,6 +75,10 @@ h3{
 }
 h5{
 margin-top: 15px;
+font-size: 20px;
+font-family: 'Noto Serif', serif;
+color: #000;
+
 }
 .container{
     width: 65%;

@@ -110,42 +110,42 @@
     
         <!-- ImageUrl Column -->
         <ng-container matColumnDef="client">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Client</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4> Client</h4></th>
           <td mat-cell *matCellDef="let i"  [routerLink]="['/admin/view',i.id]" class="pointer"><h5> {{i.client}} </h5></td>
         </ng-container>
         <!-- Title Column -->
         <ng-container matColumnDef="provider">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Provider </th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> <h4>Provider </h4></th>
           <td mat-cell *matCellDef="let i" ><h5>{{ i.provider }}</h5> </td>
         </ng-container>
         <!-- Price Column -->
         <ng-container matColumnDef="invoiceNumber">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Invoice Number</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4>Number</h4></th>
           <td mat-cell *matCellDef="let i" [routerLink]="['/admin/view',i.id]" class="pointer"><h5>  {{ i.invoiceNumber }}</h5> </td>
         </ng-container>
         <ng-container matColumnDef="material">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Material </th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4> Material </h4></th>
           <td mat-cell *matCellDef="let i"><h5>  {{i.materialAndExecution}}</h5> </td>
         </ng-container>
         <ng-container matColumnDef="invoiceDate">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4>Date</h4></th>
           <td mat-cell *matCellDef="let i"><h5>{{i.invoiceDate| date: 'dd/MM/yyyy'}}</h5> </td>
           <ng-container matColumnDef="unitPrice">
-            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header> Unit Price </th>
+            <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4> Unit Price</h4> </th>
             <td mat-cell *matCellDef="let i"><h5> {{ i.unitPrice }}</h5> </td>
           </ng-container>
 
         </ng-container>
         <ng-container matColumnDef="quantity">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Quantity</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4>Quantity</h4></th>
           <td mat-cell *matCellDef="let i"><h5> {{ i.quantity }}</h5> </td>
         </ng-container>
         <ng-container matColumnDef="tva">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>TVA</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4>TVA</h4></th>
           <td mat-cell *matCellDef="let i"><h5>  {{ i.tva }}</h5> </td>
         </ng-container>
         <ng-container matColumnDef="paidStatus">
-          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header>Paid Status</th>
+          <th class="title" mat-header-cell *matHeaderCellDef mat-sort-header><h4>Paid Status</h4></th>
           <td mat-cell *matCellDef="let i"><h5> {{ i.paidStatus }}</h5> </td>
         </ng-container>
 

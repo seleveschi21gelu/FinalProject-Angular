@@ -49,7 +49,6 @@ const routes: Routes = [
   {
     path:'firstPage',
     component:PageEntryComponent,
-    // canActivate:[AuthService]
 },
 
 {
@@ -72,11 +71,7 @@ const routes: Routes = [
     component: ViewRegistrationComponent,
     canActivate: [AuthService]
   },
-  {
-    path:'flatblock',
-    component:FlatblockComponent,
-    canActivate: [AuthService]
-  },
+  
   {
     path:'material/view',
     component:ViewMaterialComponent,
@@ -125,13 +120,8 @@ const routes: Routes = [
 },
   {path:'register',
   component:RegisterPageComponent,
-  // canActivate:[AuthService]
 },
-  {
-    path:'flatblock/view/:id',
-    component:ViewFlatblockByIdComponent,
-    canActivate: [AuthService]
-  },
+  
   {
     path:'flatblock/view',
     component:ViewRegistrationFlatblockComponent,
@@ -163,18 +153,7 @@ const routes: Routes = [
     component:FiscalBillComponent,
     canActivate: [AuthService]
   },
-  // {
-  //   path:'fiscalbill/view',
-  //   component:FiscalBillViewComponent,
-  //   canActivate: [AuthService]
-  // },
-  
-  // {
-  //   path:'fiscalbill/view/:id',
-  //   component:ViewFiscalBillByIdComponent,
-  //   canActivate: [AuthService]
-  // },
-  
+ 
   {
     path:'client/view',
     component:ClientViewComponent,

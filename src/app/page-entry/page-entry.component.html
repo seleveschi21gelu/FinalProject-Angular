@@ -298,11 +298,13 @@ You can add, view data from registers easily. You can easily control the data in
                     </div>
                 </div>
             </div>
+            <ng-container *ngIf="isLoggedIn">
         <div class="o_footer_copyright o_not_editable">
                 <div class="container py-3 mt-4">
-                    <a class="small" href="/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+                    <!-- <a class="small" href="/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a> -->
                 </div>
             </div>
+          </ng-container>
     </footer>
             </div>
         <script>
