@@ -129,6 +129,14 @@ export class HomeComponent implements OnInit {
     return this.billsform.get('quantity');
   }
 
+  get totalWithoutTVA(){
+    return this.billsform.get('totalWithoutTVA')
+  }
+  
+  get totalWithTVA(){
+    return this.billsform.get('totalWithTVA')
+  }
+
 }
 
 

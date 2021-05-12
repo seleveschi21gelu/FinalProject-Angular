@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
   @ViewChild(MatSort) sort: any 
 
   dataSource:any;
-  displayedColumns: string[]=["client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","paidStatus","action","action2"]
+  displayedColumns: string[]=["client","provider","invoiceNumber","material","invoiceDate","unitPrice","quantity","tva","totalWithoutTva","totalWithTva","paidStatus","action","action2"]
 public bills: any;
   constructor(private BillsService:BillsService, private route: ActivatedRoute, private router: Router) {
  
