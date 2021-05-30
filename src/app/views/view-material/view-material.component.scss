@@ -3,6 +3,7 @@ h1{
     margin-bottom: 50px;
     font-family: 'Noto Serif', serif;
     font-size: 55px;
+    margin-top: 50px;
 }
 th{
     text-align: center;
@@ -22,9 +23,11 @@ border-collapse: separate;
     width: 140%;
     margin-left: -222px;
 }
-.container{width: 70%;}
+.container{width: 70%;
+margin-left: 160px;
+}
 .search{
-    margin-left:663px;
+    margin-left:653px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -42,7 +45,7 @@ border-collapse: separate;
     
     }
 .btn-dark.search{
-    margin-left:888px;
+    margin-left:878px;
     width: 45px;
     height: 45px;
 }
@@ -83,16 +86,17 @@ text-align: center;
 }
 h6.d{
     margin-left: 90px;
-    font-size: 22px;
+    font-size: 24px;
 }
 h6.a{
-    margin-left: 35px;
-    font-size: 22px;
+    margin-left: 40px;
+    font-size: 24px;
+color: #000;
 }
 
 h6.n{
-    margin-left: 52px;
-    font-size: 22px;
+    margin-left: 80px;
+    font-size: 24px;
 }
 h6{
     margin-top: 11px;

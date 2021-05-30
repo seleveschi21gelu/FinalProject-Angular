@@ -1,5 +1,5 @@
 h1{
-    margin-top: 0px;
+    margin-top: 30px;
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Noto Serif', serif;
@@ -23,7 +23,7 @@ width: 110%;
     margin-left: -222px;
 }
 .search{
-    margin-left: 883px;
+    margin-left: 983px;
     font-size: 21px;
     font-family: 'Noto Serif', serif;
     border-radius: 12px;
@@ -39,15 +39,15 @@ width: 110%;
     width: 11%;
     height: 52px;
     }
-.btn-dark.search{
-    margin-left: 1285px;
-    width: 47px;
-    height: 47px;
-}
+// .btn-dark.search{
+//     margin-left: 10px;
+//     width: 47px;
+//     height: 47px;
+// }
 .title{
  
 color: black;
-font-size: 27px;
+font-size: 25px;
 font-family: 'Noto Serif', serif;
 margin-top: -80px;
 margin-bottom: 41px;
@@ -57,10 +57,13 @@ width: 140%;
 
 }
 .action{
-    font-size: 27px;
+    font-size: 25px;
     font-family: 'Noto Serif', serif;
     color: #000;
     
+}
+.action.a{
+    margin-right: 70px;
 }
 
 mat-paginator{
@@ -71,7 +74,7 @@ margin-top: -52px;
 }
 
 .btn-dark.search{
-    margin-left: 1102px;
+    margin-left: 1205px;
     width: 47px;
     height: 47px;
 }
@@ -82,12 +85,28 @@ h3{
 }
 h5{
 margin-top: 15px;
-font-size: 20px;
+font-size: 17px;
 font-family: 'Noto Serif', serif;
 color: #000;
 }
 .container{
-    width: 60%;
-    margin-left: 275px;
+    width: 65%;
+    margin-left: 232px;
+    height: 1000px;
 
 }
+h5.up{margin-left: 15px;}
+
+h4.del{
+    margin-left: 25px;
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+h5.d{margin-left: 35px;}
+h5.tel{
+    margin-left: 15px;
+}
+h5.nm{margin-top: 16px;
+margin-left: -10px;
+width: 120px;}
+h5.des{width: 250px;}

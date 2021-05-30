@@ -45,7 +45,11 @@ const routes: Routes = [
     component:FirstPageComponent,
     canActivate: [AuthService]
   },
- 
+  {
+    path:'',
+    component:FirstPageComponent,
+    canActivate: [AuthService]
+  },
   {
     path:'firstPage',
     component:PageEntryComponent,

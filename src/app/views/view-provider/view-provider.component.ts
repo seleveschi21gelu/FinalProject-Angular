@@ -16,7 +16,7 @@ export class ViewProviderComponent implements OnInit {
   @ViewChild(MatSort) sort: any 
   
   dataSource:any;
-  displayedColumns: string[]=["name","description","bank","iban","country","cif","telephone","address","action","action2"]
+  displayedColumns: string[]=["name","description","bank","iban","country","cif","telephone","address","email","action","action2"]
 
   public provider: any;
   constructor(private providerService :ProviderService,private route:ActivatedRoute) {

@@ -1,7 +1,7 @@
 h1{
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     font-family: 'Noto Serif', serif;
 }
 
@@ -11,7 +11,7 @@ font-size: 18px;
 color: #000;
 }
 .btn-dark{
-    margin-left: 655px;
+    margin-left: 685px;
     font-family: 'Noto Serif', serif;
     margin-bottom: -20px;
     color: white;
@@ -24,9 +24,12 @@ color: #000;
 }
 .container{
     width: 55%;
-    height: 1150px;
+    height: 1050px;
 }
 .btn-dark{
-    margin-left: 631px;
+    margin-left: 667px;
     
+}
+html,body,main{
+    background-color: rgb(235, 230, 230);
 }

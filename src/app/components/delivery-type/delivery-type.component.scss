@@ -16,12 +16,12 @@ margin-top: 160px;
 .container{
     margin-top: -80px;
     align-content: center;
-    
+    height: 560px;
 }
 h1{
-    margin-top: 0px;
+    margin-top: 50px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
     font-family: 'Noto Serif', serif;
 
 }
@@ -68,5 +68,8 @@ a.btn-dark{
 }
 label{
     margin-left: 7px;
+}
+main{
+    background-color: rgb(235, 230, 230);
 }
 
